@@ -33,7 +33,7 @@ exit();
                 <li class="barre"><a href="compte.html">Compte</a></li>
         </ul>
 
-        <a href="Inscriptions.html" target="_blank"><img class="help" type="button" src="../Image/help2.png" alt="Besoin d'aide ?" height="4%" width="auto"/>
+        <a href="Aide.html" target="_blank"><img class="help" type="button" src="../Image/help2.png" alt="Besoin d'aide ?" height="4%" width="auto"/>
         </a>
     </header>
        <div id="backmenu">

@@ -101,11 +101,79 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file leaf-file-name="Parametres.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CSS/Parametres.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="1" />
+=======
+      <file leaf-file-name="sertech.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vue/sertech.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="520">
+              <caret line="13" column="62" lean-forward="false" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="C_Home.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vue/C_Home.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="800">
+              <caret line="35" column="8" lean-forward="true" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="149" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Aide.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vue/Aide.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="640">
+              <caret line="16" column="58" lean-forward="false" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Compte.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Vue/Compte.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1120">
+              <caret line="28" column="149" lean-forward="false" selection-start-line="28" selection-start-column="149" selection-end-line="28" selection-end-column="149" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="C_Home_temperature.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vue/C_Home_temperature.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="673">
+              <caret line="124" column="26" lean-forward="false" selection-start-line="124" selection-start-column="26" selection-end-line="124" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="C_Home_lumiere.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vue/C_Home_lumiere.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="763">
+              <caret line="125" column="26" lean-forward="false" selection-start-line="125" selection-start-column="26" selection-end-line="125" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CodeStats.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Vue/CodeStats.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="680">
+              <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+>>>>>>> e5548b81b5c2aabe7d64c113b2b1f7e1f6716ed4
               <folding />
             </state>
           </provider>
@@ -165,6 +233,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
+=======
+        <option value="$PROJECT_DIR$/maison_supprimer.php" />
+>>>>>>> e5548b81b5c2aabe7d64c113b2b1f7e1f6716ed4
         <option value="$PROJECT_DIR$/maisoncible2.php" />
         <option value="$PROJECT_DIR$/parametres.php" />
         <option value="$PROJECT_DIR$/Connexion.php" />
@@ -187,12 +259,15 @@
         <option value="$PROJECT_DIR$/CSS/Statistiques.css" />
         <option value="$PROJECT_DIR$/CSS/style.css" />
         <option value="$PROJECT_DIR$/Controleur/inscription.php" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/Vue/C_Home.php" />
         <option value="$PROJECT_DIR$/Vue/C_Home_lumiere.php" />
         <option value="$PROJECT_DIR$/Vue/C_Home_ouverture.php" />
         <option value="$PROJECT_DIR$/Vue/C_Home_temperature.php" />
+=======
+        <option value="$PROJECT_DIR$/Vue/parametres.php" />
+>>>>>>> e5548b81b5c2aabe7d64c113b2b1f7e1f6716ed4
         <option value="$PROJECT_DIR$/Vue/CodeStats.html" />
-        <option value="$PROJECT_DIR$/Vue/Compte.html" />
         <option value="$PROJECT_DIR$/Vue/DeleteCapteur.php" />
         <option value="$PROJECT_DIR$/Vue/DeleteCapteur2.php" />
         <option value="$PROJECT_DIR$/Vue/DeletePiece.php" />
@@ -210,12 +285,21 @@
         <option value="$PROJECT_DIR$/CSS/C_Home_lumiere.css" />
         <option value="$PROJECT_DIR$/CSS/C_Home.css" />
         <option value="$PROJECT_DIR$/Vue/sertech.php" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/Controleur/maisoncible2.php" />
         <option value="$PROJECT_DIR$/Vue/maison.php" />
         <option value="$PROJECT_DIR$/Vue/maison_supprimer.php" />
         <option value="$PROJECT_DIR$/Vue/parametres.php" />
         <option value="$PROJECT_DIR$/CSS/Parametres.css" />
         <option value="$PROJECT_DIR$/CSS/Maison.css" />
+=======
+        <option value="$PROJECT_DIR$/Vue/C_Home.php" />
+        <option value="$PROJECT_DIR$/Vue/C_Home_ouverture.php" />
+        <option value="$PROJECT_DIR$/Vue/C_Home_temperature.php" />
+        <option value="$PROJECT_DIR$/Vue/C_Home_lumiere.php" />
+        <option value="$PROJECT_DIR$/Vue/Aide.html" />
+        <option value="$PROJECT_DIR$/Vue/Compte.html" />
+>>>>>>> e5548b81b5c2aabe7d64c113b2b1f7e1f6716ed4
       </list>
     </option>
   </component>
@@ -230,10 +314,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="Wamp" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="-14" />
+    <option name="y" value="-18" />
+    <option name="width" value="3856" />
+    <option name="height" value="2092" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -267,6 +351,10 @@
           </PATH>
         </subPane>
       </pane>
+<<<<<<< HEAD
+=======
+      <pane id="Scratches" />
+>>>>>>> e5548b81b5c2aabe7d64c113b2b1f7e1f6716ed4
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -295,7 +383,10 @@
           </PATH>
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="Scratches" />
+=======
+>>>>>>> e5548b81b5c2aabe7d64c113b2b1f7e1f6716ed4
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -311,7 +402,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -494,12 +585,20 @@
       <workItem from="1495370688631" duration="1662000" />
       <workItem from="1495394746925" duration="8762000" />
       <workItem from="1495434992410" duration="4904000" />
+<<<<<<< HEAD
       <workItem from="1495545999508" duration="2543000" />
+=======
+      <workItem from="1495527531136" duration="1162000" />
+>>>>>>> e5548b81b5c2aabe7d64c113b2b1f7e1f6716ed4
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="210147000" />
+=======
+    <option name="totallyTimeSpent" value="208766000" />
+>>>>>>> e5548b81b5c2aabe7d64c113b2b1f7e1f6716ed4
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -511,20 +610,30 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+=======
+    <frame x="-14" y="-18" width="3856" height="2092" extended-state="0" />
+>>>>>>> e5548b81b5c2aabe7d64c113b2b1f7e1f6716ed4
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19180088" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1916841" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09463722" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900763" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10737527" sideWeight="0.50292826" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900763" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+>>>>>>> e5548b81b5c2aabe7d64c113b2b1f7e1f6716ed4
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24961832" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39905363" sideWeight="0.49707174" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -568,6 +677,36 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/Vue/Paramètres.html" />
+    <entry file="file://$PROJECT_DIR$/Controleur/maisoncible2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Image/ban.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controleur/logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controleur/parametrescible.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> e5548b81b5c2aabe7d64c113b2b1f7e1f6716ed4
     <entry file="file://$PROJECT_DIR$/Controleur/maisoncible.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -576,6 +715,7 @@
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Desktop/c_home/chomebj/C_Home/CSS/Compte.css" />
+<<<<<<< HEAD
     <entry file="file://$USER_HOME$/Downloads/sertech (2).html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="478">
@@ -605,6 +745,13 @@
         </state>
       </provider>
     </entry>
+=======
+    <entry file="file://$USER_HOME$/Downloads/sertech (2).html" />
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa0.654/C_Home/Vue/sertech.php" />
+    <entry file="file://$PROJECT_DIR$/../siteperso/maison.php" />
+    <entry file="file://$PROJECT_DIR$/../siteperso/maison_supprimer.php" />
+    <entry file="file://$PROJECT_DIR$/../siteperso/Compte.html" />
+>>>>>>> e5548b81b5c2aabe7d64c113b2b1f7e1f6716ed4
     <entry file="file://$PROJECT_DIR$/CSS/Statistiques.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
@@ -613,20 +760,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php" />
-    <entry file="file://$USER_HOME$/Downloads/Inscription.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/Inscription.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="179" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="179" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Downloads/Inscription.html" />
+    <entry file="file://$USER_HOME$/Downloads/Inscription.css" />
     <entry file="file://$PROJECT_DIR$/Controleur/inscription.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -642,6 +777,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Vue/C_Home_lumiere.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
@@ -670,6 +806,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="94" lean-forward="true" selection-start-line="12" selection-start-column="94" selection-end-line="12" selection-end-column="94" />
+=======
+    <entry file="file://$PROJECT_DIR$/Controleur/Connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="53" lean-forward="true" selection-start-line="41" selection-start-column="53" selection-end-line="41" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="166" column="0" lean-forward="true" selection-start-line="166" selection-start-column="0" selection-end-line="166" selection-end-column="0" />
+>>>>>>> e5548b81b5c2aabe7d64c113b2b1f7e1f6716ed4
         </state>
       </provider>
     </entry>
@@ -713,6 +862,25 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/Vue/maison.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="94" lean-forward="false" selection-start-line="20" selection-start-column="94" selection-end-line="20" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/maison_ajouter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="94" lean-forward="false" selection-start-line="20" selection-start-column="94" selection-end-line="20" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> e5548b81b5c2aabe7d64c113b2b1f7e1f6716ed4
     <entry file="file://$PROJECT_DIR$/Vue/NouveauCapteur.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -721,10 +889,18 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Vue/CodeStats.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="43" lean-forward="true" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+=======
+    <entry file="file://$PROJECT_DIR$/Vue/maison_supprimer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="94" lean-forward="false" selection-start-line="20" selection-start-column="94" selection-end-line="20" selection-end-column="94" />
+          <folding />
+>>>>>>> e5548b81b5c2aabe7d64c113b2b1f7e1f6716ed4
         </state>
       </provider>
     </entry>
@@ -765,6 +941,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Vue/C_Home.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
@@ -773,6 +950,29 @@
         </state>
       </provider>
     </entry>
+=======
+    <entry file="file://$PROJECT_DIR$/Vue/parametres.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS/Maison.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="23" column="4" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="25" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS/Parametres.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="42" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> e5548b81b5c2aabe7d64c113b2b1f7e1f6716ed4
     <entry file="file://$PROJECT_DIR$/CSS/C_Home_ouverture.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
@@ -798,6 +998,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="109">
           <caret line="227" column="23" lean-forward="true" selection-start-line="227" selection-start-column="23" selection-end-line="227" selection-end-column="23" />
+<<<<<<< HEAD
         </state>
       </provider>
     </entry>
@@ -806,6 +1007,8 @@
         <state relative-caret-position="-291">
           <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
           <folding />
+=======
+>>>>>>> e5548b81b5c2aabe7d64c113b2b1f7e1f6716ed4
         </state>
       </provider>
     </entry>
@@ -817,6 +1020,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Controleur/maisoncible2.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
@@ -835,10 +1039,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-670">
           <caret line="20" column="94" lean-forward="false" selection-start-line="20" selection-start-column="94" selection-end-line="20" selection-end-column="94" />
+=======
+    <entry file="file://$PROJECT_DIR$/Vue/C_Home_temperature.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="673">
+          <caret line="124" column="26" lean-forward="false" selection-start-line="124" selection-start-column="26" selection-end-line="124" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/C_Home_lumiere.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="763">
+          <caret line="125" column="26" lean-forward="false" selection-start-line="125" selection-start-column="26" selection-end-line="125" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/CodeStats.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vue/C_Home_ouverture.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="896">
+          <caret line="124" column="149" lean-forward="true" selection-start-line="124" selection-start-column="149" selection-end-line="124" selection-end-column="149" />
+>>>>>>> e5548b81b5c2aabe7d64c113b2b1f7e1f6716ed4
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Vue/maison_supprimer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -888,18 +1123,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/Vue/sertech.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="13" column="62" lean-forward="false" selection-start-line="13" selection-start-column="62" selection-end-line="13" selection-end-column="62" />
+>>>>>>> e5548b81b5c2aabe7d64c113b2b1f7e1f6716ed4
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Controleur/logout.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
+=======
+    <entry file="file://$PROJECT_DIR$/Vue/C_Home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="35" column="8" lean-forward="true" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="149" />
+>>>>>>> e5548b81b5c2aabe7d64c113b2b1f7e1f6716ed4
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Controleur/GestionLogin.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -950,14 +1199,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="1" />
+=======
+    <entry file="file://$PROJECT_DIR$/Vue/Aide.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="640">
+          <caret line="16" column="58" lean-forward="false" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+>>>>>>> e5548b81b5c2aabe7d64c113b2b1f7e1f6716ed4
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/CSS/Maison.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+=======
+    <entry file="file://$PROJECT_DIR$/Vue/Compte.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1120">
+          <caret line="28" column="149" lean-forward="false" selection-start-line="28" selection-start-column="149" selection-end-line="28" selection-end-column="149" />
+>>>>>>> e5548b81b5c2aabe7d64c113b2b1f7e1f6716ed4
           <folding />
         </state>
       </provider>

@@ -1,0 +1,55 @@
+html{
+    background: #FFFFFF;
+    font: 1.1em sans-serif;
+}
+
+body{
+    background-image: url(../Image/int3.jpg);
+    background-size: 100% ;
+    background-attachment:fixed;
+    height: 962px;
+}
+
+#ban {
+    text-align: center;
+    /*position: fixed;*/
+    padding: 30px;
+    display: block;
+    padding-top: 70px;
+}
+
+#CondiTitle{
+    font-size: x-large;
+    font-weight: bold;
+    text-align: center;
+    border-top: 15px;
+    border-top: solid;
+    border-top-color: #FFFFFF;
+    margin-top: 30px;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .3),
+    0 3px 5px rgba(0, 0, 0, .2),
+    0 10px 20px rgba(0, 0, 0, .2),
+    0 50px 50px rgba(0, 0, 0, .15);
+
+}
+
+#cond{
+    background: white;
+    width: 1200px;
+    margin-left: 5%;
+    border-radius: 5px;
+    margin-top: 100px;
+    text-align: center;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .3),
+    0 3px 5px rgba(0, 0, 0, .2),
+    0 10px 20px rgba(0, 0, 0, .2),
+    0 50px 50px rgba(0, 0, 0, .15);
+
+    margin-bottom: 50px;
+}
