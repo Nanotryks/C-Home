@@ -123,7 +123,7 @@ if (!isset($_SESSION['pass'])) {
                 <li class="barre"><a href="compte.html">Compte</a></li>
         </ul>
 
-        <a href="inscription.html" target="_blank"><img class="help" type="button" src="../Image/help2.png" alt="Besoin d'aide ?" height="4%" width="auto"/>
+        <a href="Aide.html" target="_blank"><img class="help" type="button" src="../Image/help2.png" alt="Besoin d'aide ?" height="4%" width="auto"/>
         </a>
     </header>
 
