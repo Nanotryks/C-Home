@@ -40,13 +40,9 @@ if (!isset($_SESSION['pass'])) {
 
 <?php
 // Connexion à la base de données
-try {
-    $bdd = new PDO('mysql:host=localhost;dbname=chome2;charset=utf8', 'root', '');
-} catch (Exception $e) {
-    die('Erreur : ' . $e->getMessage());
-}
 
-$reponse = $bdd->query('SELECT Porte,Voie,Adresse,Code_Postal,Ville,Nombre_Piece,Nombre_Etage FROM maison');
+include('../Modele/Connexion.php');
+$reponse = $BDD->query('SELECT Porte,Voie,Adresse,Code_Postal,Ville,Nombre_Piece,Nombre_Etage FROM maison');
 ?>
 
 

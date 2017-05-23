@@ -42,40 +42,35 @@ if (!isset($_SESSION['pass'])) {
     <h1>Paramètres du compte </h1>
     <?php
     // Connexion à la base de données
-    try {
-        $bdd = new PDO('mysql:host=localhost;dbname=chome2;charset=utf8', 'root', '');
-    } catch (Exception $e) {
-        die('Erreur : ' . $e->getMessage());
-    }
-
-    $reponse = $bdd->query('SELECT nom, prenom, mail, mdp, numero_abonne, telephone FROM utilisateur ORDER BY IdUtilisateur DESC LIMIT 1 ');
+    include('../Modele/Connexion.php');
+    $reponse = $BDD->query('SELECT nom, prenom, mail, mdp, numero_abonne, telephone FROM utilisateur ORDER BY IdUtilisateur DESC LIMIT 1 ');
     $donnees = $reponse->fetch();
 
 
     ?>
     <form action="../Controleur/parametrescible.php" method="post">
         <p>
-            <label for="nom">Nom</label> : <br/>
+            <label for="nom">Nom</label><br/>
             <input type="text" name="nom" id="nom" value="<?php echo $donnees['nom']; ?>"/>
             <br/>
 
-            <label for="prenom">Prénom</label> : <br/>
+            <label for="prenom">Prénom</label><br/>
             <input type="text" name="prenom" id="prenom" value="<?php echo $donnees['prenom']; ?>"/>
             <br/>
 
-            <label for="mail">Adresse mail associée au compte</label> : <br/>
+            <label for="mail">Adresse mail associée au compte</label> <br/>
             <input type="email" name="mail" id="mail" value="<?php echo $donnees['mail']; ?>"/>
             <br/>
 
-            <label for="mdp">Nouveau mot de passe (12 caractères max.)</label> : <br/>
+            <label for="mdp">Nouveau mot de passe <br/> (12 caractères max)</label> <br/>
             <input type="password" name="mdp" id="mdp" maxlength="12" value="<?php echo $donnees['mdp']; ?>"/>
             <br/>
 
-            <label for="telephone">Numéro de téléphone</label> : <br/>
+            <label for="telephone">Numéro de téléphone</label> <br/>
             <input type="text" name="telephone" id="telephone" value="<?php echo $donnees['telephone']; ?>"/>
             <br/>
 
-            <label for="numero_abonne">Votre numéro abonné</label> : <br/>
+            <label for="numero_abonne">Votre numéro abonné</label><br/>
             <input type="text" name="numero_abonne" id="numero_abonne"
                    value="<?php echo $donnees['numero_abonne']; ?>"/>
             <br/>

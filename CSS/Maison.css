@@ -1,3 +1,7 @@
+html{
+    font: 1.1em sans-serif;
+}
+
 h1, p, form {
     text-align: center;
 }
@@ -10,13 +14,22 @@ h1, p, form {
     height: auto;
 }
 
-h1, form, .votre_maison{
-    color: white;
-    background-color: rgba(255, 0, 0, 0.5);
+h1{
+    color : white;
+    background-color: rgba(255,0,0,0.5);
     border-radius: 10px;
     margin-left: 35%;
     margin-right: 35%;
-    box-shadow: 6px 6px 0px silver;
+    border-style: groove;
+    border-color: white;
+}
+
+form, .votre_maison{
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    margin-left: 35%;
+    margin-right: 35%;
 
 }
 
