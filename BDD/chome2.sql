@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Dim 21 Mai 2017 à 14:50
+-- Généré le :  Mer 24 Mai 2017 à 07:40
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -33,21 +33,6 @@ CREATE TABLE `capteur` (
   `Valeur` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Contenu de la table `capteur`
---
-
-INSERT INTO `capteur` (`IdPiece`, `IdCapteur`, `Nom`, `Valeur`) VALUES
-(1, 1, 'Température', 20),
-(1, 2, 'Lumière', 100),
-(2, 3, 'Température', 25),
-(2, 4, 'Lumière', 105),
-(3, 5, 'Température', 30),
-(3, 6, 'Lumière', 110),
-(4, 7, 'Température', 15),
-(4, 8, 'Lumière', 90),
-(2, 11, 'babyphone', 0);
-
 -- --------------------------------------------------------
 
 --
@@ -55,6 +40,7 @@ INSERT INTO `capteur` (`IdPiece`, `IdCapteur`, `Nom`, `Valeur`) VALUES
 --
 
 CREATE TABLE `maison` (
+  `IdUtilisateur` int(255) NOT NULL,
   `IdMaison` int(255) NOT NULL,
   `Nom` varchar(255) NOT NULL,
   `Porte` int(255) NOT NULL,
@@ -65,14 +51,6 @@ CREATE TABLE `maison` (
   `Nombre_Piece` int(255) NOT NULL,
   `Nombre_Etage` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Contenu de la table `maison`
---
-
-INSERT INTO `maison` (`IdMaison`, `Nom`, `Porte`, `Voie`, `Adresse`, `Code_Postal`, `Ville`, `Nombre_Piece`, `Nombre_Etage`) VALUES
-(1, 'Maison1', 1, 'rue', 'bidon', 90000, 'Issy', 10, 2),
-(2, 'Maison2', 2, 'rue', 'bidon', 90000, 'Issy', 10, 2);
 
 -- --------------------------------------------------------
 
@@ -85,16 +63,6 @@ CREATE TABLE `piece` (
   `IdPiece` int(11) NOT NULL,
   `Nom` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Contenu de la table `piece`
---
-
-INSERT INTO `piece` (`IdMaison`, `IdPiece`, `Nom`) VALUES
-(1, 1, 'Salon'),
-(1, 2, 'Chambre'),
-(2, 3, 'Salon'),
-(2, 4, 'Cuisine');
 
 -- --------------------------------------------------------
 
@@ -137,8 +105,9 @@ INSERT INTO `utilisateur` (`IdUtilisateur`, `nom`, `prenom`, `mail`, `mdp`, `num
 (19, 'LO', 'CHEIKHOUNA', 'cheikhouna@cheikhouna.com', '90795a0ffaa8b88c0e250546d8439b', 'tata', 0),
 (20, 'LO', 'CHEIKHOUNA', 'cheikhouna@cheikhouna.com', '3105221c1c15399d170ef540e974ef4f37f84e93', 'tete', 0),
 (21, 'toto', 'tete', 'test@test.com', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', '123456789', 1234567),
-(22, 'Chome', 'G8C', 'G8c@chome.com', 'Chome', '0', 0),
-(23, 'Chome', 'Chome', 'Chome@Chome.com', '28df6ce1c4eb2a062b8553511431e54858c4880b', 'Chome', 0);
+(22, 'Chomes', 'G8C', 'G8c@chome.com', 'Chome', '0', 0),
+(23, 'Chomes', 'Chomeur', 'Chome@Chome.com', '28df6ce1c4eb2a062b8553511431e54858c4880b', 'Chome', 0),
+(24, 'dran', 'ben', 'Chome@Chome.com', '8cb2237d0679ca88db6464eac60da96345513964', '12345', 12345);
 
 --
 -- Index pour les tables exportées
@@ -155,7 +124,8 @@ ALTER TABLE `capteur`
 -- Index pour la table `maison`
 --
 ALTER TABLE `maison`
-  ADD PRIMARY KEY (`IdMaison`);
+  ADD PRIMARY KEY (`IdMaison`),
+  ADD KEY `IdUtilisateur` (`IdUtilisateur`);
 
 --
 -- Index pour la table `piece`
@@ -183,17 +153,17 @@ ALTER TABLE `capteur`
 -- AUTO_INCREMENT pour la table `maison`
 --
 ALTER TABLE `maison`
-  MODIFY `IdMaison` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `IdMaison` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT pour la table `piece`
 --
 ALTER TABLE `piece`
-  MODIFY `IdPiece` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `IdPiece` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `IdUtilisateur` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `IdUtilisateur` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 --
 -- Contraintes pour les tables exportées
 --
@@ -203,6 +173,12 @@ ALTER TABLE `utilisateur`
 --
 ALTER TABLE `capteur`
   ADD CONSTRAINT `capteur_ibfk_1` FOREIGN KEY (`IdPiece`) REFERENCES `piece` (`IdPiece`);
+
+--
+-- Contraintes pour la table `maison`
+--
+ALTER TABLE `maison`
+  ADD CONSTRAINT `maison_ibfk_1` FOREIGN KEY (`IdUtilisateur`) REFERENCES `utilisateur` (`IdUtilisateur`);
 
 --
 -- Contraintes pour la table `piece`
