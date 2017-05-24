@@ -12,6 +12,48 @@ if (!isset($_SESSION['pass'])) {
     <link rel="stylesheet" href="../CSS/Maison.css"/>
     <link rel="icon" type="ico" href="../Image/Logopic.ico"/>
     <title>Lieux de résidence</title>
+    <script>
+
+        function showUser(str)
+        {
+            if (str == "")
+            {
+                document.getElementById("votre_maison").innerHTML = "";
+                return;
+            }
+            if (window.XMLHttpRequest) {
+
+                xmlhttp= new XMLHttpRequest();
+            } else {
+
+                if (window.ActiveXObject)
+                    try {
+                        xmlhttp= new ActiveXObject("Msxml2.XMLHTTP");
+                    } catch (e) {
+                        try {
+                            xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+                        } catch (e) {
+                            return NULL;
+                        }
+                    }
+            }
+
+            xmlhttp.onreadystatechange = function ()
+            {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+                {
+                    document.getElementById("votre_maison").innerHTML = xmlhttp.responseText;
+
+                }
+            }
+
+            xmlhttp.open("GET", "../Controleur/Votre_Maison.php?q=" + str, true);
+
+            xmlhttp.send();
+
+
+        }
+    </script>
 </head>
 
 <body>
@@ -43,17 +85,17 @@ if (!isset($_SESSION['pass'])) {
     <?php
     // Connexion à la base de données
     include('../Modele/Connexion.php');
-    $reponse = $BDD->query('SELECT Porte,Voie,Adresse,Code_Postal,Ville,Nombre_Piece,Nombre_Etage FROM maison');
-    $reponse2 = $BDD->query('SELECT Porte,Voie,Adresse,Code_Postal,Ville,Nombre_Piece,Nombre_Etage FROM maison');
+    $reponse = $BDD->query('SELECT Nom,Porte,Voie,Adresse,Code_Postal,Ville,Nombre_Piece,Nombre_Etage FROM maison WHERE IdUtilisateur="'.$_SESSION['IdUtilisateur'].'"');
+    $reponse2 = $BDD->query('SELECT Porte,Voie,Adresse,Code_Postal,Ville,Nombre_Piece,Nombre_Etage FROM maison WHERE IdUtilisateur="'.$_SESSION['IdUtilisateur'].'"');
     ?>
 
 
     <h1>Lieux de résidence</h1>
     <form class="choix" method="post" action="../Controleur/maisoncible.php">
         <label for="choix_maison">Veuillez indiquer votre lieu de résidence actuel :</label><br/>
-        <select name="choix_maison" id="choix_maison">
+        <select name="choix_maison" id="choix_maison" onchange="showUser(this.value)">
             <?php while ($donnees = $reponse->fetch()) {
-                echo '<option value="maison1"' . $donnees['Porte'] . '">
+                echo '<option value=' . $donnees['Porte'] . '>
                     ' . $donnees['Porte'] .
                     ' ' .
                     $donnees['Voie'] .
@@ -82,12 +124,12 @@ if (!isset($_SESSION['pass'])) {
     </form>
 </div>
 <h1>Votre maison</h1>
-<p class="votre_maison">
+<div id="votre_maison">
     <?php $donnees2 = $reponse2->fetch();?>
     Nombre de pièces : <?php echo $donnees2['Nombre_Piece']?> </br>
 
     Nombre d'étages : <?php echo $donnees2['Nombre_Etage']?>
-</p>
+</div>
 </body>
 
 </html>
