@@ -8,9 +8,9 @@
 include '../Modele/Connexion.php';
 $maison = $_POST["Maison"];
 $id = intval($maison);
-echo $id;
+
 $piece =$_POST["Piece"];
-echo $piece;
+
 
 $BDD ->exec('INSERT INTO piece(IdMaison , Nom ) VALUES ("'.$id.'","'.$piece.'")');
 header('Location: ../Vue/NouvellePiece2.php');

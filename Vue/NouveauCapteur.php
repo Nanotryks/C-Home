@@ -136,10 +136,18 @@
                         ?>
         </select>
     </p>
-        <label>Type de capteur</label>
-        <br>
-        <input type="text" name="Capteur">
-    <br>
+    <p class="ListeCapteur">
+        <select name="Capteur">
+            <option selected="selected">Choississez</option>
+            <option name = "Température" value = "Température">Température</option>
+            <option name = "Fumée" value = "Fumée">Fumée</option>
+            <option name = "Lumière" value = "Lumière"name = "Lumière">Lumière</option>
+            <option name = "Porte" value = "Porte">Porte</option>
+            <option name = "Fenêtre" value = "Fenêtre">Fenêtre</option>
+            <option name = "Présence" value = "Présence">Présence</option>
+        </select>
+    </p>
+       <br>
     <input type="submit" value="Ajouter">
 </FORM>
 </div>
