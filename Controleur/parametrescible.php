@@ -14,6 +14,8 @@ if (isset($_POST['nom']) || isset($_POST['prenom']) || isset($_POST['mail']) || 
     $mail = $_POST['mail'];
     $mdp = $_POST['mdp'];
 
+// accès au programme d'encryptage et encryptage du mdp:
+
     include ('../Modele/encryptage.php');
     $mdp = encrypt($private_key,$mdp);
 

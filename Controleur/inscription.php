@@ -19,8 +19,11 @@ catch(Exception $e)
 
 // Insertion du message à l'aide d'une requête préparée
 $req = $bdd->prepare('INSERT INTO utilisateur (nom, prenom, mail, mdp, numero_abonne, telephone) VALUES(?, ?, ?, ?, ?, ?)');
+
+//encryptage du mot de passe
 include('../Modele/encryptage.php');
 $TexteCrypte = encrypt($private_key,$_POST['pass']);
+
 $req->execute(array(htmlspecialchars($_POST['nom']),htmlspecialchars($_POST['prenom']),htmlspecialchars($_POST['email']), htmlspecialchars(($TexteCrypte)),htmlspecialchars($_POST['user']),htmlspecialchars($_POST['telephone'])));
 
 

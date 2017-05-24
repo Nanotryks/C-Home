@@ -24,7 +24,7 @@ function encrypt($private_key, $str_to_crypt) {
     return base64_encode($new_str);
 }
 
-function decrypt($private_key, $str_to_decrypt) {
+/*function decrypt($private_key, $str_to_decrypt) {
     $private_key = md5($private_key);
     $letter = -1;
     $new_str = '';
@@ -43,5 +43,6 @@ function decrypt($private_key, $str_to_decrypt) {
     }
     return $new_str;
 }
+*/
 
 ?>

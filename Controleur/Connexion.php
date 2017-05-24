@@ -19,8 +19,11 @@ catch(Exception $e)
 // Insertion du message à l'aide d'une requête préparée
 
 $req = $bdd->prepare("SELECT * FROM utilisateur WHERE numero_abonne=? AND mdp=? ");
+
+//encryptage du mot de passe
 include('../Modele/encryptage.php');
 $TexteCrypte = encrypt($private_key,$_POST['pass']);
+
 $req->execute(array(htmlspecialchars($_POST['user']),htmlspecialchars(($TexteCrypte))));
 //$ret = $db->insecureQuery("SELECT * FROM table_test WHERE t1=".$db->quote($t1));
 $resultat = $req->fetch();
