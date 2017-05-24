@@ -2,7 +2,7 @@ html{
     font: 1.1em sans-serif;
 }
 
-h1, p, form {
+h1, p, form ,#votre_maison{
     text-align: center;
 }
 
@@ -24,14 +24,14 @@ h1{
     border-color: white;
 }
 
-form, .votre_maison{
+form, #votre_maison {
     color: black;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     margin-left: 35%;
     margin-right: 35%;
-
 }
+
 
 .addhouse {
     max-width: 15%;
