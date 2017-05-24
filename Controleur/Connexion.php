@@ -19,7 +19,9 @@ catch(Exception $e)
 // Insertion du message à l'aide d'une requête préparée
 
 $req = $bdd->prepare("SELECT * FROM utilisateur WHERE numero_abonne=? AND mdp=? ");
-$req->execute(array(htmlspecialchars($_POST['user']),htmlspecialchars(sha1($_POST['pass']))));
+include('../Modele/encryptage.php');
+$TexteCrypte = encrypt($private_key,$_POST['pass']);
+$req->execute(array(htmlspecialchars($_POST['user']),htmlspecialchars(($TexteCrypte))));
 //$ret = $db->insecureQuery("SELECT * FROM table_test WHERE t1=".$db->quote($t1));
 $resultat = $req->fetch();
 $rows = $req->rowCount();
@@ -28,7 +30,7 @@ if ($rows <=0)
     echo ', Mauvais identifiant ou mot de passe !';
     echo $rows;
     echo ', user '.$_POST['user'];
-    echo  'pass : '.sha1($_POST['pass']);
+    echo  'pass : '.($TexteCrypte);
 
 }
 else

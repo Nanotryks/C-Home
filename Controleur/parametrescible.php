@@ -13,6 +13,10 @@ if (isset($_POST['nom']) || isset($_POST['prenom']) || isset($_POST['mail']) || 
     $prenom = $_POST['prenom'];
     $mail = $_POST['mail'];
     $mdp = $_POST['mdp'];
+
+    include ('../Modele/encryptage.php');
+    $mdp = encrypt($private_key,$mdp);
+
     $telephone = $_POST['telephone'];
     $numero_abonne = $_POST['numero_abonne'];
     $req = $bdd->exec("UPDATE utilisateur SET nom = '" . $nom . "' WHERE nom = '" . $donnees['nom'] . "'");
