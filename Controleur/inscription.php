@@ -8,7 +8,7 @@
 // Connexion à la base de données
 try
 {
-    $dbn = 'mysql:dbname=chome;host=127.0.0.1';
+    $dbn = 'mysql:dbname=chome2;host=127.0.0.1';
 	$bdd = new PDO($dbn, $user_name,  $password );
 
 }
@@ -23,6 +23,6 @@ $req->execute(array(htmlspecialchars($_POST['nom']),htmlspecialchars($_POST['pre
 
 echo "Inscription Réussie";
 // Redirection du visiteur vers la page du index.php
-header('Location: index.php');
+header('Location: ../vue/index.php');
 ?><br/>
 <!--Cliquez <a href="index.php#contac">ici</a> pour retourner à la page d'accueil-->

@@ -20,23 +20,21 @@ catch(Exception $e)
 
 $req = $bdd->prepare("SELECT * FROM utilisateur WHERE numero_abonne=? AND mdp=? ");
 
-//encryptage du mot de passe
-include('../Modele/encryptage.php');
-$TexteCrypte = encrypt($private_key,$_POST['pass']);
 
-$req->execute(array(htmlspecialchars($_POST['user']),htmlspecialchars(($TexteCrypte))));
+$req->execute(array(htmlspecialchars($_POST['user']),htmlspecialchars(sha1($_POST['pass']))));
 //$ret = $db->insecureQuery("SELECT * FROM table_test WHERE t1=".$db->quote($t1));
 $resultat = $req->fetch();
 $rows = $req->rowCount();
+// si le mot de passe et l'identifiant ne correspondent pas
 if ($rows <=0)
 {
     echo ', Mauvais identifiant ou mot de passe !';
     echo $rows;
     echo ', user '.$_POST['user'];
-    echo  'pass : '.($TexteCrypte);
 
 }
 else
+    // sinon, on démarre la séssion
 {
     session_start();
     $_SESSION['IdUtilisateur']=$resultat['IdUtilisateur'];
