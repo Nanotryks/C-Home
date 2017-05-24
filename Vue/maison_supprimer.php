@@ -42,7 +42,7 @@ if (!isset($_SESSION['pass'])) {
 // Connexion à la base de données
 
 include('../Modele/Connexion.php');
-$reponse = $BDD->query('SELECT Porte,Voie,Adresse,Code_Postal,Ville,Nombre_Piece,Nombre_Etage FROM maison');
+$reponse = $BDD->query('SELECT Porte,Voie,Adresse,Code_Postal,Ville,Nombre_Piece,Nombre_Etage FROM maison WHERE IdUtilisateur="'.$_SESSION['IdUtilisateur'].'"');
 ?>
 
 

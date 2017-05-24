@@ -34,12 +34,13 @@ if ($rows <=0)
 else
 {
     session_start();
+    $_SESSION['IdUtilisateur']=$resultat['IdUtilisateur'];
     $_SESSION['telephone'] = $resultat['telephone'];
     $_SESSION['pass'] = $resultat['mdp'];
      $_SESSION['prenom'] = $resultat['prenom'];
     $_SESSION['nom'] = $resultat['nom'];
     $_SESSION['user'] = $resultat['numero_abonne'];
-    echo 'Bienvenue'." ".$_SESSION['prenom']." ". $_SESSION['nom'];
+    //echo 'Bienvenue'." ".$_SESSION['prenom']." ". $_SESSION['nom'];
     header ('location: ../Vue/C_Home.php');
 }
 

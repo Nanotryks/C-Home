@@ -43,7 +43,8 @@ if (!isset($_SESSION['pass'])) {
     <?php
     // Connexion à la base de données
     include('../Modele/Connexion.php');
-    $reponse = $BDD->query('SELECT nom, prenom, mail, mdp, numero_abonne, telephone FROM utilisateur ORDER BY IdUtilisateur DESC LIMIT 1 ');
+    $reponse = $BDD->query('SELECT nom, prenom, mail, mdp, numero_abonne, telephone FROM utilisateur WHERE IdUtilisateur="'.$_SESSION['IdUtilisateur'].'"');
+//    ORDER BY IdUtilisateur DESC LIMIT 1 ');
     $donnees = $reponse->fetch();
 
 

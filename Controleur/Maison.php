@@ -1,6 +1,7 @@
 <?php
 include '../Modele/Connexion.php';
-$reponse = $BDD->query('SELECT Nom,IdMaison FROM Maison');
+session_start();
+$reponse = $BDD->query('SELECT Nom,IdMaison FROM Maison WHERE IdUtilisateur="'.$_SESSION['IdUtilisateur'].'" ');
 $i=1;
 while($donnees = $reponse->fetch())
 {

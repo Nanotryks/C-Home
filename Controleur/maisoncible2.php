@@ -6,7 +6,7 @@ try {
     die('Erreur : ' . $e->getMessage());
 
 }
-$reponse = $bdd->query('SELECT IdMaison FROM maison WHERE Porte = "' . $_POST['test'] . '"');
+$reponse = $bdd->query('SELECT IdMaison FROM maison WHERE Porte = "' . $_POST['test'] . '" and IdUtilisateur="'.$_SESSION['IdUtilisateur'].'"');
 $id = 0;
 while ($donnees = $reponse->fetch()) {
     $Id = $donnees['IdMaison'];

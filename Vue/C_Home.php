@@ -49,11 +49,11 @@ exit();
 
                 if($BDD)
                 {
-                    echo 'Connecté';
+                    echo 'Connecté à votre maison';
                 }
                 else
                 {
-                    echo 'Déconnecté';
+                    echo 'Déconnecté de votre maison';
                 }?></p>
         </div>
     </div>
