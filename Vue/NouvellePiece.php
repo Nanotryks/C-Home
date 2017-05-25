@@ -1,3 +1,6 @@
+<?php
+include '../Controleur/start_session.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
