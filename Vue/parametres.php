@@ -64,7 +64,7 @@ if (!isset($_SESSION['pass'])) {
             <br/>
 
             <label for="mdp">Nouveau mot de passe <br/> (12 caractères max)</label> <br/>
-            <input type="password" name="mdp" id="mdp" maxlength="12" value="<?php echo $donnees['mdp']; ?>"/>
+            <input type="password" name="mdp" id="mdp" value="<?php echo $donnees['mdp']; ?>"/>
             <br/>
 
             <label for="telephone">Numéro de téléphone</label> <br/>
