@@ -6,7 +6,7 @@ try {
 } catch (Exception $e) {
     die('Erreur : ' . $e->getMessage());
 }
-
+///////
 $reponse = $bdd->query('SELECT nom, prenom, mail, mdp, telephone, numero_abonne FROM utilisateur ORDER BY IdUtilisateur DESC LIMIT 1 ');
 $donnees = $reponse->fetch();
 if (isset($_POST['nom']) || isset($_POST['prenom']) || isset($_POST['mail']) || isset($_POST['mdp']) || isset($_POST['telephone']) || isset($_POST['numero_abonne'])) {
