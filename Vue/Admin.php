@@ -10,6 +10,50 @@ include '../Controleur/start_session.php';
     <link rel="stylesheet" href="../CSS/Admin.css">
     <link rel="icon" href="../Image/Logopic.ico">
     <title>Section Administrateur</title>
+    <script>
+
+        function showUser(str)
+        {
+            if (str == "")
+            {
+                document.getElementById("Rechercher").innerHTML = "";
+                return;
+            }
+
+            if (window.XMLHttpRequest) {
+
+                xmlhttp= new XMLHttpRequest();
+            } else {
+
+                if (window.ActiveXObject)
+                    try {
+                        xmlhttp= new ActiveXObject("Msxml2.XMLHTTP");
+                    } catch (e) {
+                        try {
+                            xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+                        } catch (e) {
+                            return NULL;
+                        }
+                    }
+            }
+
+            xmlhttp.onreadystatechange = function ()
+            {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+                {
+
+                    document.getElementById("Rechercher").innerHTML = xmlhttp.responseText;
+
+                }
+            }
+
+            xmlhttp.open("GET", "../Controleur/SearchAdmin.php?q=" + str, true);
+
+            xmlhttp.send();
+
+
+        }
+        </script>
 </head>
 
 <body>
@@ -38,17 +82,16 @@ include '../Controleur/start_session.php';
     <div id="Moderate">
         <h2>Modérateur</h2>
 
-        <p>
-            Sélectionnez un utilisateur :
-            <SELECT name="User" size="1">
-                <OPTION>#1497
-                <OPTION>#1632
-                <OPTION>#1992
-                <OPTION>#0792
-                <OPTION>#3447
 
-            </SELECT>
-        </p>
+            <label>Identifiant du client : </label>
+            <input type="search" name="search" onchange="showUser(this.value)" maxlength="4" size="4">
+        <button type="button" value="Rechercher">Rechercher</button>
+
+
+        <div id="Rechercher">
+
+        </div>
+
 
     </div>
 </body>
