@@ -8,6 +8,15 @@ include '../Controleur/start_session.php';
     <link rel="stylesheet" href="../CSS/Parametres.css"/>
     <link rel="icon" type="ico" href="../Image\Logopic.ico"/>
     <title>Paramètres du compte</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+$("p.modif").toggle();
+    $("button").click(function(){
+        $("p.modif").toggle();
+    });
+});
+</script>
 </head>
 
 <body>
@@ -45,8 +54,12 @@ include '../Controleur/start_session.php';
 
 
     ?>
+    <p class="affichage">
+    <?php echo "Nom:"." ".$donnees['nom'].'<br>'."Prenom:"." ".$donnees['prenom'].'<br>'."Email:"." ".$donnees['mail'].'<br>'."Telephone: 0".$donnees['telephone'].'<br>'."Votre Numero abonné:"." ".$donnees['numero_abonne']; ?></p>
+    <button class="button">Modifier les Parametres</button>
     <form action="../Controleur/parametrescible.php" method="post">
-        <p>
+        
+        <p class="modif">
             <label for="nom">Nom</label><br/>
             <input type="text" name="nom" id="nom" value="<?php echo $donnees['nom']; ?>"/>
             <br/>
