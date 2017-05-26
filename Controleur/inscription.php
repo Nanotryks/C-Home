@@ -23,6 +23,6 @@ $req->execute(array(htmlspecialchars($_POST['nom']),htmlspecialchars($_POST['pre
 
 echo "Inscription Réussie";
 // Redirection du visiteur vers la page du index.php
-//header('Location: ../vue/index.php');
+header('Location: ../vue/index.php');
 ?><br/>
 <!--Cliquez <a href="index.php#contac">ici</a> pour retourner à la page d'accueil-->
