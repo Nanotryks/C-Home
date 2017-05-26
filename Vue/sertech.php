@@ -5,7 +5,7 @@ include '../Controleur/start_session.php';
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>Service technique</title>
+    <title>Service Technique</title>
     <link rel="stylesheet" href="../CSS/sertech.css"/>
     <link rel="icon" type="image/ico" href="Image\Logopic.ico"/>
 </head>
@@ -53,7 +53,7 @@ include '../Controleur/start_session.php';
             <br>
             <label>Détails du problème</label> <br/>
             <br>
-            <textarea name="expliquation" rows=5 cols=40>  </textarea><br/>
+            <textarea name="explication" rows=5 cols=40>  </textarea><br/>
             <br>
             <input type="submit" value="Envoyer"/>
         </p>
