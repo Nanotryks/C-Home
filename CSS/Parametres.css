@@ -2,32 +2,33 @@ html{
     font: 1.1em sans-serif;
 }
 
-h1, p {
+h1, p, .affichage {
     text-align: center;
 }
 .button {
-    background-color: red;
-    border: none;
+    background-color: rgba(255,0,0,0.5);
     color: white;
     padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
     font-size: 16px;
-    margin: 4px 550px;
+    border-radius: 10px;
+    margin-left: 41.5%;
+    margin-right: 35%;
+    text-align: center;
+    border-style: groove;
+    border-color: white;
     cursor: pointer;
 }
 .affichage{
-     background-color: transparent;
+    background-color: rgba(255,255,255,0.5);
     border: none;
     color: white;
     padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
     font-size: 16px;
-    margin: 4px 550px;
-    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 35%;
+    margin-right: 35%;
+    border-style: groove;
+    border-color: white;
 }
 .logo {
     display: block;
