@@ -279,3 +279,11 @@ h2 {
     margin-right: -32px;
     background-attachment: fixed;
 }
+
+#droit{
+    background: white;
+    text-align: center;
+    padding: 50px;
+    margin-top: 80px;
+    color: rgb(255, 20, 0);
+}

@@ -14,4 +14,12 @@ if(isset($_GET["q"]))
     {
         echo "<br><br>"."Nom : ".$donnees["nom"]."<br></br> "."Prénom : ".$donnees["prenom"]."<br></br> "."Mail : ".$donnees["mail"];
     }
+
+    $id=$_GET["q"];
+    $reponse = $BDD->query('SELECT IdMaison, Porte, Voie, Adresse, Code_Postal, Ville FROM maison WHERE IdUtilisateur="'.$id.'"');
+    while($donnees = $reponse->fetch())
+    {
+        echo "<br><br>"."Id Maison : ".$donnees["IdMaison"]."<br></br> "."Adresse : ".$donnees["Porte"]." ".$donnees["Voie"]." ".$donnees["Adresse"]
+        ." ".$donnees["Ville"]." ".$donnees["Code_Postal"];
+    }
 }

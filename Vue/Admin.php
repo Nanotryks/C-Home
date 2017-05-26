@@ -92,10 +92,14 @@ include '../Controleur/start_session.php';
 
         </div>
 
+        <div id="capteurs">
+
+        </div>
+
 
     </div>
 </body>
 <foot>
-    <p class="droit">All rigth</p>
+    <p id="droit"><a href="ConditionUtili.html">Conditions générales d'utilisatation</a></p>
 </foot>
 </html>
