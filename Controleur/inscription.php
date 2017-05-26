@@ -18,11 +18,11 @@ catch(Exception $e)
 }
 
 // Insertion du message à l'aide d'une requête préparée
-$req = $bdd->prepare('INSERT INTO utilisateur (nom, prenom, mail, mdp, numero_abonne, telephone) VALUES(?, ?, ?, ?, ?, ?)');
-$req->execute(array(htmlspecialchars($_POST['nom']),htmlspecialchars($_POST['prenom']),htmlspecialchars($_POST['email']), htmlspecialchars(sha1($_POST['pass'])),htmlspecialchars($_POST['user']),htmlspecialchars($_POST['telephone'])));
+$req = $bdd->prepare('INSERT INTO utilisateur (nom, prenom, mail, mdp, numero_abonne, telephone,Admin) VALUES(?, ?, ?, ?, ?, ?,?)');
+$req->execute(array(htmlspecialchars($_POST['nom']),htmlspecialchars($_POST['prenom']),htmlspecialchars($_POST['email']), htmlspecialchars(sha1($_POST['pass'])),htmlspecialchars($_POST['user']),htmlspecialchars($_POST['telephone']),'1'));
 
 echo "Inscription Réussie";
 // Redirection du visiteur vers la page du index.php
-header('Location: ../vue/index.php');
+//header('Location: ../vue/index.php');
 ?><br/>
 <!--Cliquez <a href="index.php#contac">ici</a> pour retourner à la page d'accueil-->

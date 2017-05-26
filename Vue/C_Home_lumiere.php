@@ -121,29 +121,6 @@ include '../Controleur/start_session.php';
         <a href="Aide.html" target="_blank"><img class="help" type="button" src="../Image/help2.png" alt="Besoin d'aide ?" height="4%" width="auto"/>
         </a>
     </header>
-
-    <FORM id="maisons">
-        <p>
-            <img class="maison" src="../Image/Maison.png">
-        </p>
-
-        <p>
-            <SELECT name="Maison" size="1" onchange="showUser(this.value)">
-                <option selected="selected" value="">Choisissez</option>
-                <?php
-                include "../Controleur/Maison.php";
-                ?>
-            </SELECT>
-        </p>
-        <p>
-            <select id="Piece" name="Piece" size="1" onchange="showUser2(this.value)">
-                <!--<option selected="selected" value="">Choisissez</option>-->
-                <?php
-                include '../Controleur/Piece.php'
-                ?>
-            </select>
-        </p>
-        </FORM>
     </div>
 
     <div id="backmenu">
@@ -154,6 +131,12 @@ include '../Controleur/start_session.php';
                 <li class="active2"><a href="C_Home_temperature.php"> Température </a></li>
                 <li class="active3"><a href="C_home_ouverture.php"> Etat des ouvertures </a></li>
             </ul>
+            <SELECT name="Maison" size="1" onchange="showUser(this.value)">
+                <option selected="selected" value="">Choisissez</option>
+                <?php
+                include "../Controleur/Maison.php";
+                ?>
+            </SELECT>
             <div id="Capteur">
                 <?php
                 include '../Controleur/Capteur.php';
