@@ -3,6 +3,8 @@ body{
 	color:#ffffff;
 	background:white;
 	font:600 16px/18px 'Open Sans',sans-serif;
+    background-image: url(../Image/int3.jpg);
+	background-size: 100% ;
 }
 *,:after,:before{box-sizing:border-box}
 .clearfix:after,.clearfix:before{content:'';display:table}
@@ -172,9 +174,4 @@ a{color:inherit;text-decoration:none}
 }
 .foot-lnk{
 	text-align:center;
-}
-
-body{
-	background-image: url(../Image/int3.jpg);
-	background-size: 100% ;
 }
