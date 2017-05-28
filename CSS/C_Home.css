@@ -3,6 +3,36 @@ html{
     font: 1.1em sans-serif;
 }
 
+.retour,.avancer {
+    background: #ff0000;
+    background-image: -webkit-linear-gradient(top, #ff0000, #d64949);
+    background-image: -moz-linear-gradient(top, #ff0000, #d64949);
+    background-image: -ms-linear-gradient(top, #ff0000, #d64949);
+    background-image: -o-linear-gradient(top, #ff0000, #d64949);
+    background-image: linear-gradient(to bottom, #ff0000, #d64949);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    -webkit-box-shadow: 7px 7px 3px #6e646e;
+    -moz-box-shadow: 7px 7px 3px #6e646e;
+    box-shadow: 7px 7px 3px #6e646e;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 30px;
+    padding: 0px 16px 8px 16px;
+    text-decoration: none;
+}
+
+.retour:hover,.avancer:hover{
+    background: #ff0000;
+    background-image: -webkit-linear-gradient(top, #ff0000, #000000);
+    background-image: -moz-linear-gradient(top, #ff0000, #000000);
+    background-image: -ms-linear-gradient(top, #ff0000, #000000);
+    background-image: -o-linear-gradient(top, #ff0000, #000000);
+    background-image: linear-gradient(to bottom, #ff0000, #000000);
+    text-decoration: none;
+}
+
 .top
 {
     text-align: end;

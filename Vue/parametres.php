@@ -21,6 +21,8 @@ $("p.modif").toggle();
 
 <body>
 <header>
+    <a class="retour" href="javascript:history.go(-1)">⇦</a>
+    <a class="avancer" href="javascript:history.go(+1)">⇨</a>
     <nav class="top">
         <div><a href="../Controleur/logout.php"> <input type="button" value="Déconnexion"></a>
             Langue :
