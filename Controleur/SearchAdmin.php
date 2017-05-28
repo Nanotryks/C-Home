@@ -12,7 +12,7 @@ if(isset($_GET["q"]))
     $reponse = $BDD->query('SELECT nom, prenom, mail, telephone, numero_abonne FROM utilisateur WHERE IdUtilisateur="'.$id.'"');
     while($donnees = $reponse->fetch())
     {
-        echo "<br><br>"."Nom : ".$donnees["nom"]."<br></br> "."Prénom : ".$donnees["prenom"]."<br></br> "."Mail : ".$donnees["mail"];
+        echo "<br><br>"."Nom : ".$donnees["nom"]."<br></br> "."Prénom : ".$donnees["prenom"]."<br></br> "."Mail : ".$donnees["mail"]."<br></br> "."Numéro Abonné : ".$donnees["numero_abonne"];
     }
 
     $id=$_GET["q"];

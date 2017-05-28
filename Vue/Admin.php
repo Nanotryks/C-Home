@@ -12,8 +12,9 @@ include '../Controleur/start_session.php';
     <title>Section Administrateur</title>
     <script>
 
-        function showUser(str)
+        function showUser(s)
         {
+            var str = s[s.selectedIndex].id;
             if (str == "")
             {
                 document.getElementById("Rechercher").innerHTML = "";
@@ -73,6 +74,7 @@ include '../Controleur/start_session.php';
         <li class="barre"><a href="GererVotreMaison.php">Gérez votre maison</a></li>
         <li class="barre"><a href="CodeStats.html">Statistiques</a></li>
         <li class="barre"><a href="compte.html">Compte</a></li>
+    
     </ul>
 
     <a href="Aide.html" target="_blank"><img class="help" type="button" src="../Image/help2.png" alt="Besoin d'aide ?" height="4%" width="auto"/>
@@ -84,8 +86,24 @@ include '../Controleur/start_session.php';
 
 
             <label>Identifiant du client : </label>
-            <input type="search" name="search" onchange="showUser(this.value)" maxlength="4" size="4">
-        <button type="button" value="Rechercher">Rechercher</button>
+        <!--    <input type="search" name="search" onchange="showUser(this.value)" maxlength="4" size="4">
+        <button type="button" value="Rechercher">Rechercher</button> -->
+        <?php
+            mysql_connect("localhost", "root","") or die(mysql_error());
+            mysql_select_db("chome2") or die(mysql_error());
+
+            $query = "SELECT IdUtilisateur, nom, prenom, mail, telephone, numero_abonne FROM utilisateur ORDER BY IdUtilisateur";
+            $result = mysql_query($query) or die(mysql_error()."[".$query."]");
+            ?>
+
+            <select name="categories" onchange="showUser(this)">
+        <?php 
+            while ($row = mysql_fetch_array($result))
+            {
+                echo "<option id='".$row['IdUtilisateur']."' value='".$row['path']."'>".$row['prenom']." ".$row['nom']."</option>";
+            }
+            ?>        
+            </select>
 
 
         <div id="Rechercher">
