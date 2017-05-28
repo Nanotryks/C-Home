@@ -89,16 +89,16 @@ include '../Controleur/start_session.php';
         <!--    <input type="search" name="search" onchange="showUser(this.value)" maxlength="4" size="4">
         <button type="button" value="Rechercher">Rechercher</button> -->
         <?php
-            mysql_connect("localhost", "root","") or die(mysql_error());
-            mysql_select_db("chome2") or die(mysql_error());
+            //mysql_connect("localhost", "root","") or die(mysql_error());
+            //mysql_select_db("chome2") or die(mysql_error());
+            include "../Modele/Connexion.php";
 
-            $query = "SELECT IdUtilisateur, nom, prenom, mail, telephone, numero_abonne FROM utilisateur ORDER BY IdUtilisateur";
-            $result = mysql_query($query) or die(mysql_error()."[".$query."]");
+            $query =$BDD->query("SELECT IdUtilisateur, nom, prenom, mail, telephone, numero_abonne FROM utilisateur ORDER BY IdUtilisateur");
             ?>
 
             <select name="categories" onchange="showUser(this)">
         <?php 
-            while ($row = mysql_fetch_array($result))
+            while ($row = $query->fetch())
             {
                 echo "<option id='".$row['IdUtilisateur']."' value='".$row['path']."'>".$row['prenom']." ".$row['nom']."</option>";
             }
