@@ -44,7 +44,15 @@ else
     $_SESSION['nom'] = $resultat['nom'];
     $_SESSION['user'] = $resultat['numero_abonne'];
     //echo 'Bienvenue'." ".$_SESSION['prenom']." ". $_SESSION['nom'];
-    header ('location: ../Vue/C_Home.php');
+    if($resultat['Admin']==1)
+    {
+        header ('location: ../Vue/Admin.php');
+    }
+    else
+    {
+        header ('location: ../Vue/C_Home.php');
+    }
+
 }
 
 ?><br/>
