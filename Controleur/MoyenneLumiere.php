@@ -21,4 +21,4 @@ while($donnees = $reponse->fetch())
 }
 
 $moyenne = $table/$i;
-echo "La temperature moyenne de votre maison est ".floor($moyenne)." Lux";
+echo "La lumière moyenne de votre maison est ".floor($moyenne)." Lux";
