@@ -12,7 +12,7 @@ $table=0;
 $i=0;
 while($donnees = $reponse->fetch())
 {
-    $reponse2=$BDD->query('SELECT Valeur FROM capteur WHERE IdPiece="'.$donnees['IdPiece'].'" and Nom="Température" ');
+    $reponse2=$BDD->query('SELECT Valeur FROM capteur WHERE IdPiece="'.$donnees['IdPiece'].'" and Nom="Lumière" ');
     while($donnees2 = $reponse2->fetch())
     {
     $table = $table + $donnees2['Valeur'];
@@ -21,4 +21,4 @@ while($donnees = $reponse->fetch())
 }
 
 $moyenne = $table/$i;
-echo "La temperature moyenne de votre maison est ".floor($moyenne)." °C";
+echo "La temperature moyenne de votre maison est ".floor($moyenne)." Lux";

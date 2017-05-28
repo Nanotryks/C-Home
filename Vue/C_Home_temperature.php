@@ -10,50 +10,7 @@ include '../Controleur/start_session.php';
     <link rel="icon" href="../Image/Logopic.ico">
     <title>C-Home / Acceuil</title>
     <script>
-
         function showUser(str)
-        {
-            if (str == "")
-            {
-                document.getElementById("Piece").innerHTML = "";
-                return;
-            }
-
-            if (window.XMLHttpRequest) {
-
-                xmlhttp= new XMLHttpRequest();
-            } else {
-
-                if (window.ActiveXObject)
-                    try {
-                        xmlhttp= new ActiveXObject("Msxml2.XMLHTTP");
-                    } catch (e) {
-                        try {
-                            xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
-                        } catch (e) {
-                            return NULL;
-                        }
-                    }
-            }
-
-            xmlhttp.onreadystatechange = function ()
-            {
-                if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
-                {
-
-                    document.getElementById("Piece").innerHTML = xmlhttp.responseText;
-
-                }
-            }
-
-            xmlhttp.open("GET", "../Controleur/Piece.php?q=" + str, true);
-
-            xmlhttp.send();
-
-
-        }
-
-        function showUser2(str)
         {
             if (str == "")
             {
@@ -88,7 +45,7 @@ include '../Controleur/start_session.php';
                 }
             }
 
-            xmlhttp.open("GET", "../Controleur/Capteur.php?q=" + str, true);
+            xmlhttp.open("GET", "../Controleur/MoyenneTemperature.php?q=" + str, true);
 
             xmlhttp.send();
 
@@ -121,31 +78,6 @@ include '../Controleur/start_session.php';
         <a href="Aide.html" target="_blank"><img class="help" type="button" src="../Image/help2.png" alt="Besoin d'aide ?" height="4%" width="auto"/>
         </a>
     </header>
-
-    <FORM id="maisons">
-        <p>
-            <img class="maison" src="../Image/Maison.png">
-        </p>
-
-        <p>
-            <SELECT name="Maison" size="1" onchange="showUser(this.value)">
-                <option selected="selected" value="">Choisissez</option>
-                <?php
-                include "../Controleur/Maison.php";
-                ?>
-            </SELECT>
-        </p>
-        <p>
-            <select id="Piece" name="Piece" size="1" onchange="showUser2(this.value)">
-                <!--<option selected="selected" value="">Choisissez</option>-->
-                <?php
-                include '../Controleur/Piece.php'
-                ?>
-            </select>
-        </p>
-    </FORM>
-    </div>
-
     <div id="backmenu">
         <div id="menu">
             <ul id="onglets">
@@ -154,10 +86,16 @@ include '../Controleur/start_session.php';
                 <li class="active2"><a href="C_Home_temperature.php"> Température </a></li>
                 <li class="active3"><a href="C_home_ouverture.php"> Etat des ouvertures </a></li>
             </ul>
-            <div id="Capteur">
+            <SELECT name="Maison" size="1" onchange="showUser(this.value)">
+                <option selected="selected" value="">Choisissez</option>
                 <?php
-                include '../Controleur/Capteur.php';
+                include "../Controleur/Maison.php";
                 ?>
+            </SELECT>
+            <br>
+            <br>
+            <div id="Capteur">
+
             </div>
         </div>
     </div>
