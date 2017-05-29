@@ -13,35 +13,31 @@ include '../Controleur/start_session.php';
     <link rel="icon" href="../Image/Logopic.ico">
     <title>Section Administrateur</title>
     <script>
-        function showUser(str)
-        {
-            if (str == "")
-            {
+        function showUser(str) {
+            if (str == "") {
                 document.getElementById("Rechercher").innerHTML = "";
                 return;
             }
 
             if (window.XMLHttpRequest) {
 
-                xmlhttp= new XMLHttpRequest();
+                xmlhttp = new XMLHttpRequest();
             } else {
 
                 if (window.ActiveXObject)
                     try {
-                        xmlhttp= new ActiveXObject("Msxml2.XMLHTTP");
+                        xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
                     } catch (e) {
                         try {
-                            xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+                            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
                         } catch (e) {
                             return NULL;
                         }
                     }
             }
 
-            xmlhttp.onreadystatechange = function ()
-            {
-                if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
-                {
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 
                     document.getElementById("Rechercher").innerHTML = xmlhttp.responseText;
 
@@ -55,7 +51,7 @@ include '../Controleur/start_session.php';
 
         }
 
-        </script>
+    </script>
 </head>
 
 <body>
@@ -75,48 +71,55 @@ include '../Controleur/start_session.php';
         <li class="barre"><a href="AdminCapteurs.php">Capteurs</a></li>
         <li class="barre"><a href="AdminStats.php">Statistiques</a></li>
         <li class="barre"><a href="compte.html">Compte</a></li>
-    
+
     </ul>
 
-    <a href="Aide.html" target="_blank"><img class="help" type="button" src="../Image/help2.png" alt="Besoin d'aide ?" height="4%" width="auto"/>
+    <a href="Aide.html" target="_blank"><img class="help" type="button" src="../Image/help2.png" alt="Besoin d'aide ?"
+                                             height="4%" width="auto"/>
     </a>
 </header>
 
-    <div id="Moderate">
-        <h2>Modérateur</h2>
+<div id="Moderate">
+    <h2>Modérateur</h2>
 
 
-            <label>Identifiant du client : </label>
-        <input type="search" name="search" onchange="showUser(this.value)" maxlength="4" size="4">
-        <button type="button" value="Rechercher">Rechercher</button>
-<!--        --><?php
-//
-//            include "../Modele/Connexion.php";
-//
-//            $query =$BDD->query("SELECT IdUtilisateur, nom, prenom, mail, telephone, numero_abonne FROM utilisateur ORDER BY IdUtilisateur");
-//            ?>
-<!---->
-<!--            <select name="categories" onchange="showUser(this)">-->
-<!--        --><?php //
-//            while ($row = $query->fetch())
-//            {
-//                echo "<option id='".$row['IdUtilisateur']."' value='".$row['path']."'>".$row['prenom']." ".$row['nom']."</option>";
-//            }
-//            ?><!--        -->
-<!--            </select>-->
+    <label>Identifiant du client : </label>
+    <input type="search" name="search" onchange="showUser(this.value)" maxlength="4" size="4">
+    <button type="button" value="Rechercher">Rechercher</button>
+    <!--        --><?php
+    //
+    //            include "../Modele/Connexion.php";
+    //
+    //            $query =$BDD->query("SELECT IdUtilisateur, nom, prenom, mail, telephone, numero_abonne FROM utilisateur ORDER BY IdUtilisateur");
+    //            ?>
+    <!---->
+    <!--            <select name="categories" onchange="showUser(this)">-->
+    <!--        --><?php //
+    //            while ($row = $query->fetch())
+    //            {
+    //                echo "<option id='".$row['IdUtilisateur']."' value='".$row['path']."'>".$row['prenom']." ".$row['nom']."</option>";
+    //            }
+    //            ?><!--        -->
+    <!--            </select>-->
 
 
-        <div id="Rechercher">
-
-        </div>
-
-        <div id="capteurs">
-
-        </div>
-
+    <div id="Rechercher">
 
     </div>
+
+    <div id="capteurs">
+
+    </div>
+
+
+</div>
+
+<div id="util">
+    <h2>util</h2>
+</div>
 </body>
+
+
 <foot>
     <p id="droit"><a href="ConditionUtili.php">Conditions générales d'utilisatation</a></p>
 </foot>

@@ -3,7 +3,6 @@ include '../Controleur/start_session.php';
 ?>
 
 
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -13,35 +12,31 @@ include '../Controleur/start_session.php';
     <link rel="icon" href="../Image/Logopic.ico">
     <title>Section Administrateur</title>
     <script>
-        function showUser(str)
-        {
-            if (str == "")
-            {
+        function showUser(str) {
+            if (str == "") {
                 document.getElementById("Piece").innerHTML = "";
                 return;
             }
 
             if (window.XMLHttpRequest) {
 
-                xmlhttp= new XMLHttpRequest();
+                xmlhttp = new XMLHttpRequest();
             } else {
 
                 if (window.ActiveXObject)
                     try {
-                        xmlhttp= new ActiveXObject("Msxml2.XMLHTTP");
+                        xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
                     } catch (e) {
                         try {
-                            xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+                            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
                         } catch (e) {
                             return NULL;
                         }
                     }
             }
 
-            xmlhttp.onreadystatechange = function ()
-            {
-                if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
-                {
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 
                     document.getElementById("Piece").innerHTML = xmlhttp.responseText;
 
@@ -55,35 +50,31 @@ include '../Controleur/start_session.php';
 
         }
 
-        function showUser2(str)
-        {
-            if (str == "")
-            {
+        function showUser2(str) {
+            if (str == "") {
                 document.getElementById("Capteur").innerHTML = "";
                 return;
             }
 
             if (window.XMLHttpRequest) {
 
-                xmlhttp= new XMLHttpRequest();
+                xmlhttp = new XMLHttpRequest();
             } else {
 
                 if (window.ActiveXObject)
                     try {
-                        xmlhttp= new ActiveXObject("Msxml2.XMLHTTP");
+                        xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
                     } catch (e) {
                         try {
-                            xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+                            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
                         } catch (e) {
                             return NULL;
                         }
                     }
             }
 
-            xmlhttp.onreadystatechange = function ()
-            {
-                if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
-                {
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 
                     document.getElementById("Capteur").innerHTML = xmlhttp.responseText;
 
@@ -96,35 +87,31 @@ include '../Controleur/start_session.php';
 
 
         }
-        function showUser3(str)
-        {
-            if (str == "")
-            {
+        function showUser3(str) {
+            if (str == "") {
                 document.getElementById("Maison").innerHTML = "";
                 return;
             }
 
             if (window.XMLHttpRequest) {
 
-                xmlhttp= new XMLHttpRequest();
+                xmlhttp = new XMLHttpRequest();
             } else {
 
                 if (window.ActiveXObject)
                     try {
-                        xmlhttp= new ActiveXObject("Msxml2.XMLHTTP");
+                        xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
                     } catch (e) {
                         try {
-                            xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+                            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
                         } catch (e) {
                             return NULL;
                         }
                     }
             }
 
-            xmlhttp.onreadystatechange = function ()
-            {
-                if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
-                {
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 
                     document.getElementById("Maison").innerHTML = xmlhttp.responseText;
 
@@ -161,7 +148,8 @@ include '../Controleur/start_session.php';
 
     </ul>
 
-    <a href="Aide.html" target="_blank"><img class="help" type="button" src="../Image/help2.png" alt="Besoin d'aide ?" height="4%" width="auto"/>
+    <a href="Aide.html" target="_blank"><img class="help" type="button" src="../Image/help2.png" alt="Besoin d'aide ?"
+                                             height="4%" width="auto"/>
     </a>
 </header>
 
@@ -172,7 +160,7 @@ include '../Controleur/start_session.php';
     <label>Identifiant du client : </label>
     <input type="search" name="search" onchange="showUser3(this.value)" maxlength="4" size="4">
     <button type="button" value="Rechercher">Rechercher</button>
-<br><br>
+    <br><br>
     <div id="Maison">
         <br>
     </div>
@@ -187,8 +175,9 @@ include '../Controleur/start_session.php';
     </div>
 
 
-
 </div>
+
+
 </body>
 <foot>
     <p id="droit"><a href="ConditionUtili.html">Conditions générales d'utilisatation</a></p>
