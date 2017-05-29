@@ -73,6 +73,11 @@ APP G8C ISEP
 					<label for="pass" class="label">Telephone</label>
 					<input id="pass" name="telephone" type="text" class="input">
 				</div>
+                <div class="group">
+                    <input id="check" type="checkbox" class="check" checked>
+					<label for="check">
+                        <span class="icon"></span> Accepter les conditions générales d'utilisation</label>
+                    </div>
 				<div class="group">
 					<input type="submit" class="bouton" value="s'inscrire">
 				</div>
