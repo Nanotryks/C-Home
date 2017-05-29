@@ -66,7 +66,7 @@ include '../Controleur/start_session.php';
         <li class="barre"><a href="Admin.php">Modérateur</a></li>
         <li class="barre"><a href="AdminCapteurs.php">Capteurs</a></li>
         <li class="barre"><a href="AdminStats.php">Statistiques</a></li>
-        <li class="barre"><a href="compte.html">Compte</a></li>
+        <li class="barre"><a href="ParametresAdmin.php">Paramètres</a></li>
 
     </ul>
 
