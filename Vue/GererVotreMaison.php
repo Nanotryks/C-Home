@@ -106,14 +106,10 @@ include '../Controleur/start_session.php';
 <header>
     <a class="retour" href="javascript:history.go(-1)">⇦</a>
     <a class="avancer" href="javascript:history.go(+1)">⇨</a>
-    <nav class="top">
-        <div><a href="../Controleur/logout.php"> <input type="button" value="Déconnexion"></a>
-            Langue :
-            <SELECT name="Langue" size="1">
-                <OPTION>Français</OPTION>
-                <OPTION>English</OPTION>
-            </SELECT>
-        </div>
+    <nav>
+        <a href="../Controleur/logout.php" class="top">
+            Déconnexion
+        </a>
     </nav>
     <center><img class="image" src="../Image/ban.png"></center><!-- width="300" height="500"-->
     <ul class="bar">

@@ -1,12 +1,17 @@
 html{
     font: 1.1em sans-serif;
+    color:black;
+    background-image:url(../Image/Maison.jpg);
+    background-attachment:fixed;
+    background-repeat:no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
 }
 
-h1, p, .affichage {
-    text-align: center;
-}
-
-.retour,.avancer {
+.retour{
     background: #ff0000;
     background-image: -webkit-linear-gradient(top, #ff0000, #d64949);
     background-image: -moz-linear-gradient(top, #ff0000, #d64949);
@@ -21,12 +26,40 @@ h1, p, .affichage {
     box-shadow: 7px 7px 3px #6e646e;
     font-family: Arial;
     color: #ffffff;
-    font-size: 30px;
-    padding: 0px 16px 8px 16px;
+    font-size: 40px;
+    padding: 0px 12px 5px 12px;
     text-decoration: none;
+    position:fixed;
+    padding-top: 5%;
+    margin-top: -5%;
+
 }
 
-.retour:hover,.avancer:hover{
+.avancer{
+    background: #ff0000;
+    background-image: -webkit-linear-gradient(top, #ff0000, #d64949);
+    background-image: -moz-linear-gradient(top, #ff0000, #d64949);
+    background-image: -ms-linear-gradient(top, #ff0000, #d64949);
+    background-image: -o-linear-gradient(top, #ff0000, #d64949);
+    background-image: linear-gradient(to bottom, #ff0000, #d64949);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    -webkit-box-shadow: 7px 7px 3px #6e646e;
+    -moz-box-shadow: 7px 7px 3px #6e646e;
+    box-shadow: 7px 7px 3px #6e646e;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 40px;
+    padding: 0px 12px 5px 12px;
+    text-decoration: none;
+    position:fixed;
+    margin-left:4.8%;
+    padding-top: 5%;
+    margin-top: -5%;
+}
+
+.retour:hover,.avancer:hover, .top:hover{
     background: #ff0000;
     background-image: -webkit-linear-gradient(top, #ff0000, #000000);
     background-image: -moz-linear-gradient(top, #ff0000, #000000);
@@ -34,6 +67,37 @@ h1, p, .affichage {
     background-image: -o-linear-gradient(top, #ff0000, #000000);
     background-image: linear-gradient(to bottom, #ff0000, #000000);
     text-decoration: none;
+}
+
+.top{
+    position:fixed;
+    right:10px;
+    top:5px;
+    background: #ff0000;
+    background-image: -webkit-linear-gradient(top, #ff0000, #d64949);
+    background-image: -moz-linear-gradient(top, #ff0000, #d64949);
+    background-image: -ms-linear-gradient(top, #ff0000, #d64949);
+    background-image: -o-linear-gradient(top, #ff0000, #d64949);
+    background-image: linear-gradient(to bottom, #ff0000, #d64949);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    -webkit-box-shadow: 7px 7px 3px #6e646e;
+    -moz-box-shadow: 7px 7px 3px #6e646e;
+    box-shadow: 7px 7px 3px #6e646e;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 0px 12px 5px 12px;
+    text-decoration: none;
+    position:fixed;
+    padding-top: 5%;
+    margin-top: -3%;
+    margin-right:1%;
+}
+
+h1, p, .affichage {
+    text-align: center;
 }
 
 .button {
@@ -106,14 +170,6 @@ form
     background: white;
 }
 
-body {
-    color: black;
-    background-color: white;
-    background-image: url(../Image/Maison.jpg);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center top;
-}
 
 .ban {
     text-align: center;
