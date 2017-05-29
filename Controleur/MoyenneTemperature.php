@@ -19,6 +19,10 @@ while($donnees = $reponse->fetch())
     $i++;
     }
 }
-
-$moyenne = $table/$i;
-echo "La temperature moyenne de votre maison est ".floor($moyenne)." °C";
+if($i!=0) {
+    $moyenne = $table/$i;
+    echo "La temperature moyenne de votre maison est ".floor($moyenne)." °C";
+}
+else{
+    echo "Vous n'avez pas de capteur de température";
+}
