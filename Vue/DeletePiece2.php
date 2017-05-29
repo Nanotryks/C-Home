@@ -6,6 +6,7 @@ include '../Controleur/start_session.php';
 <head>
     <meta charset="UTF-8">
     <title>Supprimer un capteur</title>
+    <link rel="stylesheet" href="../CSS/design_global.css" />
     <link rel="stylesheet" href="../CSS/GererVotreMaison.css">
     <link rel="icon" type="image/ico" href="../Image\Logopic.ico " />
     <script>

@@ -6,7 +6,9 @@ include '../Controleur/start_session.php';
 <head>
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="../CSS/Maison.css"/>
+    <link rel="stylesheet" href="../CSS/design_global.css" />
     <link rel="icon" type="ico" href="../Image/Logopic.ico"/>
+
     <title>Lieux de résidence</title>
     <script>
 

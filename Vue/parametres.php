@@ -6,6 +6,7 @@ include '../Controleur/start_session.php';
 <head>
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="../CSS/Parametres.css"/>
+    <link rel="stylesheet" href="../CSS/design_global.css" />
     <link rel="icon" type="ico" href="../Image\Logopic.ico"/>
     <title>Paramètres du compte</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

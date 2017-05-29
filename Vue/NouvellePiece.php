@@ -7,6 +7,7 @@ include '../Controleur/start_session.php';
     <meta charset="UTF-8">
     <title>Nouvelle Pièce</title>
     <link rel="stylesheet" href="../CSS/GererVotreMaison.css">
+    <link rel="stylesheet" href="../CSS/design_global.css" />
     <link rel="icon" type="image/ico" href="../Image\Logopic.ico " />
 </head>
 <body>

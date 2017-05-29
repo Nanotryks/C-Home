@@ -12,6 +12,7 @@ include '../Controleur/start_session.php';
   <title>Gérer votre Maison</title>
      <link rel="icon" type="image/ico" href="../Image\Logopic.ico " />
     <link rel="stylesheet" href="../CSS/GererVotreMaison.css"/>
+    <link rel="stylesheet" href="../CSS/design_global.css" />
 <script>
 
     function showUser(str)
