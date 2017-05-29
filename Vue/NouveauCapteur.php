@@ -145,9 +145,9 @@ include '../Controleur/start_session.php';
         <select name="Capteur">
             <option selected="selected">Choississez</option>
             <option name = "Température" value = "Température">Température</option>
-            <option name = "Fumée" value = "Fumée">Fumée</option>
+            <option name = "Humidité" value = "Humidité">Humidité</option>
             <option name = "Lumière" value = "Lumière"name = "Lumière">Lumière</option>
-            <option name = "Porte" value = "Porte">Porte</option>
+            <option name = "Porte d\'entrée" value = "Porte d\'entrée">Porte d'entrée</option>
             <option name = "Fenêtre" value = "Fenêtre">Fenêtre</option>
             <option name = "Présence" value = "Présence">Présence</option>
         </select>
