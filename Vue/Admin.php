@@ -11,10 +11,8 @@ include '../Controleur/start_session.php';
     <link rel="icon" href="../Image/Logopic.ico">
     <title>Section Administrateur</title>
     <script>
-
-        function showUser(s)
+        function showUser(str)
         {
-            var str = s[s.selectedIndex].id;
             if (str == "")
             {
                 document.getElementById("Rechercher").innerHTML = "";
@@ -23,6 +21,7 @@ include '../Controleur/start_session.php';
 
             if (window.XMLHttpRequest) {
 
+                xmlhttp= new XMLHttpRequest();
             } else {
 
                 if (window.ActiveXObject)
@@ -53,6 +52,7 @@ include '../Controleur/start_session.php';
 
 
         }
+
         </script>
 </head>
 
@@ -85,24 +85,23 @@ include '../Controleur/start_session.php';
 
 
             <label>Identifiant du client : </label>
-        <!--    <input type="search" name="search" onchange="showUser(this.value)" maxlength="4" size="4">
-        <button type="button" value="Rechercher">Rechercher</button> -->
-        <?php
-            //mysql_connect("localhost", "root","") or die(mysql_error());
-            //mysql_select_db("chome2") or die(mysql_error());
-            include "../Modele/Connexion.php";
-
-            $query =$BDD->query("SELECT IdUtilisateur, nom, prenom, mail, telephone, numero_abonne FROM utilisateur ORDER BY IdUtilisateur");
-            ?>
-
-            <select name="categories" onchange="showUser(this)">
-        <?php 
-            while ($row = $query->fetch())
-            {
-                echo "<option id='".$row['IdUtilisateur']."' value='".$row['path']."'>".$row['prenom']." ".$row['nom']."</option>";
-            }
-            ?>        
-            </select>
+        <input type="search" name="search" onchange="showUser(this.value)" maxlength="4" size="4">
+        <button type="button" value="Rechercher">Rechercher</button>
+<!--        --><?php
+//
+//            include "../Modele/Connexion.php";
+//
+//            $query =$BDD->query("SELECT IdUtilisateur, nom, prenom, mail, telephone, numero_abonne FROM utilisateur ORDER BY IdUtilisateur");
+//            ?>
+<!---->
+<!--            <select name="categories" onchange="showUser(this)">-->
+<!--        --><?php //
+//            while ($row = $query->fetch())
+//            {
+//                echo "<option id='".$row['IdUtilisateur']."' value='".$row['path']."'>".$row['prenom']." ".$row['nom']."</option>";
+//            }
+//            ?><!--        -->
+<!--            </select>-->
 
 
         <div id="Rechercher">
