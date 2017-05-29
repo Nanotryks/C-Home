@@ -23,14 +23,10 @@ $("p.modif").toggle();
 <header>
     <a class="retour" href="javascript:history.go(-1)">⇦</a>
     <a class="avancer" href="javascript:history.go(+1)">⇨</a>
-    <nav class="top">
-        <div><a href="../Controleur/logout.php"> <input type="button" value="Déconnexion"></a>
-            Langue :
-            <SELECT name="Langue" size="1">
-                <OPTION>Français
-                <OPTION>English
-            </SELECT>
-        </div>
+    <nav>
+        <a href="../Controleur/logout.php" class="top">
+            Déconnexion
+        </a>
     </nav>
     <center><img class="image" src="../Image/ban.png"></center><!-- width="300" height="500"-->
     <ul class="bar">
@@ -53,7 +49,6 @@ $("p.modif").toggle();
     $reponse = $BDD->query('SELECT nom, prenom, mail, mdp, numero_abonne, telephone FROM utilisateur WHERE IdUtilisateur="'.$_SESSION['IdUtilisateur'].'"');
 //    ORDER BY IdUtilisateur DESC LIMIT 1 ');
     $donnees = $reponse->fetch();
-
 
     ?>
     <p class="affichage">
