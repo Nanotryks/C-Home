@@ -17,7 +17,7 @@ include '../Controleur/start_session.php';
         {
             if (str == "")
             {
-                document.getElementById("Rechercher").innerHTML = "";
+                document.getElementById("Piece").innerHTML = "";
                 return;
             }
 
@@ -43,12 +43,95 @@ include '../Controleur/start_session.php';
                 if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
                 {
 
-                    document.getElementById("Rechercher").innerHTML = xmlhttp.responseText;
+                    document.getElementById("Piece").innerHTML = xmlhttp.responseText;
 
                 }
             }
 
-            xmlhttp.open("GET", "../Controleur/SearchAdminCapt.php?q=" + str, true);
+            xmlhttp.open("GET", "../Controleur/PieceAdmin.php?q=" + str, true);
+
+            xmlhttp.send();
+
+
+        }
+
+        function showUser2(str)
+        {
+            if (str == "")
+            {
+                document.getElementById("Capteur").innerHTML = "";
+                return;
+            }
+
+            if (window.XMLHttpRequest) {
+
+                xmlhttp= new XMLHttpRequest();
+            } else {
+
+                if (window.ActiveXObject)
+                    try {
+                        xmlhttp= new ActiveXObject("Msxml2.XMLHTTP");
+                    } catch (e) {
+                        try {
+                            xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+                        } catch (e) {
+                            return NULL;
+                        }
+                    }
+            }
+
+            xmlhttp.onreadystatechange = function ()
+            {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+                {
+
+                    document.getElementById("Capteur").innerHTML = xmlhttp.responseText;
+
+                }
+            }
+
+            xmlhttp.open("GET", "../Controleur/CapteurAdmin.php?q=" + str, true);
+
+            xmlhttp.send();
+
+
+        }
+        function showUser3(str)
+        {
+            if (str == "")
+            {
+                document.getElementById("Maison").innerHTML = "";
+                return;
+            }
+
+            if (window.XMLHttpRequest) {
+
+                xmlhttp= new XMLHttpRequest();
+            } else {
+
+                if (window.ActiveXObject)
+                    try {
+                        xmlhttp= new ActiveXObject("Msxml2.XMLHTTP");
+                    } catch (e) {
+                        try {
+                            xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+                        } catch (e) {
+                            return NULL;
+                        }
+                    }
+            }
+
+            xmlhttp.onreadystatechange = function ()
+            {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+                {
+
+                    document.getElementById("Maison").innerHTML = xmlhttp.responseText;
+
+                }
+            }
+
+            xmlhttp.open("GET", "../Controleur/MaisonAdmin.php?q=" + str, true);
 
             xmlhttp.send();
 
@@ -87,32 +170,22 @@ include '../Controleur/start_session.php';
 
 
     <label>Identifiant du client : </label>
-    <input type="search" name="search" onchange="showUser(this.value)" maxlength="4" size="4">
+    <input type="search" name="search" onchange="showUser3(this.value)" maxlength="4" size="4">
     <button type="button" value="Rechercher">Rechercher</button>
-    <!--        --><?php
-    //
-    //            include "../Modele/Connexion.php";
-    //
-    //            $query =$BDD->query("SELECT IdUtilisateur, nom, prenom, mail, telephone, numero_abonne FROM utilisateur ORDER BY IdUtilisateur");
-    //            ?>
-    <!---->
-    <!--            <select name="categories" onchange="showUser(this)">-->
-    <!--        --><?php //
-    //            while ($row = $query->fetch())
-    //            {
-    //                echo "<option id='".$row['IdUtilisateur']."' value='".$row['path']."'>".$row['prenom']." ".$row['nom']."</option>";
-    //            }
-    //            ?><!--        -->
-    <!--            </select>-->
+<br><br>
+    <div id="Maison">
+        <br>
+    </div>
+    <br>
+    <div id="Piece">
 
+    </div>
+    <br>
 
-    <div id="Rechercher">
+    <div id="Capteur">
 
     </div>
 
-    <div id="capteurs">
-
-    </div>
 
 
 </div>

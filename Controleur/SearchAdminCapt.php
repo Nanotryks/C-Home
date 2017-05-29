@@ -8,7 +8,7 @@
 include "../Modele/Connexion.php";
 
 session_start();
-$reponse = $BDD->query('SELECT IdUtilisateur FROM utilisateur WHERE IdUtilisateur="'.$_SESSION['IdUtilisateur'].'"');
+$reponse = $BDD->query('SELECT IdMaison FROM maison WHERE IdUtilisateur="'.$_SESSION['IdUtilisateur'].'"');
 $id = 0;
 while ($donnees = $reponse->fetch()) {
     $Id = $donnees['IdMaison'];
