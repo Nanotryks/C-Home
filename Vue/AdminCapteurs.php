@@ -2,10 +2,10 @@
 include '../Controleur/start_session.php';
 ?>
 
+
+
 <!DOCTYPE html>
 <html lang="fr">
-
-<!-- Modifier le critère de recherche-->
 
 <head>
     <meta charset="UTF-8">
@@ -48,14 +48,14 @@ include '../Controleur/start_session.php';
                 }
             }
 
-            xmlhttp.open("GET", "../Controleur/SearchAdmin.php?q=" + str, true);
+            xmlhttp.open("GET", "../Controleur/SearchAdminCapt.php?q=" + str, true);
 
             xmlhttp.send();
 
 
         }
 
-        </script>
+    </script>
 </head>
 
 <body>
@@ -75,47 +75,47 @@ include '../Controleur/start_session.php';
         <li class="barre"><a href="AdminCapteurs.php">Capteurs</a></li>
         <li class="barre"><a href="AdminStats.php">Statistiques</a></li>
         <li class="barre"><a href="compte.html">Compte</a></li>
-    
+
     </ul>
 
     <a href="Aide.html" target="_blank"><img class="help" type="button" src="../Image/help2.png" alt="Besoin d'aide ?" height="4%" width="auto"/>
     </a>
 </header>
 
-    <div id="Moderate">
-        <h2>Modérateur</h2>
+<div id="Moderate">
+    <h2>Capteurs</h2>
 
 
-            <label>Identifiant du client : </label>
-        <input type="search" name="search" onchange="showUser(this.value)" maxlength="4" size="4">
-        <button type="button" value="Rechercher">Rechercher</button>
-<!--        --><?php
-//
-//            include "../Modele/Connexion.php";
-//
-//            $query =$BDD->query("SELECT IdUtilisateur, nom, prenom, mail, telephone, numero_abonne FROM utilisateur ORDER BY IdUtilisateur");
-//            ?>
-<!---->
-<!--            <select name="categories" onchange="showUser(this)">-->
-<!--        --><?php //
-//            while ($row = $query->fetch())
-//            {
-//                echo "<option id='".$row['IdUtilisateur']."' value='".$row['path']."'>".$row['prenom']." ".$row['nom']."</option>";
-//            }
-//            ?><!--        -->
-<!--            </select>-->
+    <label>Identifiant du client : </label>
+    <input type="search" name="search" onchange="showUser(this.value)" maxlength="4" size="4">
+    <button type="button" value="Rechercher">Rechercher</button>
+    <!--        --><?php
+    //
+    //            include "../Modele/Connexion.php";
+    //
+    //            $query =$BDD->query("SELECT IdUtilisateur, nom, prenom, mail, telephone, numero_abonne FROM utilisateur ORDER BY IdUtilisateur");
+    //            ?>
+    <!---->
+    <!--            <select name="categories" onchange="showUser(this)">-->
+    <!--        --><?php //
+    //            while ($row = $query->fetch())
+    //            {
+    //                echo "<option id='".$row['IdUtilisateur']."' value='".$row['path']."'>".$row['prenom']." ".$row['nom']."</option>";
+    //            }
+    //            ?><!--        -->
+    <!--            </select>-->
 
 
-        <div id="Rechercher">
-
-        </div>
-
-        <div id="capteurs">
-
-        </div>
-
+    <div id="Rechercher">
 
     </div>
+
+    <div id="capteurs">
+
+    </div>
+
+
+</div>
 </body>
 <foot>
     <p id="droit"><a href="ConditionUtili.html">Conditions générales d'utilisatation</a></p>
