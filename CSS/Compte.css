@@ -1,6 +1,14 @@
 html{
-	background: #FFFFFF;
 	font: 1.1em sans-serif;
+	color:black;
+	background-image:url(../Image/Maison.jpg);
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
 }
 
 .retour,.avancer {
@@ -75,20 +83,6 @@ h1, p
 	width: 20%;
 	height: auto;
 	margin-top: 3%;
-}
-.back {
-	width:auto;
-	height:auto;
-	background:white;
-}
-
-body {
-	color:black;
-	background-color:white;
-	background-image:url(../Image/Maison.jpg);
-	background-attachment:fixed;
-	background-repeat:no-repeat;
-	background-position:center top;
 }
 
 .ban {
@@ -172,14 +166,30 @@ ul li a:focus::before{
 	0 -1px 0 rgba(0, 0, 0, .4);
 }
 
-#back{
-	height: 20%;
-	width: auto;
-	background-color: #FFFFFF;
+
+
+.choix{
+	color: white;
+	background-color: rgba(255,0,0,0.5);
+	border-radius: 3px;
+	margin-left:30%;
+	margin-right: 30%;
+	margin-bottom: 30px;
+	padding: 0.5%;
+	font-size: xx-large;
+	font-weight: bolder;
+	text-align: center;
+
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .3),
+	0 3px 5px rgba(0, 0, 0, .2),
+	0 5px 8px rgba(0, 0, 0, .2),
+	0 8px 15px rgba(0, 0, 0, .15);
 }
 
-a { color: black;
-	background: white;
+a{
+	color:white;
+	text-decoration:none;
+	font-size: large;
 }
 
 button{
