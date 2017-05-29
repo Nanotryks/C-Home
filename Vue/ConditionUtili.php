@@ -8,7 +8,7 @@
 
     <title>Condition d'utilisation</title>
     <link rel="icon" type="image/ico" href="Image/Logopic.ico" />
-    <link rel="stylesheet" href="CSS/ConditionUtili.css"/>
+    <link rel="stylesheet" href="../CSS/ConditionUtili.css"/>
 </head>
 <body>
 
@@ -22,10 +22,14 @@
 
 
     <div id ="cond">
-        Entrer les conditions générales d'utilisation
-        <br><br><textarea name="Vos Condition" rows="15" cols="160">  </textarea>
+        
+        <br><br>
+        <div class="group">
+					<label for="user" class="label">Entrer les conditions générales d'utilisation</label>
+					<textarea id="cond" name="cond" rows="15" cols="1" type="text" class="input"></textarea>
+        </div>
         <br><br><br>
-        <input type="button" class="buttonCond" value="Envoyer" onclick="alert('Les conditions générales d utilisisation vont être sauvegardés et misent à jour')">
+        <input type="button" class="btn" value="Envoyer">
     </div>
 </div>
 </body>

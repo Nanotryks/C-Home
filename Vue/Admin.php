@@ -118,6 +118,6 @@ include '../Controleur/start_session.php';
     </div>
 </body>
 <foot>
-    <p id="droit"><a href="ConditionUtili.html">Conditions générales d'utilisatation</a></p>
+    <p id="droit"><a href="ConditionUtili.php">Conditions générales d'utilisatation</a></p>
 </foot>
 </html>
