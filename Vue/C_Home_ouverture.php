@@ -6,6 +6,7 @@ include '../Controleur/start_session.php';
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="../CSS/design_global.css" />
     <link rel="stylesheet" href="../CSS/C_Home_ouverture.css">
     <link rel="icon" href="../Image/Logopic.ico">
     <title>C-Home / Acceuil</title>

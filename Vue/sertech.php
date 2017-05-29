@@ -7,6 +7,7 @@ include '../Controleur/start_session.php';
     <meta charset="utf-8"/>
     <title>Service Technique</title>
     <link rel="stylesheet" href="../CSS/sertech.css"/>
+    <link rel="stylesheet" href="../CSS/design_global.css" />
     <link rel="icon" type="image/ico" href="Image\Logopic.ico"/>
 </head>
 
