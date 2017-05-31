@@ -293,14 +293,41 @@ h2 {
     background-attachment: fixed;
 }
 
-#droit {
+#droits {
     background: white;
     text-align: center;
-    padding: 50px;
-    margin-top: 80px;
+    left: 45%;
+    width: 400px;
+
     color: rgb(255, 20, 0);
 }
 
-.util {
+#util {
 
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    margin-right: 14%;
+    margin-left: 14%;
+    padding-bottom: 5%;
+    margin-top: 5%;
+    text-align: center;
+    height: 250px;
+
+}
+
+#Stats {
+
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 4px;
+    margin-right: 14%;
+    margin-left: 14%;
+    padding-bottom: 5%;
+    margin-top: 5%;
+    text-align: center;
+
+}
+
+.showuserScroll{
+
+    overflow-y: scroll;
 }

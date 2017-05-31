@@ -16,111 +16,138 @@ $reponse2 = $BDD->query('SELECT Valeur FROM capteur WHERE IdPiece="' . $piece . 
 while ($donnees = $reponse->fetch()) {
     $donnees2 = $reponse2->fetch();
 
-    switch ($donnees['Nom'])
-    {
-        case 'Température' :
+//    switch ($donnees['Nom'])
+//    {
+//        case 'Température' :
+//        {
+//            echo $donnees['Nom'] . " : " . $donnees2['Valeur'] . " °C" . "<br>";
+//            echo "<br>";
+//        }break;
+//        case 'Humidité' :
+//        {
+//            echo $donnees['Nom'] . " : " . $donnees2['Valeur'] . " °C" . "<br>";
+//            echo "<br>";
+//        }break;
+//        case 'Porte d\'entrée' :
+//        {
+//            if ($donnees2['Valeur'] == 0)
+//            {
+//                echo $donnees['Nom'] . " : " . " est fermée" . "<br>";
+//                echo "<br>";
+//            }
+//            else
+//            {
+//                if ($donnees2['Valeur'] == 0)
+//                {
+//                    echo $donnees['Nom'] . " : " . " est ouverte" . "<br>";
+//                    echo "<br>";
+//                }
+//            }
+//        }break;
+//        case 'Fenêtre' :
+//        {
+//            if ($donnees2['Valeur'] == 0)
+//            {
+//                echo $donnees['Nom'] . " : " . " est fermée" . "<br>";
+//                echo "<br>";
+//            }
+//            else
+//            {
+//                if ($donnees2['Valeur'] == 0)
+//                {
+//                    echo $donnees['Nom'] . " : " . " est ouverte" . "<br>";
+//                    echo "<br>";
+//                }
+//            }
+//        }break;
+//        case 'Fumée' :
+//        {
+//            echo $donnees['Nom'] . " : " . $donnees2['Valeur'] . " °C" . "<br>";
+//            echo "<br>";
+//        }break;
+//        default :
+//        {
+//            echo "Vous n'avez actuellement aucun capteur de configuré" . "<br>";
+//            echo "<br>";
+//        }
+//    }
+//
+//
+//    }
+
+    if (strcmp($donnees['Nom'], 'Température') == 1) {
+        echo $donnees['Nom'] . " : " . $donnees2['Valeur'] . " °C" . "<br>";
+        echo "<br>";
+    }
+    else
         {
-            echo $donnees['Nom'] . " : " . $donnees2['Valeur'] . " °C" . "<br>";
+         if (strcmp($donnees['Nom'], "Humidité") == 1) {
+            echo $donnees['Nom'] . " : " . $donnees2['Valeur'] . " %" . "<br>";
             echo "<br>";
-        }break;
-        case 'Humidité' :
+        }
+        else
         {
-            echo $donnees['Nom'] . " : " . $donnees2['Valeur'] . " °C" . "<br>";
-            echo "<br>";
-        }break;
-        case 'Porte d\'entrée' :
-        {
-            if ($donnees2['Valeur'] == 0)
-            {
-                echo $donnees['Nom'] . " : " . " est fermée" . "<br>";
+            if (strcmp($donnees['Nom'], "Lumière") == 1) {
+                echo $donnees['Nom'] . " : " . $donnees2['Valeur'] . " Lux" . "<br>";
                 echo "<br>";
             }
-            else
-            {
-                if ($donnees2['Valeur'] == 0)
-                {
-                    echo $donnees['Nom'] . " : " . " est ouverte" . "<br>";
+            else{
+                if (strcmp($donnees['Nom'], "Fumée") == 1) {
+                    echo $donnees['Nom'] . " : " . $donnees2['Valeur'] . "<br>";
                     echo "<br>";
                 }
-            }
-        }break;
-        case 'Fenêtre' :
-        {
-            if ($donnees2['Valeur'] == 0)
-            {
-                echo $donnees['Nom'] . " : " . " est fermée" . "<br>";
-                echo "<br>";
-            }
-            else
-            {
-                if ($donnees2['Valeur'] == 0)
-                {
-                    echo $donnees['Nom'] . " : " . " est ouverte" . "<br>";
-                    echo "<br>";
+                else{
+                    if (strcmp($donnees['Nom'], "Porte d\'entrée") == 1) {
+                        if ($donnees2['Valeur'] == 0) {
+                            echo $donnees['Nom'] . " : " . " est fermée" . "<br>";
+                            echo "<br>";
+                        } else if ($donnees2['Valeur'] == 0) {
+                            echo $donnees['Nom'] . " : " . " est ouverte" . "<br>";
+                            echo "<br>";
+                        }
+                    }
+
+                    else{
+
+                        if (strcmp($donnees['Nom'], "Fenêtre") == 1) {
+                            if ($donnees2['Valeur'] == 0) {
+                                echo $donnees['Nom'] . " : " . " est fermée" . "<br>";
+                            } else if ($donnees2['Valeur'] == 0) {
+                                echo $donnees['Nom'] . " : " . " est ouverte" . "<br>";
+                            }
+                        }
+
+                        else{
+                            if (strcmp($donnees['Nom'], "Présence") == 1) {
+                                if ($donnees2['Valeur'] == 0) {
+                                    echo $donnees['Nom'] . " : " . "Aucune présence détectée" . "<br>";
+                                    echo "<br>";
+                                } else if ($donnees2['Valeur'] == 0) {
+                                    echo $donnees['Nom'] . " : " . "Présence détectée" . "<br>";
+                                    echo "<br>";
+                                }
+                            } else {
+                                echo "Vous n'avez actuellement aucun capteur de configuré" . "<br>";
+                                echo "<br>";
+                            }
+
+                        }
+
+                    }
+
+
                 }
             }
-        }break;
-        case 'Fumée' :
-        {
-            echo $donnees['Nom'] . " : " . $donnees2['Valeur'] . " °C" . "<br>";
-            echo "<br>";
-        }break;
-        default :
-        {
-            echo "Vous n'avez actuellement aucun capteur de configuré" . "<br>";
-            echo "<br>";
+
         }
     }
 
 
-    }
+}
 
-//    if (strcmp($donnees['Nom'], 'Température') == 1) {
-//        echo $donnees['Nom'] . " : " . $donnees2['Valeur'] . " °C" . "<br>";
-//        echo "<br>";
-//    }
-//
-//    if (strcmp($donnees['Nom'], "Humidité") == 1) {
-//        echo $donnees['Nom'] . " : " . $donnees2['Valeur'] . " %" . "<br>";
-//        echo "<br>";
-//    }
-//
-//    if (strcmp($donnees['Nom'], "Lumière") == 1) {
-//        echo $donnees['Nom'] . " : " . $donnees2['Valeur'] . " Lux" . "<br>";
-//        echo "<br>";
-//    }
-//    if (strcmp($donnees['Nom'], "Fumée") == 1) {
-//        echo $donnees['Nom'] . " : " . $donnees2['Valeur'] . "<br>";
-//        echo "<br>";
-//    }
-//    if (strcmp($donnees['Nom'], "Porte d\'entrée") == 1) {
-//        if ($donnees2['Valeur'] == 0) {
-//            echo $donnees['Nom'] . " : " . " est fermée" . "<br>";
-//            echo "<br>";
-//        } else if ($donnees2['Valeur'] == 0) {
-//            echo $donnees['Nom'] . " : " . " est ouverte" . "<br>";
-//            echo "<br>";
-//        }
-//    }
-//
-//    if (strcmp($donnees['Nom'], "Fenêtre") == 1) {
-//        if ($donnees2['Valeur'] == 0) {
-//            echo $donnees['Nom'] . " : " . " est fermée" . "<br>";
-//        } else if ($donnees2['Valeur'] == 0) {
-//            echo $donnees['Nom'] . " : " . " est ouverte" . "<br>";
-//        }
-//    }
-//
-//    if (strcmp($donnees['Nom'], "Présence") == 1) {
-//        if ($donnees2['Valeur'] == 0) {
-//            echo $donnees['Nom'] . " : " . "Aucune présence détectée" . "<br>";
-//            echo "<br>";
-//        } else if ($donnees2['Valeur'] == 0) {
-//            echo $donnees['Nom'] . " : " . "Présence détectée" . "<br>";
-//            echo "<br>";
-//        }
-//    } else {
-//        echo "Vous n'avez actuellement aucun capteur de configuré" . "<br>";
-//        echo "<br>";
-//    }
-//}
+
+
+
+
+
+

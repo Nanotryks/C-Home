@@ -111,12 +111,21 @@ include '../Controleur/start_session.php';
 </div>
 
 <div id="util">
-    <h2>util</h2>
+    <h2>Utilisateurs connectés</h2>
+
+    <div class="showuserScroll">
+
+            <p>Utilisateur #0136</p>
+        <p>Utilisateur #0178</p>
+        <p>Utilisateur #0630</p>
+        <p>Utilisateur #0412</p>
+
+    </div>
 </div>
 </body>
 
 
 <foot>
-    <p id="droit"><a href="ConditionUtili.php">Conditions générales d'utilisatation</a></p>
+    <p><a id="droits" href="ConditionUtili.php">Conditions générales d'utilisatation</a></p>
 </foot>
 </html>
