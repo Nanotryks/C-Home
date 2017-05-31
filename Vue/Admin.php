@@ -63,10 +63,10 @@ include '../Controleur/start_session.php';
     </nav>
     <center><img class="image" src="../Image/ban.png"></center>
     <ul class="bar">
-        <li class="barre"><a href="Admin.php">Modérateur</a></li>
-        <li class="barre"><a href="AdminCapteurs.php">Capteurs</a></li>
-        <li class="barre"><a href="AdminStats.php">Statistiques</a></li>
-        <li class="barre"><a href="ParametresAdmin.php">Paramètres</a></li>
+        <li class="barre"><a href="../Vue/Admin.php">Modérateur</a></li>
+        <li class="barre"><a href="../Vue/AdminCapteurs.php">Capteurs</a></li>
+        <li class="barre"><a href="../Vue/AdminStats.php">Statistiques</a></li>
+        <li class="barre"><a href="../Vue/ParametreAdmin.php">Paramètres</a></li>
 
     </ul>
 

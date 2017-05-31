@@ -10,9 +10,15 @@ include '../Controleur/start_session.php';
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Gérer votre Maison</title>
-     <link rel="icon" type="image/ico" href="../Image\Logopic.ico " />
     <link rel="stylesheet" href="../CSS/GererVotreMaison.css"/>
     <link rel="stylesheet" href="../CSS/design_global.css" />
+
+    <link rel="stylesheet" href="../CSS/bouton_remonter.css" />
+    <link rel="icon" href="../Image/Logopic.ico">
+    <title>Gérez votre maison</title>
+
+    <script type="text/javascript" src="../Js/scroll.js"></script>
+</head>
 <script>
 
     function showUser(str)
@@ -104,7 +110,7 @@ include '../Controleur/start_session.php';
     
     
 <body>
-<header>
+<header id="haut">
     <a class="retour" href="javascript:history.go(-1)">⇦</a>
     <a class="avancer" href="javascript:history.go(+1)">⇨</a>
     <nav>
@@ -126,12 +132,12 @@ include '../Controleur/start_session.php';
         <div id="Maison">
 
         </div>
-        <h2 class="titre">Gerez Votre Maison</h2>
+        <h1 class="titre">Gerez votre maison</h1>
         <div  class="gestion">
 
             <FORM id="maisons">
                 <p>
-                    <img class="maison" src="../Image/Maison.png">
+                    <img class="maison" src="../Image/gerer_maison.png">
                 </p>
 
                 <p>
@@ -157,16 +163,24 @@ include '../Controleur/start_session.php';
                 </div>
             </FORM>
 
-                <a href="NouveauCapteur.php"> <input type="button" value="Nouveau capteur"></a>
-            <a href="DeleteCapteur.php"> <input type="button" value="Supprimer un capteur"></a>
-            <br>
-            <a href="NouvellePiece.php"> <input type="button" value="Nouvelle pièce"></a>
-            <a href="DeletePiece.php"> <input type="button" value="Supprimer une piece"></a>
-
-
-
         <br>
-     <div>
+        </div>
+    </div>
+<br/>
+<br/>
+<div class="options">
+    <h1> Sélectionnez une des options suivantes</h1>
+    <br/>
+    <img src="..\Image\addsensor.png" alt="ajout d'un capteur" class="addsensor"/></br>
+<a href="NouveauCapteur.php"> <input type="button" value="Nouveau capteur"></a>
+<a href="DeleteCapteur.php"> <input type="button" value="Supprimer un capteur"></a>
+<br/>
+<br/>
+    <img src="..\Image\room.png" alt="ajout/suppression de pièces" class="room"/></br>
+<a href="NouvellePiece.php"> <input type="button" value="Nouvelle pièce"></a>
+<a href="DeletePiece.php"> <input type="button" value="Supprimer une piece"></a>
+</div>
+
 <script>
 //    var a=10000;
 //    setInterval('rafraichir()',a);
@@ -176,7 +190,38 @@ include '../Controleur/start_session.php';
 //    }
 
 </script>
-      </div>
+
+            <div id="pied">
+
+                <a name="haut" id="haut"</a>
+                <div><a id="cRetour" class="cInvisible" href="#haut"></a></div>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        window.onscroll = function(ev) {
+                            document.getElementById("cRetour").className = (window.pageYOffset > 100) ? "cVisible" : "cInvisible";
+                        };
+                    });
+                </script>
+
+                <p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    À PROPOS
+                    <br>
+                    <br>
+                    Copyright 2017 C-HOME.
+                    <br>
+                    <br>
+                    All Rights Reserved.
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </p>
+            </div>
     
 </body>
 </html>

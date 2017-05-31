@@ -8,7 +8,12 @@ include '../Controleur/start_session.php';
     <title>Supprimer un capteur</title>
     <link rel="stylesheet" href="../CSS/GererVotreMaison.css">
     <link rel="stylesheet" href="../CSS/design_global.css" />
-    <link rel="icon" type="image/ico" href="../Image\Logopic.ico " />
+
+    <link rel="stylesheet" href="../CSS/bouton_remonter.css" />
+    <link rel="icon" href="../Image/Logopic.ico">
+    <title>Suppression d'un capteur</title>
+
+    <script type="text/javascript" src="../Js/scroll.js"></script>
     <script>
 
         function showUser(str)
@@ -98,7 +103,7 @@ include '../Controleur/start_session.php';
     </script>
 </head>
 <body>
-<header>
+<header id="haut">
     <a class="retour" href="javascript:history.go(-1)">⇦</a>
     <a class="avancer" href="javascript:history.go(+1)">⇨</a>
     <nav>
@@ -108,7 +113,7 @@ include '../Controleur/start_session.php';
     </nav>
     <center><img class="image" src="../Image/ban.png"></center><!-- width="300" height="500"-->
     <ul class="bar">
-        <li class="barre"><a href="C_home.html">Accueil</a></li>
+        <li class="barre"><a href="C_Home.php">Accueil</a></li>
         <li class="barre"><a href="GererVotreMaison.php">Gérez votre maison</a></li>
         <li class="barre"><a href="CodeStats.html">Statistiques</a></li>
         <li class="barre"><a href="compte.html">Compte</a></li>
@@ -119,7 +124,7 @@ include '../Controleur/start_session.php';
 <div class="Etat">
 <FORM method="post" action="../Controleur/Delete.php">
     <p>
-        <img class="maison" src="../Image/Maison.png">
+        <img class="maison" src="../Image/gerer_maison.png">
     </p>
 
     <p>
@@ -146,6 +151,38 @@ include '../Controleur/start_session.php';
     <br>
     <input type="submit" value="Supprimer">
 </FORM>
+</div>
+
+<div id="pied">
+
+    <a name="haut" id="haut"</a>
+    <div><a id="cRetour" class="cInvisible" href="#haut"></a></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.onscroll = function(ev) {
+                document.getElementById("cRetour").className = (window.pageYOffset > 100) ? "cVisible" : "cInvisible";
+            };
+        });
+    </script>
+
+    <p>
+        <br>
+        <br>
+        <br>
+        <br>
+        À PROPOS
+        <br>
+        <br>
+        Copyright 2017 C-HOME.
+        <br>
+        <br>
+        All Rights Reserved.
+
+        <br>
+        <br>
+        <br>
+        <br>
+    </p>
 </div>
 </body>
 </html>

@@ -7,8 +7,11 @@ include '../Controleur/start_session.php';
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="../CSS/Parametres.css"/>
     <link rel="stylesheet" href="../CSS/design_global.css" />
-    <link rel="icon" type="ico" href="../Image\Logopic.ico"/>
-    <title>Paramètres du compte</title>
+    <link rel="stylesheet" href="../CSS/bouton_remonter.css" />
+    <link rel="icon" href="../Image/Logopic.ico">
+    <title>Suppresion d'une maison</title>
+
+    <script type="text/javascript" src="../Js/scroll.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
@@ -21,7 +24,7 @@ $("p.modif").toggle();
 </head>
 
 <body>
-<header>
+<header id="haut">
     <a class="retour" href="javascript:history.go(-1)">⇦</a>
     <a class="avancer" href="javascript:history.go(+1)">⇨</a>
     <nav>
@@ -88,6 +91,38 @@ $("p.modif").toggle();
 
     </form>
 
+</div>
+
+<div id="pied">
+
+    <a name="haut" id="haut"</a>
+    <div><a id="cRetour" class="cInvisible" href="#haut"></a></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.onscroll = function(ev) {
+                document.getElementById("cRetour").className = (window.pageYOffset > 100) ? "cVisible" : "cInvisible";
+            };
+        });
+    </script>
+
+    <p>
+        <br>
+        <br>
+        <br>
+        <br>
+        À PROPOS
+        <br>
+        <br>
+        Copyright 2017 C-HOME.
+        <br>
+        <br>
+        All Rights Reserved.
+
+        <br>
+        <br>
+        <br>
+        <br>
+    </p>
 </div>
 </body>
 </html>

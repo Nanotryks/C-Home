@@ -8,10 +8,13 @@ include '../Controleur/start_session.php';
     <title>Nouvelle Pièce</title>
     <link rel="stylesheet" href="../CSS/GererVotreMaison.css">
     <link rel="stylesheet" href="../CSS/design_global.css" />
-    <link rel="icon" type="image/ico" href="../Image\Logopic.ico " />
-</head>
+    <link rel="stylesheet" href="../CSS/bouton_remonter.css" />
+    <link rel="icon" href="../Image/Logopic.ico">
+    <title>Ajout d'une pièce</title>
+
+    <script type="text/javascript" src="../Js/scroll.js"></script>
 <body>
-<header>
+<header id="haut">
     <a class="retour" href="javascript:history.go(-1)">⇦</a>
     <a class="avancer" href="javascript:history.go(+1)">⇨</a>
     <nav>
@@ -33,7 +36,7 @@ include '../Controleur/start_session.php';
     <h3>Ajout Réussi</h3>
 <FORM method="post" action="../Controleur/AjoutP.php">
     <p>
-        <img class="maison" src="../Image/Maison.png">
+        <img class="maison" src="../Image/gerer_maison.png">
     </p>
 
     <p>
@@ -51,6 +54,38 @@ include '../Controleur/start_session.php';
     <br>
     <input type="submit" value="Ajouter">
 </FORM>
+</div>
+
+<div id="pied">
+
+    <a name="haut" id="haut"</a>
+    <div><a id="cRetour" class="cInvisible" href="#haut"></a></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.onscroll = function(ev) {
+                document.getElementById("cRetour").className = (window.pageYOffset > 100) ? "cVisible" : "cInvisible";
+            };
+        });
+    </script>
+
+    <p>
+        <br>
+        <br>
+        <br>
+        <br>
+        À PROPOS
+        <br>
+        <br>
+        Copyright 2017 C-HOME.
+        <br>
+        <br>
+        All Rights Reserved.
+
+        <br>
+        <br>
+        <br>
+        <br>
+    </p>
 </div>
 </body>
 </html>

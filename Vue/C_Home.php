@@ -8,11 +8,14 @@ include '../Controleur/start_session.php';
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../CSS/design_global.css" />
     <link rel="stylesheet" href="../CSS/C_Home.css" />
+    <link rel="stylesheet" href="../CSS/bouton_remonter.css" />
     <link rel="icon" href="../Image/Logopic.ico">
     <title>C-Home / Accueil</title>
+
+    <script type="text/javascript" src="../Js/scroll.js"></script>
  </head>
 <body>
-    <header>
+    <header id="haut">
         <a class="retour" href="javascript:history.go(-1)">⇦</a>
         <a class="avancer" href="javascript:history.go(+1)">⇨</a>
         <nav>
@@ -89,6 +92,17 @@ include '../Controleur/start_session.php';
     </div>
 
     <div id="pied">
+
+        <a name="haut" id="haut"</a>
+        <div><a id="cRetour" class="cInvisible" href="#haut"></a></div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                window.onscroll = function(ev) {
+                    document.getElementById("cRetour").className = (window.pageYOffset > 100) ? "cVisible" : "cInvisible";
+                };
+            });
+        </script>
+
         <p>
             <br>
             <br>

@@ -8,8 +8,11 @@ include '../Controleur/start_session.php';
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../CSS/design_global.css" />
     <link rel="stylesheet" href="../CSS/C_Home_lumiere.css">
+    <link rel="stylesheet" href="../CSS/bouton_remonter.css" />
     <link rel="icon" href="../Image/Logopic.ico">
-    <title>C-Home / Acceuil</title>
+    <title>C-Home / Accueil</title>
+
+    <script type="text/javascript" src="../Js/scroll.js"></script>
     <script>
         function showUser(str)
         {
@@ -58,7 +61,7 @@ include '../Controleur/start_session.php';
 
 <body>
 
-    <header>
+<header id="haut">
         <a class="retour" href="javascript:history.go(-1)">⇦</a>
         <a class="avancer" href="javascript:history.go(+1)">⇨</a>
         <nav>
@@ -77,7 +80,6 @@ include '../Controleur/start_session.php';
         <a href="Aide.html" target="_blank"><img class="help" type="button" src="../Image/help2.png" alt="Besoin d'aide ?" height="4%" width="auto"/>
         </a>
     </header>
-    </div>
 
     <div id="backmenu">
         <div id="menu">
@@ -100,23 +102,72 @@ include '../Controleur/start_session.php';
             </div>
         </div>
     </div>
-    <footer>
-        <div id="foot">
+    <div id="section">
         <div class="site">
-            <header class="titre">Information sur l'entreprise</header>
+            <header class="titre">INFORMATIONS SUR L'ENTREPRISE</header>
+            <br><br>
+
             <p>C Home Corporation</p>
+
             <p>Mail : </p>
-            <p>10 rue de Vanves
-                92130 ISSY LES MOULINEAUX</p>
-            <center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.7390397216686!2d2.2779324156780496!3d48.82504037928424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6707980bd3947%3A0xd54fb6c5e1933333!2s10+Rue+de+Vanves%2C+92170+Issy-les-Moulineaux!5e0!3m2!1sfr!2sfr!4v1492426882176" width="250" height="150" frameborder="0" style="border" allowfullscreen ></iframe></center>
+            <p>10 rue de Vanves</p>
+            <p>92130 ISSY LES MOULINEAUX</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.7390397216686!2d2.2779324156780496!3d48.82504037928424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6707980bd3947%3A0xd54fb6c5e1933333!2s10+Rue+de+Vanves%2C+92170+Issy-les-Moulineaux!5e0!3m2!1sfr!2sfr!4v1492426882176"
+                    width="400" height="200" frameborder="0" style="border" allowfullscreen></iframe>
         </div>
         <div class="app">
-            <header class="app_titre">Coming Soon</header>
-            <center><img src="../Image/Android_apple.png"></center>
-            <p>Bientot des applications pour gérer vos maisons depuis votre téléphone
+            <header class="app_titre">BIENTÔT</header>
+            <br><br><br><br>
+
+            <div id ="appliandroapple">
+
+                <div id="android">
+                    <a href="https://play.google.com/store/apps?hl=fr"><img src="../Image/andro.png" height="200px" width="auto"></a>
+                </div>
+                <div id="apple">
+                    <a href="https://itunes.apple.com/fr/app/apple-store/id375380948?mt=8"><img src="../Image/apple.png" height="200px" width="auto"></a>
+                </div>
+
+            </div>
+
+            <br><br>
+            <p>Bientôt des applications disponibles pour </br>vous permettre de gérer votre/vos domicile(s)</br> depuis votre
+                smartphone ou votre tablettes
             </p></br>
+
         </div>
-        </div>
-    </footer>
+    </div>
+
+    <div id="pied">
+
+        <a name="haut" id="haut"</a>
+        <div><a id="cRetour" class="cInvisible" href="#haut"></a></div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                window.onscroll = function(ev) {
+                    document.getElementById("cRetour").className = (window.pageYOffset > 100) ? "cVisible" : "cInvisible";
+                };
+            });
+        </script>
+
+        <p>
+            <br>
+            <br>
+            <br>
+            <br>
+            À PROPOS
+            <br>
+            <br>
+            Copyright 2017 C-HOME.
+            <br>
+            <br>
+            All Rights Reserved.
+
+            <br>
+            <br>
+            <br>
+            <br>
+        </p>
+    </div>
 </body>
 </html>

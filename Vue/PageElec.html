@@ -3,12 +3,13 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href=" ../CSS/Statistiques.css"/>
     <link rel="stylesheet" href="../CSS/design_global.css" />
+    <link rel="stylesheet" href="../CSS/bouton_remonter.css" />
     <link rel="icon" href="../Image/Logopic.ico">
-    <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
+    <title>Statistiques Electricité</title>
 
-    <title>Statistiques</title>
+    <script type="text/javascript" src="../Js/scroll.js"></script>
 </head>
-<header>
+<header id="haut">
     <a class="retour" href="javascript:history.go(-1)">⇦</a>
     <a class="avancer" href="javascript:history.go(+1)">⇨</a>
     <nav>
@@ -77,6 +78,38 @@
 
 	</div>
 
+</div>
+
+<div id="pied">
+
+    <a name="haut" id="haut"</a>
+    <div><a id="cRetour" class="cInvisible" href="#haut"></a></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            window.onscroll = function(ev) {
+                document.getElementById("cRetour").className = (window.pageYOffset > 100) ? "cVisible" : "cInvisible";
+            };
+        });
+    </script>
+
+    <p>
+        <br>
+        <br>
+        <br>
+        <br>
+        À PROPOS
+        <br>
+        <br>
+        Copyright 2017 C-HOME.
+        <br>
+        <br>
+        All Rights Reserved.
+
+        <br>
+        <br>
+        <br>
+        <br>
+    </p>
 </div>
 
 </body>
