@@ -22,6 +22,7 @@ include '../Controleur/start_session.php';
             if (window.XMLHttpRequest) {
 
                 xmlhttp= new XMLHttpRequest();
+
             } else {
 
                 if (window.ActiveXObject)
