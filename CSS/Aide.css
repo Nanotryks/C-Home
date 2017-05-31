@@ -130,15 +130,5 @@ body {
 }
 
 footer{
-    width: auto;
-    height: 20px;
-    background: #FFF;
-    text-align: center;
-    padding-left: 20%;
-    padding-right: 20%;
-    margin-left: -10%;
-    margin-bottom: -13%;
-    color: #d40000;
-    font-weight: bold;
-    margin-bottom: 50px;
+text-align: center;
 }

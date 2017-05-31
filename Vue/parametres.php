@@ -37,7 +37,7 @@ $("p.modif").toggle();
         <li class="barre"><a href="compte.html">Compte</a></li>
     </ul>
 
-    <a href="index.php" target="_blank"><img class="help" type="button" src="../Image/help2.png"
+    <a href="Aide.html" target="_blank"><img class="help" type="button" src="../Image/help2.png"
                                                     alt="Besoin d'aide ?" height="4%" width="auto"></a>
 </header>
 

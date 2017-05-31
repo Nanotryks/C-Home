@@ -27,7 +27,7 @@ include '../Controleur/start_session.php';
         <li class="barre"><a href="compte.html">Compte</a></li>
     </ul>
 
-    <a href="index.php" target="_blank"><img class="help" type="button" src="../Image/help2.png" alt="Besoin d'aide ?" height="4%" width="auto"/></a>
+    <a href="Aide.html" target="_blank"><img class="help" type="button" src="../Image/help2.png" alt="Besoin d'aide ?" height="4%" width="auto"/></a>
 </header>
 <div class="Etat">
 <FORM method="post" action="../Controleur/AjoutP.php">
