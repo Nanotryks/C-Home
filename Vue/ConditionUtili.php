@@ -25,12 +25,15 @@
     <div id ="cond">
         
         <br><br>
+    <form action="../Controleur/condgen.php" method="post">
         <div class="group">
-					<label for="user" class="label">Entrer les conditions générales d'utilisation</label>
+					<label for="cond" class="label">Entrer les conditions générales d'utilisation</label>
 					<textarea id="cond" name="cond" rows="15" cols="1" type="text" class="input"></textarea>
         </div>
+    
         <br><br><br>
-        <input type="button" class="btn" value="Envoyer">
+        <input type="submit" class="btn" value="Envoyer">
+    </form>
     </div>
 </div>
 </body>

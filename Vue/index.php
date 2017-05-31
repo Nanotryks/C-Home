@@ -76,7 +76,7 @@ APP G8C ISEP
                 <div class="group">
                     <input id="check" type="checkbox" class="check" checked>
 					<label for="check">
-                        <span class="icon"></span> Accepter les conditions générales d'utilisation</label>
+                        <span class="icon"></span> <a href="cond_gen.php">Accepter les conditions générales d'utilisation</a></label>
                     </div>
 				<div class="group">
 					<input type="submit" class="bouton" value="s'inscrire">
