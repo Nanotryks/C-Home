@@ -72,7 +72,7 @@ include '../Controleur/start_session.php';
         <ul class="bar">
                 <li class="barre"><a href="C_home.php">Accueil</a></li>
                 <li class="barre"><a href="GererVotreMaison.php">Gérez votre maison</a></li>
-                <li class="barre"><a href="CodeStats.html">Statistiques</a></li>
+                <li class="barre"><a href="CodeStats.php">Statistiques</a></li>
                 <li class="barre"><a href="compte.html">Compte</a></li>
         </ul>
 
