@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.6.4
+-- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 02 Juin 2017 à 10:45
--- Version du serveur :  10.1.9-MariaDB
--- Version de PHP :  5.6.15
+-- Généré le :  Ven 02 Juin 2017 à 09:01
+-- Version du serveur :  5.7.14
+-- Version de PHP :  5.6.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -57,6 +57,35 @@ CREATE TABLE `conditions_d_utilisation` (
 
 INSERT INTO `conditions_d_utilisation` (`id`, `text`) VALUES
 (1, 'Mamadou fi lay ndogoo inchaAllah');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `donnees`
+--
+
+CREATE TABLE `donnees` (
+  `IdDonnees` int(255) NOT NULL,
+  `Type` varchar(255) NOT NULL,
+  `Valeur` int(255) NOT NULL,
+  `date` date NOT NULL,
+  `time` time NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `donnees`
+--
+
+INSERT INTO `donnees` (`IdDonnees`, `Type`, `Valeur`, `date`, `time`) VALUES
+(1, 'Température', 10, '2017-06-01', '00:00:00'),
+(2, 'Température', 11, '2017-06-01', '03:00:00'),
+(3, 'Température', 12, '2017-06-01', '06:00:00'),
+(4, 'Température', 15, '2017-06-01', '09:00:00'),
+(5, 'Température', 19, '2017-06-01', '12:00:00'),
+(6, 'Température', 25, '2017-06-01', '15:00:00'),
+(7, 'Température', 16, '2017-06-01', '18:00:00'),
+(8, 'eau', 1, '2017-06-02', '05:00:00'),
+(9, 'eau', 10, '2017-06-02', '08:00:00');
 
 -- --------------------------------------------------------
 
@@ -173,6 +202,12 @@ ALTER TABLE `conditions_d_utilisation`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Index pour la table `donnees`
+--
+ALTER TABLE `donnees`
+  ADD PRIMARY KEY (`IdDonnees`);
+
+--
 -- Index pour la table `maison`
 --
 ALTER TABLE `maison`
@@ -206,6 +241,11 @@ ALTER TABLE `capteur`
 --
 ALTER TABLE `conditions_d_utilisation`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT pour la table `donnees`
+--
+ALTER TABLE `donnees`
+  MODIFY `IdDonnees` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT pour la table `maison`
 --
