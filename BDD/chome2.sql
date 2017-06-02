@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.4
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 01 Juin 2017 à 15:22
--- Version du serveur :  5.7.14
--- Version de PHP :  5.6.25
+-- Généré le :  Ven 02 Juin 2017 à 10:45
+-- Version du serveur :  10.1.9-MariaDB
+-- Version de PHP :  5.6.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -38,49 +38,25 @@ CREATE TABLE `capteur` (
 --
 
 INSERT INTO `capteur` (`IdPiece`, `IdCapteur`, `Nom`, `Valeur`) VALUES
-(5, 12, 'Fumée', 0),
-(6, 13, 'Température', 20),
-(7, 14, 'Température', 23),
-(8, 15, 'Température', 10),
-(9, 16, 'Température', 13),
-(6, 17, 'Lumière', 150),
-(7, 18, 'Lumière', 600),
-(8, 19, 'Lumière', 300),
-(9, 20, 'Lumière', 120),
-(6, 21, 'Fenêtre', 1),
-(7, 22, 'Fenêtre', 0),
-(8, 23, 'Fenêtre', 0),
-(9, 24, 'Fenêtre', 0),
-(6, 25, 'Porte d\'entrée', 0);
+(5, 12, 'Fumée', 0);
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `donnees`
+-- Structure de la table `conditions_d_utilisation`
 --
 
-CREATE TABLE `donnees` (
-  `IdDonnees` int(255) NOT NULL,
-  `Type` varchar(255) NOT NULL,
-  `Valeur` int(255) NOT NULL,
-  `date` date NOT NULL,
-  `time` time NOT NULL
+CREATE TABLE `conditions_d_utilisation` (
+  `id` int(11) NOT NULL,
+  `text` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `donnees`
+-- Contenu de la table `conditions_d_utilisation`
 --
 
-INSERT INTO `donnees` (`IdDonnees`, `Type`, `Valeur`, `date`, `time`) VALUES
-(1, 'Température', 10, '2017-06-01', '00:00:00'),
-(2, 'Température', 11, '2017-06-01', '03:00:00'),
-(3, 'Température', 12, '2017-06-01', '06:00:00'),
-(4, 'Température', 15, '2017-06-01', '09:00:00'),
-(5, 'Température', 19, '2017-06-01', '12:00:00'),
-(6, 'Température', 25, '2017-06-01', '15:00:00'),
-(7, 'Température', 16, '2017-06-01', '18:00:00'),
-(8, 'eau', 1, '2017-06-02', '05:00:00'),
-(9, 'eau', 10, '2017-06-02', '08:00:00');
+INSERT INTO `conditions_d_utilisation` (`id`, `text`) VALUES
+(1, 'Mamadou fi lay ndogoo inchaAllah');
 
 -- --------------------------------------------------------
 
@@ -108,8 +84,7 @@ CREATE TABLE `maison` (
 INSERT INTO `maison` (`IdUtilisateur`, `IdMaison`, `Nom`, `Porte`, `Voie`, `Adresse`, `Code_Postal`, `Ville`, `Nombre_Piece`, `Nombre_Etage`) VALUES
 (24, 2, 'Maison1', 1, 'rue', 'bidon', 90000, 'Issy', 5, 1),
 (1, 3, 'Maison2', 2, 'rue', 'bidon', 90000, 'Issy', 10, 2),
-(25, 11, 'vacance', 6, 'rue', 'vac', 75000, 'rochelle', 9, 2),
-(27, 12, 'Principal', 1, 'rue', 'bidon', 90000, 'issy', 10, 2);
+(25, 11, 'vacance', 6, 'rue', 'vac', 75000, 'rochelle', 9, 2);
 
 -- --------------------------------------------------------
 
@@ -128,11 +103,7 @@ CREATE TABLE `piece` (
 --
 
 INSERT INTO `piece` (`IdMaison`, `IdPiece`, `Nom`) VALUES
-(2, 5, 'Salon'),
-(12, 6, 'Salon'),
-(12, 7, 'Cuisine'),
-(12, 8, 'Chambre'),
-(12, 9, 'salle à manger');
+(2, 5, 'Salon');
 
 -- --------------------------------------------------------
 
@@ -159,29 +130,30 @@ INSERT INTO `utilisateur` (`IdUtilisateur`, `nom`, `prenom`, `mail`, `mdp`, `num
 (1, 'jgdgdf', 'dfgsdhf', '123@gmail.com', 'azertyazerty', '1231312', 1231312, 0),
 (2, 'jgdgdf', 'dfgsdhf', '123@gmail.com', 'qsdqsdqsdqsd', '1231312', 1231312, 0),
 (3, 'abcde', 'ddadqss', 'dqsfqfqsfqs@qsdqs', 'sqdqsdq', '1231312', 1231312, 0),
-(4, 'azerty', 'qsdqs', '123@gmail.com', 'qsdqsdqs', '1231312', 1231312, 0),
+(4, 'LO', 'qsdqs', '123@gmail.com', 'qsdqsdqs', '1231312', 1231312, 0),
 (5, 'dran', 'gjghhg', 'jdrebd@test', 'sdqshfgjy', '5686797', 6547658, 0),
 (6, 'nouveaunom', 'test2', 'jdrebd@test', 'fhfghfghg', '2222222', 1231312, 0),
 (7, 'dran', 'be', 'benjamin@dran.fr', 'azertyazerty', '999992222', 6943837, 0),
-(8, 'LO', 'CHEIKHOUNA', 'cheikhouna@cheikhouna.com', '60ca10a2cac0ec59bc65654222b065', '0', 0, 0),
-(9, '', '', 'jb', 'a94a8fe5ccb19ba61c4c0873d391e9', '758449357', 0, 0),
+(8, 'LO', 'CHEIKHOUNA', 'cheikhouna@cheikhouna.com', '60ca10a2cac0ec59bc65654222b065', '0', 758449357, 0),
+(9, '', '', 'jb', 'a94a8fe5ccb19ba61c4c0873d391e9', '758449357', 758449357, 0),
 (10, 'nom', 'PRENOM', 'jb', '60ca10a2cac0ec59bc65654222b065', '758449357', 12345, 0),
-(11, 'AZERTY', 'AZERTY', 'AZERTY', '52036e5a96b401419e3b870bb38598', '0', 12345, 0),
-(12, 'azerty', 'azerty', 'azerty', '9cf95dacd226dcf43da376cdb6cbba', '12345', 0, 0),
-(14, '', '', 'jb', '0b9c2625dc21ef05f6ad4ddf47c5f2', '0', 0, 0),
-(15, '', '', 'jb', '0b9c2625dc21ef05f6ad4ddf47c5f2', '123', 0, 0),
-(16, 'LO', 'CHEIKHOUNA', 'cheikhouna@cheikhouna.com', 'a94a8fe5ccb19ba61c4c0873d391e9', '1994', 0, 0),
-(17, '', '', 'jb', '90795a0ffaa8b88c0e250546d8439b', 'tata', 0, 0),
-(18, 'LO', 'CHEIKHOUNA', 'cheikhouna@cheikhouna.com', '90795a0ffaa8b88c0e250546d8439b', 'tata', 0, 0),
-(19, 'LO', 'CHEIKHOUNA', 'cheikhouna@cheikhouna.com', '90795a0ffaa8b88c0e250546d8439b', 'tata', 0, 0),
-(20, 'LO', 'CHEIKHOUNA', 'cheikhouna@cheikhouna.com', '3105221c1c15399d170ef540e974ef4f37f84e93', 'tete', 0, 0),
-(21, 'toto', 'tete', 'test@test.com', 'a94a8fe5ccb19ba61c4c0873d391e987982fbbd3', '123456789', 1234567, 0),
-(22, 'Chomes', 'G8C', 'G8c@chome.com', 'Chome', '0', 0, 0),
-(23, 'Chomes', 'Chomeur', 'Chome@Chome.com', '28df6ce1c4eb2a062b8553511431e54858c4880b', 'Chome', 0, 0),
+(11, 'LO', 'CHEIKHOUNA', 'azerty@azerty.com', '52036e5a96b401419e3b870bb38598', '0', 12345, 0),
+(12, 'LO', 'CHEIKHOUNA', 'azerty@azerty.com', '9cf95dacd226dcf43da376cdb6cbba', '12345', 758449357, 0),
+(14, '', '', 'jb', '0b9c2625dc21ef05f6ad4ddf47c5f2', '0', 758449357, 0),
+(15, '', '', 'jb', '0b9c2625dc21ef05f6ad4ddf47c5f2', '123', 758449357, 0),
+(16, 'LO', 'CHEIKHOUNA', 'cheikhouna@cheikhouna.com', 'a94a8fe5ccb19ba61c4c0873d391e9', '1994', 758449357, 0),
+(17, '', '', 'jb', '90795a0ffaa8b88c0e250546d8439b', 'tata', 758449357, 0),
+(18, 'LO', 'CHEIKHOUNA', 'cheikhouna@cheikhouna.com', '90795a0ffaa8b88c0e250546d8439b', 'tata', 758449357, 0),
+(19, 'LO', 'CHEIKHOUNA', 'cheikhouna@cheikhouna.com', '90795a0ffaa8b88c0e250546d8439b', 'tata', 758449357, 0),
+(20, 'LO', 'CHEIKHOUNA', 'cheikhouna@cheikhouna.com', '3105221c1c15399d170ef540e974ef4f37f84e93', 'tete', 758449357, 0),
+(21, 'toto', 'tete', 'test@test.com', 'c4033bff94b567a190e33faa551f411caef444f2', '123456789', 1234567, 0),
+(22, 'Chomes', 'G8C', 'G8c@chome.com', 'Chome', '0', 758449357, 0),
+(23, 'Chomes', 'Chomeur', 'Chome@Chome.com', '28df6ce1c4eb2a062b8553511431e54858c4880b', 'Chome', 758449357, 0),
 (24, 'dran', 'be', 'Chome@Chome.com', '8cb2237d0679ca88db6464eac60da96345513964', '12345', 12345, 0),
 (25, 'dell', 'paul', 'pauldell@c-home.com', '8cb2237d0679ca88db6464eac60da96345513964', 'paul', 12345, 0),
-(26, 'azerty', 'azerty', 'azerty', '9cf95dacd226dcf43da376cdb6cbba7035218921', 'azerty', 123456, 1),
-(27, 'moi', 'moi', 'moi@moi.fr', '55cbe7fd00627a28668d1d7c9899bdb602dad69d', 'moi', 123456, 0);
+(26, 'LO', 'CHEIKHOUNA', 'azerty@azerty.com', 'a0ff094025db6249d90f911e531633bdaea45616', 'azerty', 123456, 1),
+(27, 'Basile', 'test', 'test@test.com', 'c4033bff94b567a190e33faa551f411caef444f2', 'test', 758449357, 0),
+(28, 'Basile', 'test', 'test@test.com', 'c4033bff94b567a190e33faa551f411caef444f2', 'test', 758449357, 0);
 
 --
 -- Index pour les tables exportées
@@ -195,10 +167,10 @@ ALTER TABLE `capteur`
   ADD KEY `IdPiece` (`IdPiece`);
 
 --
--- Index pour la table `donnees`
+-- Index pour la table `conditions_d_utilisation`
 --
-ALTER TABLE `donnees`
-  ADD PRIMARY KEY (`IdDonnees`);
+ALTER TABLE `conditions_d_utilisation`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Index pour la table `maison`
@@ -228,27 +200,27 @@ ALTER TABLE `utilisateur`
 -- AUTO_INCREMENT pour la table `capteur`
 --
 ALTER TABLE `capteur`
-  MODIFY `IdCapteur` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `IdCapteur` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
--- AUTO_INCREMENT pour la table `donnees`
+-- AUTO_INCREMENT pour la table `conditions_d_utilisation`
 --
-ALTER TABLE `donnees`
-  MODIFY `IdDonnees` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+ALTER TABLE `conditions_d_utilisation`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT pour la table `maison`
 --
 ALTER TABLE `maison`
-  MODIFY `IdMaison` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `IdMaison` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT pour la table `piece`
 --
 ALTER TABLE `piece`
-  MODIFY `IdPiece` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `IdPiece` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `IdUtilisateur` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `IdUtilisateur` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 --
 -- Contraintes pour les tables exportées
 --
