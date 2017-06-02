@@ -1,15 +1,15 @@
 <?php
 include '../Controleur/start_session.php';
+include '../Vue/header.html';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../CSS/design_global.css" />
+
     <link rel="stylesheet" href="../CSS/C_Home_lumiere.css">
-    <link rel="stylesheet" href="../CSS/bouton_remonter.css" />
-    <link rel="icon" href="../Image/Logopic.ico">
+
     <title>C-Home / Accueil</title>
 
     <script type="text/javascript" src="../Js/scroll.js"></script>
@@ -60,27 +60,6 @@ include '../Controleur/start_session.php';
 </head>
 
 <body>
-
-<header id="haut">
-        <a class="retour" href="javascript:history.go(-1)">⇦</a>
-        <a class="avancer" href="javascript:history.go(+1)">⇨</a>
-        <nav>
-            <a href="../Controleur/logout.php" class="top">
-                Déconnexion
-            </a>
-        </nav>
-        <center><img class="image" src="../Image/ban.png"></center>
-        <ul class="bar">
-                <li class="barre"><a href="C_home.php">Accueil</a></li>
-                <li class="barre"><a href="GererVotreMaison.php">Gérez votre maison</a></li>
-                <li class="barre"><a href="CodeStats.php">Statistiques</a></li>
-                <li class="barre"><a href="compte.html">Compte</a></li>
-        </ul>
-
-        <a href="Aide.html" target="_blank"><img class="help" type="button" src="../Image/help2.png" alt="Besoin d'aide ?" height="4%" width="auto"/>
-        </a>
-    </header>
-
     <div id="backmenu">
         <div id="menu">
             <ul id="onglets">
@@ -138,36 +117,9 @@ include '../Controleur/start_session.php';
         </div>
     </div>
 
-    <div id="pied">
 
-        <a name="haut" id="haut"</a>
-        <div><a id="cRetour" class="cInvisible" href="#haut"></a></div>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                window.onscroll = function(ev) {
-                    document.getElementById("cRetour").className = (window.pageYOffset > 100) ? "cVisible" : "cInvisible";
-                };
-            });
-        </script>
-
-        <p>
-            <br>
-            <br>
-            <br>
-            <br>
-            À PROPOS
-            <br>
-            <br>
-            Copyright 2017 C-HOME.
-            <br>
-            <br>
-            All Rights Reserved.
-
-            <br>
-            <br>
-            <br>
-            <br>
-        </p>
-    </div>
+    <?php
+    include '../Vue/footer.html';
+    ?>
 </body>
 </html>
