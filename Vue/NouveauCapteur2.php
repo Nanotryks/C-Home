@@ -103,14 +103,15 @@ include '../Vue/header.html';
 <body>
 
 <div class="Etat">
-    <h3>Ajout de capteur effectué</h3>
+    <br>
+    <h2>Ajout de capteur effectué</h2>
 <FORM method="post" action="../Controleur/Ajout.php">
     <p>
         <img class="maison" src="../Image/gerer_maison.png">
     </p>
 
     <p>
-        <SELECT name="Maison" size="1" onchange="showUser(this.value)">
+        <SELECT name="Maison" size="1" onchange="showUser(this.value)" style="width:150px;">
             <option selected="selected" value="">Choisissez</option>
             <?php
                         include "../Controleur/Maison.php";
@@ -118,7 +119,7 @@ include '../Vue/header.html';
         </SELECT>
     </p>
     <p>
-        <select id="Piece" name="Piece" size="1" onchange="showUser2(this.value)">
+        <select id="Piece" name="Piece" size="1" onchange="showUser2(this.value)" style="width:150px;">
             <!--<option selected="selected" value="">Choisissez</option>-->
             <?php
                         include '../Controleur/Piece.php'
@@ -126,7 +127,7 @@ include '../Vue/header.html';
         </select>
     </p>
     <p class="ListeCapteur">
-        <select name="Capteur">
+        <select name="Capteur" style="width:150px;">
             <option selected="selected">Choississez</option>
             <option name = "Température" value = "Température">Température</option>
             <option name = "Fumée" value = "Fumée">Fumée</option>
@@ -138,7 +139,9 @@ include '../Vue/header.html';
     </p>
     <br>
     <input type="submit" value="Ajouter">
+
 </FORM>
+    <br><br>
 </div>
 
 

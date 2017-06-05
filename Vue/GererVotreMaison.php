@@ -112,6 +112,7 @@ include '../Vue/header.html';
         <div id="Maison">
 
         </div>
+        <br>
         <h1 class="titre">Gerez votre maison</h1>
         <div  class="gestion">
 
@@ -121,7 +122,7 @@ include '../Vue/header.html';
                 </p>
 
                 <p>
-                    <SELECT name="Maison" size="1" onchange="showUser(this.value)">
+                    <SELECT name="Maison" size="1" onchange="showUser(this.value)" style="width:150px;">
                         <option selected="selected" value="">Choisissez</option>
                         <?php
                         include "../Controleur/Maison.php";
@@ -129,13 +130,14 @@ include '../Vue/header.html';
                     </SELECT>
                 </p>
                 <p>
-                    <select id="Piece" name="Piece" size="1" onchange="showUser2(this.value)">
+                    <select id="Piece" name="Piece" size="1" onchange="showUser2(this.value)" style="width:150px;">
                         <!--<option selected="selected" value="">Choisissez</option>-->
                         <?php
                         include '../Controleur/Piece.php'
                         ?>
                     </select>
                 </p>
+                <br>
                 <div id="Capteur">
                     <?php
                     include '../Controleur/Capteur.php';
@@ -144,19 +146,24 @@ include '../Vue/header.html';
             </FORM>
 
         <br>
+            <br>
         </div>
     </div>
 <br/>
 <br/>
 <div class="options">
+    <br>
     <h1> Sélectionnez une des options suivantes</h1>
     <br/>
     <img src="..\Image\addsensor.png" alt="ajout d'un capteur" class="addsensor"/></br>
+    <br>
 <a href="NouveauCapteur.php"> <input type="button" value="Nouveau capteur"></a>
 <a href="DeleteCapteur.php"> <input type="button" value="Supprimer un capteur"></a>
 <br/>
 <br/>
+    <br>
     <img src="..\Image\room.png" alt="ajout/suppression de pièces" class="room"/></br>
+    <br>
 <a href="NouvellePiece.php"> <input type="button" value="Nouvelle pièce"></a>
 <a href="DeletePiece.php"> <input type="button" value="Supprimer une piece"></a>
 </div>

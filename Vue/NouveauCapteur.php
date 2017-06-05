@@ -110,7 +110,7 @@ include '../Vue/header.html';
     </p>
 
     <p>
-        <SELECT name="Maison" size="1" onchange="showUser(this.value)">
+        <SELECT name="Maison" size="1" onchange="showUser(this.value)" style="width:150px;">
             <option selected="selected" value="">Choisissez</option>
             <?php
                         include "../Controleur/Maison.php";
@@ -118,7 +118,7 @@ include '../Vue/header.html';
         </SELECT>
     </p>
     <p>
-        <select id="Piece" name="Piece" size="1" >
+        <select id="Piece" name="Piece" size="1" style="width:150px;">
             <!--<option selected="selected" value="">Choisissez</option>-->
             <?php
                         include '../Controleur/Piece.php'
@@ -126,7 +126,7 @@ include '../Vue/header.html';
         </select>
     </p>
     <p class="ListeCapteur">
-        <select name="Capteur">
+        <select name="Capteur" style="width:150px;">
             <option selected="selected">Choississez</option>
             <option name = "Température" value = "Température">Température</option>
             <option name = "Humidité" value = "Humidité">Humidité</option>
@@ -139,6 +139,7 @@ include '../Vue/header.html';
        <br>
     <input type="submit" value="Ajouter">
 </FORM>
+    <br><br>
 </div>
 
 

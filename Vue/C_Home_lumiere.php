@@ -63,17 +63,23 @@ include '../Vue/header.html';
     <div id="backmenu">
         <div id="menu">
             <ul id="onglets">
-                <li class="active"><a href="C_home.php"> Utilisateurs connectés </a></li>
+                <li class="active"><a href="C_home.php"> Etats des capteurs </a></li>
                 <li class="active1"><a href="C_home_lumiere.php"> Lumières </a></li>
                 <li class="active2"><a href="C_Home_temperature.php"> Température </a></li>
                 <li class="active3"><a href="C_home_ouverture.php"> Etat des ouvertures </a></li>
             </ul>
+
+            <br><br>
             <SELECT name="Maison" size="1" onchange="showUser(this.value)">
-                <option selected="selected" value="">Choisissez</option>
+                <option selected="selected" value="">Choisissez un domicile</option>
                 <?php
                 include "../Controleur/Maison.php";
                 ?>
+
             </SELECT>
+
+            <br><br>
+
             <br>
             <br>
             <div id="Capteur">
