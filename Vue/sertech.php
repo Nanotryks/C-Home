@@ -92,7 +92,7 @@ include '../Vue/header.html';
 </div>
 </div>
 <footer>
-
+    <br>
     <div id="photos">
         <h1>Nos capteurs</h1>
         <br>
@@ -101,7 +101,7 @@ include '../Vue/header.html';
                     id="p3" src="../Image/photo3.jpeg" width="200px" height="auto"/></p>
     </div>
 
-
+    <br>
 </footer>
 
 <?php

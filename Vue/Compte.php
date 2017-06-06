@@ -1,6 +1,6 @@
 <?php
 
-include '../Vue/header.html';?>
+include '../Vue/header.html'; ?>
 
 
 <!DOCTYPE html>
@@ -8,7 +8,7 @@ include '../Vue/header.html';?>
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../CSS/Compte.css" />
+    <link rel="stylesheet" href="../CSS/Compte.css"/>
 
     <title>Gestion de compte utilisateur</title>
 
@@ -22,17 +22,12 @@ include '../Vue/header.html';?>
             <br>
             <br>
 
-            <div class ="para">
-Gestion du compte utilisateur
-</div>
+            <div class="para">
+                Gestion du compte utilisateur
+            </div>
 
-            <div class ="choix" id="choice">
+            <div class="choix" id="choice">
 
-                <div id="bloc1">
-
-
-                </div>
-                <br>
 
                 <p><a href="parametres.php">Paramètres du compte</a></p>
                 <p><a href="sertech.php">Service technique</a></p>

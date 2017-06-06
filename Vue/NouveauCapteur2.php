@@ -14,35 +14,31 @@ include '../Vue/header.html';
 
     <script type="text/javascript" src="../Js/scroll.js"></script>
 
-     <script>  function showUser(str)
-        {
-            if (str == "")
-            {
+    <script>  function showUser(str) {
+            if (str == "") {
                 document.getElementById("Piece").innerHTML = "";
                 return;
             }
 
             if (window.XMLHttpRequest) {
 
-                xmlhttp= new XMLHttpRequest();
+                xmlhttp = new XMLHttpRequest();
             } else {
 
                 if (window.ActiveXObject)
                     try {
-                        xmlhttp= new ActiveXObject("Msxml2.XMLHTTP");
+                        xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
                     } catch (e) {
                         try {
-                            xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+                            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
                         } catch (e) {
                             return NULL;
                         }
                     }
             }
 
-            xmlhttp.onreadystatechange = function ()
-            {
-                if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
-                {
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 
                     document.getElementById("Piece").innerHTML = xmlhttp.responseText;
 
@@ -56,35 +52,31 @@ include '../Vue/header.html';
 
         }
 
-        function showUser2(str)
-        {
-            if (str == "")
-            {
+        function showUser2(str) {
+            if (str == "") {
                 document.getElementById("Capteur").innerHTML = "";
                 return;
             }
 
             if (window.XMLHttpRequest) {
 
-                xmlhttp= new XMLHttpRequest();
+                xmlhttp = new XMLHttpRequest();
             } else {
 
                 if (window.ActiveXObject)
                     try {
-                        xmlhttp= new ActiveXObject("Msxml2.XMLHTTP");
+                        xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
                     } catch (e) {
                         try {
-                            xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+                            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
                         } catch (e) {
                             return NULL;
                         }
                     }
             }
 
-            xmlhttp.onreadystatechange = function ()
-            {
-                if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
-                {
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 
                     document.getElementById("Capteur").innerHTML = xmlhttp.responseText;
 
@@ -97,7 +89,7 @@ include '../Vue/header.html';
 
 
         }
-     </script>
+    </script>
 </head>
 
 <body>
@@ -105,42 +97,42 @@ include '../Vue/header.html';
 <div class="Etat">
     <br>
     <h2>Ajout de capteur effectué</h2>
-<FORM method="post" action="../Controleur/Ajout.php">
-    <p>
-        <img class="maison" src="../Image/gerer_maison.png">
-    </p>
+    <FORM method="post" action="../Controleur/Ajout.php">
+        <p>
+            <img class="maison" src="../Image/gerer_maison.png">
+        </p>
 
-    <p>
-        <SELECT name="Maison" size="1" onchange="showUser(this.value)" style="width:150px;">
-            <option selected="selected" value="">Choisissez</option>
-            <?php
-                        include "../Controleur/Maison.php";
-                        ?>
-        </SELECT>
-    </p>
-    <p>
-        <select id="Piece" name="Piece" size="1" onchange="showUser2(this.value)" style="width:150px;">
-            <!--<option selected="selected" value="">Choisissez</option>-->
-            <?php
-                        include '../Controleur/Piece.php'
-                        ?>
-        </select>
-    </p>
-    <p class="ListeCapteur">
-        <select name="Capteur" style="width:150px;">
-            <option selected="selected">Choississez</option>
-            <option name = "Température" value = "Température">Température</option>
-            <option name = "Fumée" value = "Fumée">Fumée</option>
-            <option name = "Lumière" value = "Lumière"name = "Lumière">Lumière</option>
-            <option name = "Porte" value = "Porte">Porte</option>
-            <option name = "Fenêtre" value = "Fenêtre">Fenêtre</option>
-            <option name = "Présence" value = "Présence">Présence</option>
-        </select>
-    </p>
-    <br>
-    <input type="submit" value="Ajouter">
+        <p>
+            <SELECT name="Maison" size="1" onchange="showUser(this.value)" style="width:150px;">
+                <option selected="selected" value="">Choisissez</option>
+                <?php
+                include "../Controleur/Maison.php";
+                ?>
+            </SELECT>
+        </p>
+        <p>
+            <select id="Piece" name="Piece" size="1" onchange="showUser2(this.value)" style="width:150px;">
+                <!--<option selected="selected" value="">Choisissez</option>-->
+                <?php
+                include '../Controleur/Piece.php'
+                ?>
+            </select>
+        </p>
+        <p class="ListeCapteur">
+            <select name="Capteur" style="width:150px;">
+                <option selected="selected">Choississez</option>
+                <option name="Température" value="Température">Température</option>
+                <option name="Fumée" value="Fumée">Fumée</option>
+                <option name="Lumière" value="Lumière" name="Lumière">Lumière</option>
+                <option name="Porte" value="Porte">Porte</option>
+                <option name="Fenêtre" value="Fenêtre">Fenêtre</option>
+                <option name="Présence" value="Présence">Présence</option>
+            </select>
+        </p>
+        <br>
+        <input type="submit" value="Ajouter">
 
-</FORM>
+    </FORM>
     <br><br>
 </div>
 
