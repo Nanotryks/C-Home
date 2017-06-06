@@ -75,29 +75,29 @@ while ($donnees = $reponse->fetch()) {
 //
 //    }
 
-    if (strcmp($donnees['Nom'], 'Température') == 1) {
+    if ($donnees['Nom'] == 'Température') {
         echo $donnees['Nom'] . " : " . $donnees2['Valeur'] . " °C" . "<br>";
         echo "<br>";
     }
     else
         {
-         if (strcmp($donnees['Nom'], "Humidité") == 1) {
+         if ($donnees['Nom'] == "Humidité") {
             echo $donnees['Nom'] . " : " . $donnees2['Valeur'] . " %" . "<br>";
             echo "<br>";
         }
         else
         {
-            if (strcmp($donnees['Nom'], "Lumière") == 1) {
+            if ($donnees['Nom'] == "Lumière") {
                 echo $donnees['Nom'] . " : " . $donnees2['Valeur'] . " Lux" . "<br>";
                 echo "<br>";
             }
             else{
-                if (strcmp($donnees['Nom'], "Fumée") == 1) {
+                if ($donnees['Nom'] == "Fumée") {
                     echo $donnees['Nom'] . " : " . $donnees2['Valeur'] . "<br>";
                     echo "<br>";
                 }
                 else{
-                    if (strcmp($donnees['Nom'], "Porte d\'entrée") == 1) {
+                    if ($donnees['Nom'] == "Porte d\'entrée") {
                         if ($donnees2['Valeur'] == 0) {
                             echo $donnees['Nom'] . " : " . " est fermée" . "<br>";
                             echo "<br>";
@@ -109,16 +109,20 @@ while ($donnees = $reponse->fetch()) {
 
                     else{
 
-                        if (strcmp($donnees['Nom'], "Fenêtre") == 1) {
+                        if ($donnees['Nom'] == "Fenêtre") {
                             if ($donnees2['Valeur'] == 0) {
-                                echo $donnees['Nom'] . " : " . " est fermée" . "<br>";
+                                echo $donnees['Nom'] . " : " . " Fermée" . "<br>";
+                                echo "<br>";
+
                             } else if ($donnees2['Valeur'] == 0) {
-                                echo $donnees['Nom'] . " : " . " est ouverte" . "<br>";
+                                echo $donnees['Nom'] . " : " . " Ouverte" . "<br>";
+                                echo "<br>";
+
                             }
                         }
 
                         else{
-                            if (strcmp($donnees['Nom'], "Présence") == 1) {
+                            if ($donnees['Nom']== "Présence") {
                                 if ($donnees2['Valeur'] == 0) {
                                     echo $donnees['Nom'] . " : " . "Aucune présence détectée" . "<br>";
                                     echo "<br>";
@@ -126,9 +130,7 @@ while ($donnees = $reponse->fetch()) {
                                     echo $donnees['Nom'] . " : " . "Présence détectée" . "<br>";
                                     echo "<br>";
                                 }
-                            } else {
-                                echo "Vous n'avez actuellement aucun capteur de configuré" . "<br>";
-                                echo "<br>";
+                            }
                             }
 
                         }
@@ -140,7 +142,7 @@ while ($donnees = $reponse->fetch()) {
             }
 
         }
-    }
+
 
 
 }
