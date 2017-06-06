@@ -63,19 +63,14 @@ include '../Vue/header.html';
 
 
         <p>
-            <label for="pseudo">Numéro d'utilisateur</label> <br/>
+            <label for="pseudo">Numéro d'utilisateur :</label> <br/>
             <br>
             <input type="text" name="pseudo" id="pseudoP1" maxlength="4" size="4" value="XXXX"
                    onFocus="javascript:this.value=''"/>
-            <input type="text" name="pseudo" id="pseudoP2" maxlength="4" size="4" value="XXXX"
-                   onFocus="javascript:this.value=''"/>
-            <input type="text" name="pseudo" id="pseudoP3" maxlength="4" size="4" value="XXXX"
-                   onFocus="javascript:this.value=''"/>
-            <input type="text" name="pseudo" id="pseudoP4" maxlength="4" size="4" value="XXXX"
-                   onFocus="javascript:this.value=''"/>
+
             <br>
             <br>
-            <label>Détails du problème</label> <br/>
+
             <br>
             <!--                <textarea name="explication" rows=5 cols=40>  </textarea><br/>-->
             <!--                <br>-->
@@ -84,8 +79,9 @@ include '../Vue/header.html';
             <form method="post">
         <p>
 
-            <label for="message">Message</label> : <input type="text" name="message" id="message"/><br/>
+            <label for="message">Détails du problème :</label></p> <input type="text" name="message" id="message" size="20"/><br/>
 
+            <br>
             <input type="submit" value="Envoyer"/>
         </p>
         </form>
@@ -125,7 +121,7 @@ include '../Vue/header.html';
     <div id="photos">
         <h1>Nos capteurs</h1>
         <br>
-        <p><img id="p1" src="../Image/photo1.jpeg" width="200px" height="auto"/><img id="p2" src="../Image/photo2.jpeg"
+        <p><img id="p1" src="../Image/photo1.jpeg" width="200px" height="auto"/><img id="p4" src="../Image/photo2.png"
                                                                                      width="200px" height="auto"/><img
                     id="p3" src="../Image/photo3.jpeg" width="200px" height="auto"/></p>
     </div>
