@@ -207,3 +207,22 @@ ul li a:focus::before{
     text-align: center;
     margin: auto;
 }
+
+#cond{
+    color : #FFFFFF;
+    text-decoration: none;
+}
+
+#cond:hover,
+#cond:focus{
+    background: rgba(255,255,255,.2);
+    font-size: 20px;
+    border-radius: 3px;
+
+    padding: 4px;
+    transition: all .3s 0s;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .3),
+    0 3px 5px rgba(0, 0, 0, .2),
+    0 5px 10px rgba(0, 0, 0, .2),
+    0 20px 20px rgba(0, 0, 0, .15);
+}
