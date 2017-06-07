@@ -1,5 +1,7 @@
 <?php
 include '../Controleur/start_session.php';
+include '../Vue/header_admin.html';
+
 ?>
 
 
@@ -8,10 +10,11 @@ include '../Controleur/start_session.php';
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../CSS/Admin.css">
+    <link rel="stylesheet" href="../CSS/AdminCapteurs.css">
     <link rel="icon" href="../Image/Logopic.ico">
     <title>Section Administrateur</title>
     <script>
+
         function showUser(str) {
             if (str == "") {
                 document.getElementById("Piece").innerHTML = "";
@@ -125,29 +128,11 @@ include '../Controleur/start_session.php';
 
         }
 
+
     </script>
 </head>
 
 <body>
-<header>
-    <nav>
-        <a href="../Controleur/logout.php" class="top">
-            Déconnexion
-        </a>
-    </nav>
-    <center><img class="image" src="../Image/ban.png"></center>
-    <ul class="bar">
-        <li class="barre"><a href="Admin.php">Modérateur</a></li>
-        <li class="barre"><a href="AdminCapteurs.php">Capteurs</a></li>
-        <li class="barre"><a href="AdminStats.php">Statistiques</a></li>
-        <li class="barre"><a href="compte.html">Compte</a></li>
-
-    </ul>
-
-    <a href="Aide.html" target="_blank"><img class="help" type="button" src="../Image/help2.png" alt="Besoin d'aide ?"
-                                             height="4%" width="auto"/>
-    </a>
-</header>
 
 <div id="Moderate">
     <h2>Capteurs</h2>
@@ -162,20 +147,20 @@ include '../Controleur/start_session.php';
     </div>
     <br>
     <div id="Piece">
-
+        <br>
     </div>
     <br>
-
     <div id="Capteur">
-
+        <br>
     </div>
-
+    <br>
 
 </div>
 
 
 </body>
 <foot>
-    <p id="droit"><a href="ConditionUtili.html">Conditions générales d'utilisatation</a></p>
+    <? include '../Vue/footer_admin.html';
+    ?>
 </foot>
 </html>

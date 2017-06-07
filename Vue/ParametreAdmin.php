@@ -1,11 +1,11 @@
 <?php
 include '../Controleur/start_session.php';
-?>
+include '../Vue/header_admin.html';?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8"/>
-    <link rel="stylesheet" href="../CSS/design_global_admin.css"/>
+
     <link rel="stylesheet" href="../CSS/parametres_admin.css" />
     <link rel="icon" type="ico" href="../Image\Logopic.ico"/>
     <title>Paramètres du compte</title>
@@ -21,23 +21,6 @@ include '../Controleur/start_session.php';
 </head>
 
 <body>
-<header>
-    <a class="retour" href="javascript:history.go(-1)">⇦</a>
-    <a class="avancer" href="javascript:history.go(+1)">⇨</a>
-    <nav>
-        <a href="../Controleur/logout.php" class="top">
-            Déconnexion
-        </a>
-    </nav>
-    <center><img class="image" src="../Image/ban.png"></center><!-- width="300" height="500"-->
-    <ul class="bar">
-        <li class="barre"><a href="../Vue/Admin.php">Modérateur</a></li>
-        <li class="barre"><a href="../Vue/AdminCapteurs.php">Capteurs</a></li>
-        <li class="barre"><a href="../Vue/AdminStats.php">Statistiques</a></li>
-        <li class="barre"><a href="../Vue/ParametreAdmin.php">Paramètres</a></li>
-
-    </ul>
-</header>
 
 <div>
 
