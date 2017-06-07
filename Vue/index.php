@@ -21,6 +21,9 @@ APP G8C ISEP
 		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">s'inscrire</label>
 		<div class="forme">
 			<div class="sign-in-lo">
+
+<!--                form avec la connexion-->
+
             <form action="../Controleur/connexion.php" method="post">
 
 				<div class="group">
@@ -48,6 +51,8 @@ APP G8C ISEP
                 </form>
 			</div>
 			<div class="sign-up-lo">
+
+<!--                form inscription-->
                 <form action="../Controleur/inscription.php" method="post">
 				<div class="group">
 					<label for="user" class="label">IDENTIFIANT DOMISEP</label>
