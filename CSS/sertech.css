@@ -102,7 +102,7 @@ footer {
 #p1:hover,
 #p1:focus {
     background: rgba(255, 255, 255, 0);
-    padding: 0 3% 0 0;
+    padding: 0 3% 3% 0;
     transition: all .5s 0s;
 
 }
@@ -116,7 +116,7 @@ footer {
 #p2:hover,
 #p2:focus {
     background: rgba(255, 255, 255, 0);
-    padding: 3% 0 0 0;
+    padding: 3% 0 3% 0;
     transition: all .5s 0s;
 
 }
@@ -125,6 +125,14 @@ footer {
 #p3:focus {
     background: rgba(255, 255, 255, 0);
     padding: 0 0 0 3%;
+    transition: all .5s 0s;
+
+}
+
+#p4:hover,
+#p4:focus {
+    background: rgba(255, 255, 255, 0);
+    padding: 3% 0 0 3%;
     transition: all .5s 0s;
 
 }
