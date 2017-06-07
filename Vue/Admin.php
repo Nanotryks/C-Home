@@ -1,6 +1,6 @@
 <?php
 include '../Controleur/start_session.php';
-?>
+include '../Vue/header_admin.html';?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -55,25 +55,6 @@ include '../Controleur/start_session.php';
 </head>
 
 <body>
-<header>
-    <nav>
-        <a href="../Controleur/logout.php" class="top">
-            Déconnexion
-        </a>
-    </nav>
-    <center><img class="image" src="../Image/ban.png"></center>
-    <ul class="bar">
-        <li class="barre"><a href="../Vue/Admin.php">Modérateur</a></li>
-        <li class="barre"><a href="../Vue/AdminCapteurs.php">Capteurs</a></li>
-        <li class="barre"><a href="../Vue/AdminStats.php">Statistiques</a></li>
-        <li class="barre"><a href="../Vue/ParametreAdmin.php">Paramètres</a></li>
-
-    </ul>
-
-    <a href="Aide.html" target="_blank"><img class="help" type="button" src="../Image/help2.png" alt="Besoin d'aide ?"
-                                             height="4%" width="auto"/>
-    </a>
-</header>
 
 <div id="Moderate">
     <h2>Modérateur</h2>
@@ -122,10 +103,8 @@ include '../Controleur/start_session.php';
 
     </div>
 </div>
+    <? include '../Vue/footer_admin.html';
+    ?>
 </body>
 
-
-<foot>
-    <p><a id="droits" href="ConditionUtili.php">Conditions générales d'utilisatation</a></p>
-</foot>
 </html>
