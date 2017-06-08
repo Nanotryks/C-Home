@@ -60,7 +60,7 @@ include '../Vue/header.html';
 <!--<img src="Image\Logop.png" alt="Logo de C-Home" class="logo"/>-->
 
 
-<div>
+<div class="lieu">
 
     <?php
     // Connexion à la base de données
@@ -72,7 +72,9 @@ include '../Vue/header.html';
 
     <h1>Lieux de résidence</h1>
     <form class="choix" method="post" action="../Controleur/maisoncible.php">
+        <br>
         <label for="choix_maison">Veuillez indiquer votre lieu de résidence actuel :</label><br/>
+        <br>
         <select name="choix_maison" id="choix_maison" onchange="showUser(this.value)">
             <?php while ($donnees = $reponse->fetch()) {
                 echo '<option value=' . $donnees['Porte'] . '>
@@ -91,24 +93,26 @@ include '../Vue/header.html';
 
         </select>
 
+
+<!--        <input type="submit" name="maison_actuelle" value="Faire de cette adresse mon adresse actuelle" class="actual"/>-->
+        </br><br>
         </br>
-        </br>
-        <input type="submit" name="maison_actuelle" value="Faire de cette adresse mon adresse actuelle"/>
-        </br>
-        </br>
-        <img src="..\Image\addhouse.png" alt="ajout d'une maison" class="addhouse"/></br>
-        <a href="maison_ajouter.php"><input type="button" name="Ajouter une maison " value="Ajouter une maison"/></a></br></br>
-        <img src="..\Image\deletehouse.png" alt="supression d'une maison" class="deletehouse"/></br>
-        <a href="maison_supprimer.php"><input type="button" name="Supprimer une maison " value="Supprimer une maison"/></a></br> </br>
+        <img src="..\Image\addhouse.png" alt="ajout d'une maison" class="addhouse"/></br></br>
+        <a href="maison_ajouter.php"><input type="button" name="Ajouter une maison " value="Ajouter une maison" class="actual"/></a></br></br>
+        <img src="..\Image\deletehouse.png" alt="supression d'une maison" class="deletehouse" /></br></br>
+        <a href="maison_supprimer.php"><input type="button" name="Supprimer une maison " value="Supprimer une maison" class="actual"/></a></br></br> </br>
 
     </form>
 </div>
 <h1>Votre maison</h1>
 <div id="votre_maison">
+    <br>
     <?php $donnees2 = $reponse2->fetch();?>
-    Nombre de pièces : <?php echo $donnees2['Nombre_Piece']?> </br>
+    Nombre de pièces : <?php echo $donnees2['Nombre_Piece']?> </br><br>
 
     Nombre d'étages : <?php echo $donnees2['Nombre_Etage']?>
+
+    <br><br>
 </div>
 
 
