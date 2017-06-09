@@ -12,6 +12,7 @@ include '../Vue/header_admin.html';?>
     <link rel="stylesheet" href="../CSS/Admin.css">
     <link rel="icon" href="../Image/Logopic.ico">
     <title>Section Administrateur</title>
+    <script type="text/javascript" src="../Js/scroll.js"></script>
     <script>
         function showUser(str) {
             if (str == "") {
@@ -104,8 +105,9 @@ include '../Vue/header_admin.html';?>
 
     </div>
 </div>
-    <? include '../Vue/footer_admin.html';
-    ?>
+<?php
+include '../Vue/footer_admin.html';
+?>
 </body>
 
 </html>

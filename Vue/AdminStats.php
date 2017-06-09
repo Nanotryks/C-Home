@@ -169,10 +169,8 @@ include '../Vue/header_admin.html';?>
 <div id="util">
     <h2>util</h2>
 </div>
+<?php
+include '../Vue/footer_admin.html';
+?>
 </body>
-
-
-<foot>
-    <p id="droit"><a href="ConditionUtili.php">Conditions générales d'utilisatation</a></p>
-</foot>
 </html>

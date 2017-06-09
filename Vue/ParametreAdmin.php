@@ -9,6 +9,7 @@ include '../Vue/header_admin.html';?>
     <link rel="stylesheet" href="../CSS/parametres_admin.css" />
     <link rel="icon" type="ico" href="../Image\Logopic.ico"/>
     <title>Paramètres du compte</title>
+    <script type="text/javascript" src="../Js/scroll.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
@@ -74,5 +75,8 @@ include '../Vue/header_admin.html';?>
     </form>
 
 </div>
+<?php
+include '../Vue/footer_admin.html';
+?>
 </body>
 </html>
