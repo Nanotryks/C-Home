@@ -56,28 +56,27 @@ include '../Vue/header_admin.html';?>
 
 <body>
 
-<div id="Moderate">
-    <h2>Modérateur</h2>
-
-
-    <label>Identifiant du client : </label>
-    <input type="search" name="search" onchange="showUser(this.value)" maxlength="4" size="4">
-    <button type="button" value="Rechercher">Rechercher</button>
-    <!--        --><?php
-    //
-    //            include "../Modele/Connexion.php";
-    //
-    //            $query =$BDD->query("SELECT IdUtilisateur, nom, prenom, mail, telephone, numero_abonne FROM utilisateur ORDER BY IdUtilisateur");
-    //            ?>
-    <!---->
-    <!--            <select name="categories" onchange="showUser(this)">-->
-    <!--        --><?php //
-    //            while ($row = $query->fetch())
-    //            {
-    //                echo "<option id='".$row['IdUtilisateur']."' value='".$row['path']."'>".$row['prenom']." ".$row['nom']."</option>";
-    //            }
-    //            ?><!--        -->
-    <!--            </select>-->
+<form method="post" action="../Controleur/admin_delete.php">
+    <div id="Moderate">
+        <h2>Modérateur</h2>
+        <label>Identifiant du client : </label>
+        <input type="search" name="search" onchange="showUser(this.value)" maxlength="4" size="4">
+        <button type="button" value="Rechercher">Rechercher</button>
+        <!--        --><?php
+        //
+        //            include "../Modele/Connexion.php";
+        //
+        //            $query =$BDD->query("SELECT IdUtilisateur, nom, prenom, mail, telephone, numero_abonne FROM utilisateur ORDER BY IdUtilisateur");
+        //            ?>
+        <!---->
+        <!--            <select name="categories" onchange="showUser(this)">-->
+        <!--        --><?php //
+        //            while ($row = $query->fetch())
+        //            {
+        //                echo "<option id='".$row['IdUtilisateur']."' value='".$row['path']."'>".$row['prenom']." ".$row['nom']."</option>";
+        //            }
+        //            ?><!--        -->
+        <!--            </select>-->
 
 
     <div id="Rechercher">
@@ -87,9 +86,11 @@ include '../Vue/header_admin.html';?>
     <div id="capteurs">
 
     </div>
+    </br>
+    <input type="submit" value="Supprimer le compte">
 
-
-</div>
+    </div>
+</form>
 
 <div id="util">
     <h2>Utilisateurs connectés</h2>
