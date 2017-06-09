@@ -34,7 +34,7 @@ include '../Vue/header.html';
         <div id="jour">
 		<h2>
 
-			CONSOMMATION JOURNALIERE
+			CONSOMMATION JOURNALIERE EN TEMPS REELS
 
 			
 		</h2>
