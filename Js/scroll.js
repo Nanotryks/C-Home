@@ -28,7 +28,7 @@ function scrollToC(element, from, to, duration) {
     if (duration < 0) return;
     if(typeof from === "object")from=from.offsetTop;
     if(typeof to === "object")to=to.offsetTop;
-    scrollToX(element, from, to, 0, 1/duration, 20, easeOutCuaic);
+    scrollToX(element, from, to, 0, 1/(duration-300), 20, easeOutCuaic);
 }
 
 function scrollToX(element, x1, x2, t, v, step, operacion) {
