@@ -43,7 +43,7 @@ include '../Vue/header.html';
             </br>
             </br>
             <div id="horaires">
-                - du Mardi au Samedi de 8h30 à19h
+                - du Mardi au Samedi de 9h à19h
                 <br/>- le samedi de 8h30 à 17h
             </div>
             <div id="bloc_mail" class=" Par mail">
