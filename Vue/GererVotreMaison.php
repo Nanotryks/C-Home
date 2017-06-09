@@ -17,6 +17,50 @@ include '../Vue/header.html';
 
     <script type="text/javascript" src="../Js/scroll.js"></script>
     <script type="text/javascript" src="../Js/GererVotreMaison.js"></script>
+    <script>
+
+        function showUser3(str)
+        {
+            if (str == "")
+            {
+                document.getElementById("Radio").innerHTML = "";
+                return;
+            }
+
+            if (window.XMLHttpRequest) {
+
+                xmlhttp= new XMLHttpRequest();
+            } else {
+
+                if (window.ActiveXObject)
+                    try {
+                        xmlhttp= new ActiveXObject("Msxml2.XMLHTTP");
+                    } catch (e) {
+                        try {
+                            xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+                        } catch (e) {
+                            return NULL;
+                        }
+                    }
+            }
+
+            xmlhttp.onreadystatechange = function ()
+            {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+                {
+
+                    document.getElementById("Radio").innerHTML = xmlhttp.responseText;
+
+                }
+            }
+
+            xmlhttp.open("GET", "../Controleur/Radio.php?q=" + str, true);
+
+            xmlhttp.send();
+
+
+        }
+        </script>
 </head>
 
 
@@ -80,6 +124,18 @@ include '../Vue/header.html';
     <br>
     <a href="NouvellePiece.php"> <input type="button" value="Nouvelle pièce"></a>
     <a href="DeletePiece.php"> <input type="button" value="Supprimer une piece"></a>
+</div>
+
+<div id="mode">
+    <h1>Automatique/Manuel</h1>
+    <select name="mode" onchange="showUser3(this.value)">
+        <option selected="selected">Choississez</option>
+        <option name="Température" value="Température">Température</option>
+        <option name="Lumière" value="Lumière">Lumière</option>
+    </select>
+    <div id="Radio">
+
+    </div>
 </div>
 
 <script>

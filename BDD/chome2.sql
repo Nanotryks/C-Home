@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 02 Juin 2017 à 09:01
+-- Généré le :  Ven 09 Juin 2017 à 23:09
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -23,6 +23,26 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `auto`
+--
+
+CREATE TABLE `auto` (
+  `IdAuto` int(255) NOT NULL,
+  `Capteur` varchar(255) NOT NULL,
+  `Valeur` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `auto`
+--
+
+INSERT INTO `auto` (`IdAuto`, `Capteur`, `Valeur`) VALUES
+(1, 'Température', 20),
+(2, 'Lumière', 700);
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `capteur`
 --
 
@@ -38,7 +58,8 @@ CREATE TABLE `capteur` (
 --
 
 INSERT INTO `capteur` (`IdPiece`, `IdCapteur`, `Nom`, `Valeur`) VALUES
-(5, 12, 'Fumée', 0);
+(5, 12, 'Fumée', 0),
+(6, 26, 'Température', 20);
 
 -- --------------------------------------------------------
 
@@ -113,7 +134,30 @@ CREATE TABLE `maison` (
 INSERT INTO `maison` (`IdUtilisateur`, `IdMaison`, `Nom`, `Porte`, `Voie`, `Adresse`, `Code_Postal`, `Ville`, `Nombre_Piece`, `Nombre_Etage`) VALUES
 (24, 2, 'Maison1', 1, 'rue', 'bidon', 90000, 'Issy', 5, 1),
 (1, 3, 'Maison2', 2, 'rue', 'bidon', 90000, 'Issy', 10, 2),
-(25, 11, 'vacance', 6, 'rue', 'vac', 75000, 'rochelle', 9, 2);
+(25, 11, 'vacance', 6, 'rue', 'vac', 75000, 'rochelle', 9, 2),
+(29, 12, 'Maison1', 1, 'rue', 'azerty', 90000, 'Issy', 10, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `mode`
+--
+
+CREATE TABLE `mode` (
+  `IdUtilisateur` int(255) NOT NULL,
+  `IdCapteur` int(255) NOT NULL,
+  `Idmode` int(255) NOT NULL,
+  `mode` varchar(255) NOT NULL,
+  `Capteur` varchar(255) NOT NULL,
+  `Valeur` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `mode`
+--
+
+INSERT INTO `mode` (`IdUtilisateur`, `IdCapteur`, `Idmode`, `mode`, `Capteur`, `Valeur`) VALUES
+(29, 26, 11, 'Automatique', 'Température', 20);
 
 -- --------------------------------------------------------
 
@@ -132,7 +176,10 @@ CREATE TABLE `piece` (
 --
 
 INSERT INTO `piece` (`IdMaison`, `IdPiece`, `Nom`) VALUES
-(2, 5, 'Salon');
+(2, 5, 'Salon'),
+(12, 6, 'Salon'),
+(12, 7, 'Chambre'),
+(12, 8, 'Cuisine');
 
 -- --------------------------------------------------------
 
@@ -182,11 +229,18 @@ INSERT INTO `utilisateur` (`IdUtilisateur`, `nom`, `prenom`, `mail`, `mdp`, `num
 (25, 'dell', 'paul', 'pauldell@c-home.com', '8cb2237d0679ca88db6464eac60da96345513964', 'paul', 12345, 0),
 (26, 'LO', 'CHEIKHOUNA', 'azerty@azerty.com', 'a0ff094025db6249d90f911e531633bdaea45616', 'azerty', 123456, 1),
 (27, 'Basile', 'test', 'test@test.com', 'c4033bff94b567a190e33faa551f411caef444f2', 'test', 758449357, 0),
-(28, 'Basile', 'test', 'test@test.com', 'c4033bff94b567a190e33faa551f411caef444f2', 'test', 758449357, 0);
+(28, 'Basile', 'test', 'test@test.com', 'c4033bff94b567a190e33faa551f411caef444f2', 'test', 758449357, 0),
+(29, 'azerty', 'azerty', 'azerty@azerty.fr', '9cf95dacd226dcf43da376cdb6cbba7035218921', 'azerty', 123456789, 0);
 
 --
 -- Index pour les tables exportées
 --
+
+--
+-- Index pour la table `auto`
+--
+ALTER TABLE `auto`
+  ADD PRIMARY KEY (`IdAuto`);
 
 --
 -- Index pour la table `capteur`
@@ -215,6 +269,14 @@ ALTER TABLE `maison`
   ADD KEY `IdUtilisateur` (`IdUtilisateur`);
 
 --
+-- Index pour la table `mode`
+--
+ALTER TABLE `mode`
+  ADD PRIMARY KEY (`Idmode`),
+  ADD KEY `IdUtilisateur` (`IdUtilisateur`),
+  ADD KEY `IdCapteur` (`IdCapteur`);
+
+--
 -- Index pour la table `piece`
 --
 ALTER TABLE `piece`
@@ -232,10 +294,15 @@ ALTER TABLE `utilisateur`
 --
 
 --
+-- AUTO_INCREMENT pour la table `auto`
+--
+ALTER TABLE `auto`
+  MODIFY `IdAuto` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
 -- AUTO_INCREMENT pour la table `capteur`
 --
 ALTER TABLE `capteur`
-  MODIFY `IdCapteur` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `IdCapteur` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 --
 -- AUTO_INCREMENT pour la table `conditions_d_utilisation`
 --
@@ -250,17 +317,22 @@ ALTER TABLE `donnees`
 -- AUTO_INCREMENT pour la table `maison`
 --
 ALTER TABLE `maison`
-  MODIFY `IdMaison` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `IdMaison` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+--
+-- AUTO_INCREMENT pour la table `mode`
+--
+ALTER TABLE `mode`
+  MODIFY `Idmode` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT pour la table `piece`
 --
 ALTER TABLE `piece`
-  MODIFY `IdPiece` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `IdPiece` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `IdUtilisateur` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `IdUtilisateur` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 --
 -- Contraintes pour les tables exportées
 --
@@ -276,6 +348,13 @@ ALTER TABLE `capteur`
 --
 ALTER TABLE `maison`
   ADD CONSTRAINT `maison_ibfk_1` FOREIGN KEY (`IdUtilisateur`) REFERENCES `utilisateur` (`IdUtilisateur`);
+
+--
+-- Contraintes pour la table `mode`
+--
+ALTER TABLE `mode`
+  ADD CONSTRAINT `mode_ibfk_1` FOREIGN KEY (`IdCapteur`) REFERENCES `capteur` (`IdCapteur`),
+  ADD CONSTRAINT `mode_ibfk_2` FOREIGN KEY (`IdUtilisateur`) REFERENCES `utilisateur` (`IdUtilisateur`);
 
 --
 -- Contraintes pour la table `piece`
