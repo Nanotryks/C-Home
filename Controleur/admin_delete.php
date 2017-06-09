@@ -18,3 +18,5 @@ while ($donnees2 = $reponse2->fetch()) {
 $req1 = $BDD->exec("DELETE FROM piece WHERE IdMaison = '" . $Id . "'");
 $req = $BDD->exec('DELETE FROM maison WHERE IdUtilisateur="'.$_POST['search'].'"');
 $req2 = $BDD->exec('DELETE FROM utilisateur WHERE IdUtilisateur="'.$_POST['search'].'"');
+
+header('location:../Vue/Admin.php');
