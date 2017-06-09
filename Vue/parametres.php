@@ -73,7 +73,6 @@ include '../Vue/header.html';
             <br>
             <br>
         </p>
-//dqshdqskhfkjqsfhksq
     </form>
 
 </div>
