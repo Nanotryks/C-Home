@@ -36,9 +36,21 @@ include '../Vue/header.html';
 
 			CONSOMMATION JOURNALIERE
 
-			<img class="diag1" src="../Image/diag2.jpg"/>
-
+			
 		</h2>
+            <table>
+                <caption>Température</caption>
+                <tr>
+                    <?php
+                    include "../Controleur/BareSupTemp.php";
+                    ?>
+                </tr>
+                <tr>
+                    <?php
+                    include "../Controleur/BareInfTemp.php";
+                    ?>
+                </tr>
+            </table>
 		</div>
 
         <div id="jour">
@@ -46,9 +58,21 @@ include '../Vue/header.html';
 
 			CONSOMMATION HEBDOMADAIRE
 
-			<img class="diag1" src="../Image/diag1.jpg"/>
 
 		</h2>
+            <table>
+                <caption>Température</caption>
+                <tr>
+                    <?php
+                    include "../Controleur/BareSupTemp.php";
+                    ?>
+                </tr>
+                <tr>
+                    <?php
+                    include "../Controleur/BareInfTemp.php";
+                    ?>
+                </tr>
+            </table>
 		</div>
 
             </div>
