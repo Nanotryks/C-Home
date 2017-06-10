@@ -13,6 +13,11 @@ $reponse2 = $BDD->query('SELECT IdPiece FROM piece WHERE IdMaison = "' . $Id . '
 $Id2 = 0;
 while ($donnees2 = $reponse2->fetch()) {
     $Id2 = $donnees2['IdPiece'];
+    $reponse=$BDD->query('SELECT IdCapteur FROM capteur WHERE IdPiece="'.$Id2.'"');
+    while($donnees=$reponse->fetch())
+    {
+        $BDD->query('DELETE FROM mode WHERE IdCapteur="'.$donnees['IdCapteur'].'"');
+    }
     $req1 = $BDD->exec("DELETE FROM capteur WHERE IdPiece = '" . $Id2 . "'");
 }
 
