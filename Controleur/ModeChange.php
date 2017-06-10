@@ -8,6 +8,7 @@
 include '../Modele/Connexion.php';
 $radio=$_POST['mode'];
 $capteur=$_POST["capteur"];
+
 if(isset($_POST['valeur']))
 {
     $val=intval($_POST['valeur']);

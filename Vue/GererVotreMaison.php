@@ -171,7 +171,7 @@ include '../Vue/header.html';
     <h1>Automatique/Manuel</h1><br>
     <form method='post' action='../Controleur/ModeChange.php'>
     <select name="capteur" onchange="showUser3(this.value)">
-        <option selected="selected">Choississez</option>
+        <option name="Choisissez" selected="selected">Choississez</option>
         <option name="Température" value="Température">Température</option>
         <option name="Lumière" value="Lumière">Lumière</option>
     </select><br><br>

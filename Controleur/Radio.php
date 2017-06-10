@@ -28,8 +28,8 @@ if($mode=="Manuel")
 else
 {
 
-    echo "<input type='radio' name='mode' value='auto' checked><label>Automatique</label>";
-    echo "<input type='radio' name='mode' value='manuel' onclick='showUser4(this.value)'><label>Manuel</label><br><br>";
-    echo "<input type='submit' value='Changer de mode'>";
+        echo "<input type='radio' name='mode' value='auto' checked><label>Automatique</label>";
+        echo "<input type='radio' name='mode' value='manuel' onclick='showUser4(this.value)'><label>Manuel</label><br><br>";
+        echo "<input type='submit' value='Changer de mode'>";
 
 }
