@@ -7,7 +7,15 @@
  */
 include '../Modele/Connexion.php';
 
-$rep=sha1($_POST['reponse']);
+if(isset($_POST['reponse']))
+{
+    $rep=sha1($_POST['reponse']);
+}
+else
+{
+    header('Location:../Vue/MotDePasseOublie.html');
+}
+
 $mail=$_POST['mail'];
 $mdp=sha1($_POST['new']);
 $conf=sha1($_POST['conf']);
