@@ -41,13 +41,13 @@ else
         {
 
             $val=intval($donnees['Valeur']);
-            $BDD ->exec('INSERT INTO capteur(IdPiece, Nom ,Valeur) VALUES ("'.$idPiece.'", "'.$capteur.'", "'.$val.'")');
+            $BDD ->exec('INSERT INTO capteur(IdPiece, Nom ,Valeur,Valeur_Mode) VALUES ("'.$idPiece.'", "'.$capteur.'", "'.$val.'", "'.$val.'")');
             $reponse2 = $BDD->query('SELECT IdCapteur FROM capteur WHERE Nom="'.$capteur.'" AND IdPiece="'.$idPiece.'"');
             while($donnees2 = $reponse2->fetch())
             {
 
                 $val2=intval($donnees2['IdCapteur']);
-                $BDD->exec('INSERT INTO mode(IdUtilisateur, IdCapteur, mode, Capteur ,Valeur) VALUES("'.$_SESSION['IdUtilisateur'].'", "'.$val2.'", \'Automatique\', "' . $capteur . '", "' . $val . '")');
+                $BDD->exec('INSERT INTO mode(IdUtilisateur, IdCapteur, mode, Capteur ,Valeur) VALUES("'.$_SESSION['IdUtilisateur'].'", "'.$val2.'", \'Automatique\', "' . $capteur . '", "' . $val . '", )');
             }
         }
     }

@@ -60,6 +60,47 @@ include '../Vue/header.html';
 
 
         }
+        function showUser4(str)
+        {
+            if (str == "")
+            {
+                document.getElementById("Radio").innerHTML = "";
+                return;
+            }
+
+            if (window.XMLHttpRequest) {
+
+                xmlhttp= new XMLHttpRequest();
+            } else {
+
+                if (window.ActiveXObject)
+                    try {
+                        xmlhttp= new ActiveXObject("Msxml2.XMLHTTP");
+                    } catch (e) {
+                        try {
+                            xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+                        } catch (e) {
+                            return NULL;
+                        }
+                    }
+            }
+
+            xmlhttp.onreadystatechange = function ()
+            {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+                {
+
+                    document.getElementById("Radio").innerHTML = xmlhttp.responseText;
+
+                }
+            }
+
+            xmlhttp.open("GET", "../Controleur/ChangeMode.php?q=" + str, true);
+
+            xmlhttp.send();
+
+
+        }
         </script>
 </head>
 
@@ -127,15 +168,17 @@ include '../Vue/header.html';
 </div>
 
 <div id="mode">
-    <h1>Automatique/Manuel</h1>
-    <select name="mode" onchange="showUser3(this.value)">
+    <h1>Automatique/Manuel</h1><br>
+    <form method='post' action='../Controleur/ModeChange.php'>
+    <select name="capteur" onchange="showUser3(this.value)">
         <option selected="selected">Choississez</option>
         <option name="Température" value="Température">Température</option>
         <option name="Lumière" value="Lumière">Lumière</option>
-    </select>
+    </select><br><br>
     <div id="Radio">
 
     </div>
+    </form>
 </div>
 
 <script>

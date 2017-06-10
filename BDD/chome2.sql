@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 09 Juin 2017 à 23:09
+-- Généré le :  Sam 10 Juin 2017 à 10:22
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -50,16 +50,17 @@ CREATE TABLE `capteur` (
   `IdPiece` int(255) NOT NULL,
   `IdCapteur` int(255) NOT NULL,
   `Nom` varchar(255) NOT NULL,
-  `Valeur` int(255) NOT NULL
+  `Valeur` int(255) NOT NULL,
+  `Mode_Valeur` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Contenu de la table `capteur`
 --
 
-INSERT INTO `capteur` (`IdPiece`, `IdCapteur`, `Nom`, `Valeur`) VALUES
-(5, 12, 'Fumée', 0),
-(6, 26, 'Température', 20);
+INSERT INTO `capteur` (`IdPiece`, `IdCapteur`, `Nom`, `Valeur`, `Mode_Valeur`) VALUES
+(5, 12, 'Fumée', 0, 0),
+(6, 26, 'Température', 20, 20);
 
 -- --------------------------------------------------------
 
