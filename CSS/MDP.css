@@ -7,4 +7,7 @@ body{
     background-size: 100% ;
     text-align: center;
 }
-
+.erreur
+{
+    color: red;
+}

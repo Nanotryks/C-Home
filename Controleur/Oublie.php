@@ -8,10 +8,11 @@
 include '../Modele/Connexion.php';
 $mail=$_GET["q"];
 $reponse=$BDD->query('SELECT QuestionSecrete FROM utilisateur WHERE mail="'.$mail.'"');
-if($reponse)
-{
+$i=0;
+
    while($donnees=$reponse->fetch())
    {
+       $i++;
        switch ($donnees['QuestionSecrete'])
        {
            case 'Couleur' :
@@ -53,8 +54,13 @@ if($reponse)
                echo '<input type="text" name="reponse"><br>';
 
            }break;
+
+
        }
    }
 
-
+if ($i==0)
+{
+    echo "<label class='erreur' id='question'>Mail érroné</label>";
 }
+
