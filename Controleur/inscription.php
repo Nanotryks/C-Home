@@ -16,10 +16,11 @@ catch(Exception $e)
 {
         die('Erreur : '.$e->getMessage());
 }
-
+echo $_POST['Select'];
+echo $_POST['reponse'];
 // Insertion du message à l'aide d'une requête préparée
-$req = $bdd->prepare('INSERT INTO utilisateur (nom, prenom, mail, mdp, numero_abonne, telephone,Admin) VALUES(?, ?, ?, ?, ?, ?,?)');
-$req->execute(array(htmlspecialchars($_POST['nom']),htmlspecialchars($_POST['prenom']),htmlspecialchars($_POST['email']), htmlspecialchars(sha1($_POST['pass'])),htmlspecialchars($_POST['user']),htmlspecialchars($_POST['telephone']),'0'));
+$req = $bdd->prepare('INSERT INTO utilisateur (nom, prenom, mail, mdp, numero_abonne, telephone, QuestionSecrete, ReponseSecrete, Admin) VALUES(?, ?, ?, ?, ?, ?,?,?,?)');
+$req->execute(array(htmlspecialchars($_POST['nom']),htmlspecialchars($_POST['prenom']),htmlspecialchars($_POST['email']), htmlspecialchars(sha1($_POST['pass'])),htmlspecialchars($_POST['user']),htmlspecialchars($_POST['telephone']),htmlspecialchars($_POST['Select']),sha1($_POST['reponse']),'0'));
 
 echo "Inscription Réussie";
 // Redirection du visiteur vers la page du index.php
