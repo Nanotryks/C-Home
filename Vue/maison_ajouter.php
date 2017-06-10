@@ -5,7 +5,7 @@ include '../Vue/header.html';
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8"/>
+    <meta charset="UTF-8"/>
     <link rel="stylesheet" href="../CSS/Maison.css"/>
 
 
@@ -46,7 +46,7 @@ include '../Vue/header.html';
             <br/><br>
 
             <label for="code_postal">Code postal</label> : <br/>
-            <input type="number" name="code_postal" id="code_postal" min="0" step="10"/>
+            <input type="number" name="code_postal" id="code_postal" step="10"/>
             <br/><br>
 
             <label for="ville">Ville</label> : <br/>

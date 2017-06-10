@@ -5,7 +5,7 @@ include '../Vue/header.html';
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8"/>
+    <meta charset="UTF-8"/>
     <link rel="stylesheet" href="../CSS/Maison.css"/>
 
     <title>Lieux de résidence</title>
