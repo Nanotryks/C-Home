@@ -20,9 +20,8 @@ if($capteur=='Température')
     $reponse=$BDD->query('SELECT Valeur FROM auto WHERE Capteur="'.$capteur.'"');
     while($donnees = $reponse->fetch())
     {
-
         $val=intval($donnees['Valeur']);
-        $BDD ->exec('INSERT INTO capteur(IdPiece, Nom ,Valeur) VALUES ("'.$idPiece.'", "'.$capteur.'", "'.$val.'")');
+        $BDD ->exec('INSERT INTO capteur(IdPiece, Nom ,Valeur,Mode_Valeur) VALUES ("'.$idPiece.'", "'.$capteur.'", "'.$val.'", "'.$val.'")');
         $reponse2 = $BDD->query('SELECT IdCapteur FROM capteur WHERE Nom="'.$capteur.'" AND IdPiece="'.$idPiece.'"');
         while($donnees2 = $reponse2->fetch())
         {
@@ -41,7 +40,7 @@ else
         {
 
             $val=intval($donnees['Valeur']);
-            $BDD ->exec('INSERT INTO capteur(IdPiece, Nom ,Valeur,Valeur_Mode) VALUES ("'.$idPiece.'", "'.$capteur.'", "'.$val.'", "'.$val.'")');
+            $BDD ->exec('INSERT INTO capteur(IdPiece, Nom ,Valeur,Mode_Valeur) VALUES ("'.$idPiece.'", "'.$capteur.'", "'.$val.'", "'.$val.'")');
             $reponse2 = $BDD->query('SELECT IdCapteur FROM capteur WHERE Nom="'.$capteur.'" AND IdPiece="'.$idPiece.'"');
             while($donnees2 = $reponse2->fetch())
             {
@@ -53,7 +52,7 @@ else
     }
     else
     {
-        $BDD ->exec('INSERT INTO capteur(IdPiece, Nom ,Valeur) VALUES ("'.$idPiece.'", "'.$capteur.'", 0)');
+        $BDD ->exec('INSERT INTO capteur(IdPiece, Nom ,Valeur,Mode_Valeur) VALUES ("'.$idPiece.'", "'.$capteur.'", 0, 0)');
     }
 }
 header('Location: ../Vue/NouveauCapteur2.php');
