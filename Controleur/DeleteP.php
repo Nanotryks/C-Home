@@ -11,6 +11,11 @@ $maison = $_POST["Maison"];
 $piece =$_POST["Piece"];
 
 $capteur = $_POST["Capteur"];
+$reponse=$BDD->query('SELECT IdCapteur FROM capteur WHERE IdPiece="'.$piece.'"');
+while($donnees=$reponse->fetch())
+{
+    $BDD->query('DELETE FROM mode WHERE IdCapteur="'.$donnees['IdCapteur'].'"');
+}
 $BDD->query('DELETE FROM capteur WHERE IdPiece="'.$piece.'"');
 
 $BDD->query('DELETE FROM piece WHERE IdPiece="'.$piece.'"');
