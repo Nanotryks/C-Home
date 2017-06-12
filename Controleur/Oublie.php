@@ -12,55 +12,58 @@ $i=0;
 
    while($donnees=$reponse->fetch())
    {
-       $i++;
-       switch ($donnees['QuestionSecrete'])
-       {
-           case 'Couleur' :
+       if($i==0){
+           switch ($donnees['QuestionSecrete'])
            {
+               case 'Couleur' :
+               {
 
-               echo '<label id="question">Quelle est votre couleur préférée ?</label><br>';
-               echo '<input type="text" name="reponse"><br>';
+                   echo '<label for="couleur" class="label" id="question">Quelle est votre couleur préférée ?</label><br>';
+                   echo '<input type="text" name="reponse" class="input"><br>';
 
-           }break;
+               }break;
 
-           case 'Ville' :
-           {
+               case 'Ville' :
+               {
 
-               echo '<label id="question">Quelle est votre ville favorite ?</label><br>';
-               echo '<input type="text" name="reponse"><br>';
+                   echo '<label for="ville" class="label" id="question">Quelle est votre ville favorite ?</label><br>';
+                   echo '<input type="text" name="reponse" class="input"><br>';
 
-           }break;
+               }break;
 
-           case 'Animal' :
-           {
+               case 'Animal' :
+               {
 
-               echo '<label id="question">Quelle est le nom de votre premier animal domestique ?</label><br>';
-               echo '<input type="text" name="reponse"><br>';
+                   echo '<label for="animal" class="label" id="question">Quelle est le nom de votre premier animal domestique ?</label><br>';
+                   echo '<input type="text" name="reponse" class="input"><br>';
 
-           }break;
+               }break;
 
-           case 'Nom' :
-           {
+               case 'Nom' :
+               {
 
-               echo '<label id="question">Quelle est le nom de jeune fille de votre mère ?</label><br>';
-               echo '<input type="text" name="reponse"><br>';
+                   echo '<label for="mere" class="label"  id="question">Quelle est le nom de jeune fille de votre mère ?</label><br>';
+                   echo '<input type="text" name="reponse" class="input"><br>';
 
-           }break;
+               }break;
 
-           case 'Ecole' :
-           {
+               case 'Ecole' :
+               {
 
-               echo '<label id="question">Quelle est le nom de votre institutrice de maternelle ?</label><br>';
-               echo '<input type="text" name="reponse"><br>';
+                   echo '<label for="teacher" class="label" id="question">Quelle est le nom de votre institutrice de maternelle ?</label><br>';
+                   echo '<input type="text" name="reponse" class="input"><br>';
 
-           }break;
+               }break;
 
 
+           }
        }
+
+       $i++;
    }
 
 if ($i==0)
 {
-    echo "<label class='erreur' id='question'>Mail érroné</label>";
+    echo "<label class='label' id='erreur' id='question'>Mail érroné</label>";
 }
 

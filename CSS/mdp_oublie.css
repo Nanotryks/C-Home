@@ -1,0 +1,77 @@
+body{
+    margin:5%;
+    color:#ffffff;
+    background:white;
+    font:600 16px/18px 'Open Sans',sans-serif;
+    background-image: url(../Image/int3.jpg);
+    background-size: 100% ;
+    text-align: center;
+}
+*,:after,:before{box-sizing:border-box}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+a{color:inherit;text-decoration:none}
+.logo{
+    /*display: flex;*/
+    /*margin:auto;*/
+    /*max-width: 50%;*/
+    /*position: center;*/
+    position:relative;
+    text-align: center;
+    margin-bottom: 5%;
+}
+.enveloppe{
+    width:100%;
+    margin:auto;
+    margin-top: 30px;
+    max-width:525px;
+    min-height:450px;
+    position:relative;
+    background:white;
+    box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+
+.forme .group .label,
+.forme .group .bouton {
+    text-transform: uppercase;
+}
+
+
+.forme{
+    min-height:345px;
+    position:relative;
+    -webkit-perspective:1000px;
+    perspective:1000px;
+    -webkit-transform-style:preserve-3d;
+    transform-style:preserve-3d;
+}
+.forme .group{
+    margin-bottom:15px;
+}
+
+.forme .group .input,
+.forme .group .bouton{
+    border:none;
+    padding:15px 150px;
+    border-radius:25px;
+    background:#F2EEEE;
+}
+.forme .group input[data-type="password"]{
+    text-security:circle;
+    -webkit-text-security:circle;
+}
+.forme .group .label{
+    color:#aaa;
+    font-size:12px;
+}
+.forme .group .bouton{
+    background:red;
+    color:white;
+    font-size: medium;
+    font-weight: bold;
+}
+
+#erreur{
+    color:red;
+}
+
