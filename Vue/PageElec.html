@@ -49,9 +49,20 @@
 
 			CONSOMMATION JOURNALIERE
 
-			<img class="diag2" src="../Image/diag4.jpg"/>
-
 		</h2>
+            <table>
+                <caption>Température</caption>
+                <tr>
+                    <?php
+                    include "../Controleur/BareSupTemp.php";
+                    ?>
+                </tr>
+                <tr>
+                    <?php
+                    include "../Controleur/BareInfTemp.php";
+                    ?>
+                </tr>
+            </table>
 		</div>
         
         <div id="jour"> 

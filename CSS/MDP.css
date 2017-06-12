@@ -1,0 +1,13 @@
+body{
+    margin:5%;
+    color:#ffffff;
+    background:white;
+    font:600 16px/18px 'Open Sans',sans-serif;
+    background-image: url(../Image/int3.jpg);
+    background-size: 100% ;
+    text-align: center;
+}
+.erreur
+{
+    color: red;
+}

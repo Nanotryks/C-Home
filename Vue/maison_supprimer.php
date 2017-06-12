@@ -26,8 +26,8 @@ $reponse = $BDD->query('SELECT Porte,Voie,Adresse,Code_Postal,Ville,Nombre_Piece
 
 
 <form method="post" action="../Controleur/maisoncible2.php">
-    <p>
-        Veuillez indiquer quel domicile vous voulez retirer :<br/>
+    <p><br>
+        Veuillez indiquer quel domicile vous voulez retirer :<br/><br>
         <?php while ($donnees = $reponse->fetch()) {
             echo '<input type="radio" name="test" value="' . $donnees['Porte'] . '"  id="test"/>
                     <label for="test">
@@ -44,8 +44,8 @@ $reponse = $BDD->query('SELECT Porte,Voie,Adresse,Code_Postal,Ville,Nombre_Piece
         }
         ?>
         </label></br>
-        <input type="submit" name="submit" value="Supprimer la sélection"/>
-
+        <input type="submit" name="submit" value="Supprimer la sélection" class="delete"/>
+    <br><br>
     </p>
 </form>
 

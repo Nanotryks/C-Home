@@ -160,7 +160,8 @@ include '../Vue/header_admin.html';
 
 </body>
 <foot>
-    <? include '../Vue/footer_admin.html';
+    <?php
+    include '../Vue/footer_admin.html';
     ?>
 </foot>
 </html>
