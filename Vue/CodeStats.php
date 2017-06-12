@@ -34,7 +34,7 @@ include '../Vue/header.html';
         <div id="jour">
 		<h2>
 
-			CONSOMMATION JOURNALIERE EN TEMPS REELS
+			TEMPÉRATURE EN TEMPS RÉELS
 
 			
 		</h2>
@@ -56,7 +56,7 @@ include '../Vue/header.html';
         <div id="jour">
 		<h2>
 
-			CONSOMMATION HEBDOMADAIRE
+			MOYENNE DE TEMPÉRATURE HEBDOMADAIRE 
 
 
 		</h2>
@@ -79,7 +79,7 @@ include '../Vue/header.html';
 
         <div id="jour">
 		<h2>
-			CONSOMMATION MENSUELLE
+			MOYENNE TEMPÉRATURE MENSUELLE
         </h2>
             <table>
                 <caption>Température</caption>
