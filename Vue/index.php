@@ -46,7 +46,7 @@ APP G8C ISEP
 					<a href="../Vue/MotDePasseOublie.html">MOT DE PASSE OUBLIE?</a>
 				</div><br/>
                 <div class="foot-lnk">
-					<a href="#">BESOIN D'AIDE ? </a>
+					<a href="Aide.html">BESOIN D'AIDE ? </a>
 				</div>   
                 </form>
 			</div>
@@ -79,22 +79,26 @@ APP G8C ISEP
 					<input id="pass" name="telephone" type="text" class="input">
 				</div>
                     <div id="Question" class="group">
-                        <label>Question Secrète</label><br><br>
+                        <label for="question" class="label">Question secrète</label><br>
                         <select name="Select">
-                            <option selected="selected">Choississez</option>
+                            <option selected="selected">Sélectionnez une question</option>
                             <option name="Couleur" value="Couleur">Quelle est votre couleur préférée ?</option>
                             <option name="Ville" value="Ville">Quelle est votre ville favorite ?</option>
                             <option name="Animal" value="Animal">Quelle est le nom de votre premier animal domestique ?</option>
                             <option name="Nom" value="Nom">Quelle est le nom de jeune fille de votre mère ?</option>
                             <option name="Ecole" value="ecole">Quelle est le nom de votre institutrice de maternelle ?</option>
                         </select>
-                        <input type="text" name="reponse">
+                    </br>
+                        </br>
+                        <label for="reponse" class="label">Votre réponse secrète</label>
+                        <input class ="input" type="text" name="reponse">
                     </div>
                 <div class="group">
                     <input id="check" type="checkbox" class="check" checked>
 					<label for="check">
                         <span class="icon"></span> <a href="cond_gen.php">Accepter les conditions générales d'utilisation</a></label>
                     </div>
+                    </br>
 				<div class="group">
 					<input type="submit" class="bouton" value="s'inscrire">
 				</div>
