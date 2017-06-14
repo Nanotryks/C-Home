@@ -2,6 +2,6 @@
  session_start();
 session_unset ();
   session_destroy();   // function that Destroys Session 
-  header("Location: ../Vue/index.php");
+  header("Location: ../Vue/Connexion.php");
 exit();
 ?>

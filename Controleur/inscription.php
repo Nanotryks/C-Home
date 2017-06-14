@@ -23,7 +23,7 @@ $req = $bdd->prepare('INSERT INTO utilisateur (nom, prenom, mail, mdp, numero_ab
 $req->execute(array(htmlspecialchars($_POST['nom']),htmlspecialchars($_POST['prenom']),htmlspecialchars($_POST['email']), htmlspecialchars(sha1($_POST['pass'])),htmlspecialchars($_POST['user']),htmlspecialchars($_POST['telephone']),htmlspecialchars($_POST['Select']),sha1($_POST['reponse']),'0'));
 
 echo "Inscription Réussie";
-// Redirection du visiteur vers la page du index.php
-header('Location: ../vue/index.php');
+// Redirection du visiteur vers la page du Connexion.php
+header('Location: ../vue/Connexion.php');
 ?><br/>
 <!--Cliquez <a href="index.php#contac">ici</a> pour retourner à la page d'accueil-->

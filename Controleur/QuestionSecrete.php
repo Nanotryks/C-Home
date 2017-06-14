@@ -30,7 +30,7 @@ while($donnees=$reponse->fetch())
     {
         echo 'reussi';
         $BDD->query('UPDATE utilisateur SET mdp="'.$mdp.'" WHERE mail="'.$mail.'"');
-        header('Location:../Vue/index.php');
+        header('Location:../Vue/Connexion.php');
     }
     else
     {
