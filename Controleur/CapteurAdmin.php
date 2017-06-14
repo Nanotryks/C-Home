@@ -16,6 +16,7 @@ $reponse2 = $BDD->query('SELECT Valeur FROM capteur WHERE IdPiece="' . $piece . 
 while ($donnees = $reponse->fetch()) {
     $donnees2 = $reponse2->fetch();
 
+
 //    switch ($donnees['Nom'])
 //    {
 //        case 'Température' :

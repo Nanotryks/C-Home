@@ -21,7 +21,7 @@ while($donnees = $reponse->fetch())
     $donnees2=$donnees['Nom'];
     $donnees3=$donnees['IdPiece'];
 
-    echo "<option name='$donnees2;' value='$donnees3'>".$donnees['Nom']."</option>";
+    echo "<option name='$donnees2;' value='$donnees3'>".$donnees2."</option>";
 
 }
 ?>
