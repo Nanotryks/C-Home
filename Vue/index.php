@@ -121,23 +121,23 @@
         }
 
         /*#slide1 {*/
-            /*background-image: url('../Image/int1.png');*/
-            /*background-size: 100%;*/
+        /*background-image: url('../Image/int1.png');*/
+        /*background-size: 100%;*/
         /*}*/
 
         /*#slide2 {*/
-            /*background-image: url(../Image/pics/int2.jpg);*/
-            /*background-size: 100%;*/
+        /*background-image: url(../Image/pics/int2.jpg);*/
+        /*background-size: 100%;*/
         /*}*/
 
         /*#slide3 {*/
-            /*background-image: url(../Image/pics/int3.jpg);*/
-            /*background-size: 100%;*/
+        /*background-image: url(../Image/pics/int3.jpg);*/
+        /*background-size: 100%;*/
         /*}*/
 
         /*#slide4 {*/
-            /*background-image: url(..\www\C-Home\Image\pics\int1.jpg);*/
-            /*background-size: 100%;*/
+        /*background-image: url(..\www\C-Home\Image\pics\int1.jpg);*/
+        /*background-size: 100%;*/
         /*}*/
 
         /* Section 3
@@ -255,6 +255,27 @@
 
         }
 
+        /* Section 4
+         * --------------------------------------- */
+        #section3 {
+            background-color: #ffffff;
+        }
+
+        #section3 h1 {
+            color: #444;
+        }
+
+        #section3 p {
+            color: #333;
+            opacity: 0.4;
+        }
+
+        #rencontre{
+            text-decoration: none;
+            color: #ff1400;
+            font-weight: 600;
+        }
+
     </style>
 </head>
 <body>
@@ -307,7 +328,7 @@
         </div>
         <div class="slide" id="slide3">
             <div class="content">
-                <h1>SUIVIE</h1>
+                <h1>SUIVI</h1>
                 <p>
                     <br>
                     Suivez les données enregistrées par vos capteurs </br><br>
@@ -330,38 +351,42 @@
             </div>
         </div>
     </div>
+
+
     <div class="section" id="section2">
-        <div class="slide" id="slide5">
-            <div class="content">
-                <h1>ADOPTEZ C-HOME ?</h1>
-                <p><br>
-                    Voulez vous faire un bond dans le futur avec C-HOME ?</br><br>
-                    Pour cela, rencontrez un conseiller C-HOME</br><br>
-                </p>
-            </div>
-        </div>
-        <div class="slide" id="slide6">
-            <div class="content">
-                <h1>RENCONTRE</h1>
-                <p><br>
-                    Pour prendre un rendez vous, remplissez le formulaire ci-dessous</br><br>
-                    <a id="formulaire" href="www.google.fr">FORMULAIRE</a>
-                </p>
-            </div>
+
+        <div class="content">
+            <h1>ADOPTEZ C-HOME ?</h1>
+            <p><br>
+                Voulez vous faire un bond dans le futur avec C-HOME ?</br><br>
+                Pour cela, <a id="rencontre" href="../Vue/Index.php#4thpage"> rencontrez un conseiller C-HOME  </a> </br><br>
+            </p>
+
         </div>
     </div>
 
-</div>
 
-<script type="text/javascript" src="../Js/javascript.fullPage.js"></script>
-<script type="text/javascript">
-    fullpage.initialize('#fullpage', {
-        anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
-        menu: '#menu',
-        css3: true
-    });
+    <div class="section" id="section3">
+        <div class="content">
+            <h1>RENCONTRE</h1>
+            <p><br>
+                Pour prendre un rendez vous, remplissez le formulaire ci-dessous</br><br>
+                 <a id="formulaire" href="../Vue/FormulaireRDV.php">FORMULAIRE</a>
 
-</script>
+            </p>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="../Js/javascript.fullPage.js"></script>
+    <script type="text/javascript">
+        fullpage.initialize('#fullpage', {
+            anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', '5thpage', 'lastPage'],
+            menu: '#menu',
+            css3: true
+        });
+
+    </script>
 
 </body>
 </html>
