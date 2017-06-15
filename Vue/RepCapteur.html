@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Donnees</title>
+</head>
+<body>
+<div id="auto"></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready( function(){
+        $('#auto').load('../Controleur/recupCmac.php');
+        refresh();
+    });
+
+    function refresh()
+    {
+        setTimeout(function() {
+            $('#auto').fadeOut('slow').load('../Controleur/recupCmac.php').fadeIn();
+            refresh();
+        }, 2500);
+
+    }
+</script>
+</body>
+</html>
