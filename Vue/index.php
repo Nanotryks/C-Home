@@ -376,12 +376,13 @@
             </p>
         </div>
     </div>
+</div>
 
 
     <script type="text/javascript" src="../Js/javascript.fullPage.js"></script>
     <script type="text/javascript">
         fullpage.initialize('#fullpage', {
-            anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', '5thpage', 'lastPage'],
+            anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage'],
             menu: '#menu',
             css3: true
         });
