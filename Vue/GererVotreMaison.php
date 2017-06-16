@@ -101,6 +101,48 @@ include '../Vue/header.html';
 
 
         }
+
+        function showUser5(str)
+        {
+            if (str == "")
+            {
+                document.getElementById("envoie").innerHTML = "";
+                return;
+            }
+
+            if (window.XMLHttpRequest) {
+
+                xmlhttp= new XMLHttpRequest();
+            } else {
+
+                if (window.ActiveXObject)
+                    try {
+                        xmlhttp= new ActiveXObject("Msxml2.XMLHTTP");
+                    } catch (e) {
+                        try {
+                            xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+                        } catch (e) {
+                            return NULL;
+                        }
+                    }
+            }
+
+            xmlhttp.onreadystatechange = function ()
+            {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200)
+                {
+
+                    document.getElementById("envoie").innerHTML = xmlhttp.responseText;
+
+                }
+            }
+
+            xmlhttp.open("GET", "../Controleur/recupCmac.php?q=" + str, true);
+
+            xmlhttp.send();
+
+
+        }
         </script>
 </head>
 
@@ -145,6 +187,11 @@ include '../Vue/header.html';
             </div>
             </div>
         </FORM>
+
+        <input type="button" value="Activation du ventilateur" onclick="showUser5(3)">
+        <input type="button" value="Activation d'une led" onclick="showUser5(2)">
+        <input type="button" value="Arret" onclick="showUser5(4)">
+        <div id="envoie"></div>
 
         <br>
         <br>
@@ -224,6 +271,11 @@ include '../Vue/footer.html';
            refresh()
         }, 2500);
 
+    }
+
+    function envoyer(val)
+    {
+        $('#envoie').load("GET", "../Controleur/recupCmac.php?q=" + val, true);
     }
 </script>
 </body>
