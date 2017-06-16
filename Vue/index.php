@@ -4,11 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>C-HOME</title>
-    <meta name="description" content="fullPage plugin by Alvaro Trigo. Pure javascript version of full screen slider."/>
-    <meta name="keywords"
-          content="fullpage,jquery,alvaro,trigo,plugin,fullscren,screen,full,iphone5,apple,pure,javascript,slider,hijacking"/>
-    <!--    <meta name="Resource-type" content="Document"/>-->
-
+    <link rel="icon" href="../Image/Logopic.ico">
 
     <link rel="stylesheet" type="text/css" href="../CSS/javascript.fullPage.css"/>
 
@@ -292,8 +288,9 @@
 <div id="fullpage">
     <div class="section " id="section0">
         <div class="content">
-            <h1>C-HOME</h1>
-            <p>DOMISEP</p>
+<!--            <h1>C-HOME</h1>-->
+                <img src="../Image/LOGO11-3.png" height="100" width="auto">
+            <p><br>DOMISEP</p>
         </div>
     </div>
     <div class="section" id="section1">
@@ -347,6 +344,20 @@
                     En cas de prôbleme, vous n'êtes pas seul </br><br>
                     Une section dédiée a la résolution de prôblèmes est présente </br><br>
                     Celle-ci permet de contacter le service technique de manière simple et rapide
+                </p>
+            </div>
+        </div>
+        <div class="slide" id="slide5">
+            <div class="content">
+                <h1>LES OFFRES</h1>
+                <p>
+                    <br>
+                    Cette solution innovante vous est proposé sous forme d'abonnement </br><br>
+                    Cet abonnement comprend les capteurs ainsi qu'un suivi </br><br>
+                    2 formules vous sont proposées : </br><br>
+
+                    - Le <b>'STARTER PACK'</b> comprend des capteurs moyenne gamme</br><br>
+                    - Le <b>'ADVANCED PACK'</b> comprend des capteurs haut de gamme</br><br>
                 </p>
             </div>
         </div>

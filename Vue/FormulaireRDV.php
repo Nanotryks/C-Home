@@ -4,10 +4,10 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Interface d'identification de domIsep</title>
+    <title> Formulaire de Rendez-vous </title>
 
     <link rel="stylesheet" href="../CSS/style.css">
-
+    <link rel="icon" href="../Image/Logopic.ico">
 
 </head>
 

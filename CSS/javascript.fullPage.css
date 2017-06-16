@@ -211,6 +211,11 @@ html.fp-enabled,
 }
 
 #slide4 {
-    background-image: url(../Image/int1.jpg);
+    background-image: url(../Image/int4.jpg);
+    background-size: 100%;
+}
+
+#slide5 {
+    background-image: url(../Image/int5.jpg);
     background-size: 100%;
 }
