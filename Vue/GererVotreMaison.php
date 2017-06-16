@@ -128,9 +128,10 @@ include '../Vue/header.html';
                     ?>
                 </SELECT>
             </p>
+            <div id="tout">
             <p>
                 <select id="Piece" name="Piece" size="1" onchange="showUser2(this.value)" style="width:150px;">
-                    <!--<option selected="selected" value="">Choisissez</option>-->
+                    <option selected="selected" value="">Choisissez</option>
                     <?php
                     include '../Controleur/Piece.php'
                     ?>
@@ -141,6 +142,7 @@ include '../Vue/header.html';
                 <?php
                 include '../Controleur/Capteur.php';
                 ?>
+            </div>
             </div>
         </FORM>
 
@@ -196,5 +198,33 @@ include '../Vue/header.html';
 include '../Vue/footer.html';
 ?>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+    var str2 =  document.getElementById("Piece").value;
+
+    $(document).ready( function(){
+
+        showUser2(str2);
+        $('#Capteur').fadeOut('slow').load("GET", "../Controleur/ChangeMode.php?q=" + str2, true).fadeIn('slow');
+
+        refresh();
+    });
+
+    function refresh()
+    {
+        setTimeout(function() {
+
+
+            str2 =  document.getElementById("Piece").value;
+
+            showUser2(str2);
+            $('#Capteur').fadeOut('slow').load("GET", "../Controleur/ChangeMode.php?q=" + str2, true).fadeIn('slow');
+
+           refresh()
+        }, 2500);
+
+    }
+</script>
 </body>
 </html>

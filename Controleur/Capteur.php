@@ -1,12 +1,15 @@
 <?php
 
 include '../Modele/Connexion.php';
-$piece = 0;
-if (isset($_GET["q"])) {
-    $piece = $_GET["q"];
+$piece=0;
+global $id;
+    if (isset($_GET["q"])) {
+        $piece = $_GET["q"];
+        $id = $piece;
 }
-$reponse = $BDD->query('SELECT Nom FROM capteur WHERE IdPiece="' . $piece . '"');
-$reponse2 = $BDD->query('SELECT Valeur FROM capteur WHERE IdPiece="' . $piece . '"');
+
+$reponse = $BDD->query('SELECT Nom FROM capteur WHERE IdPiece="' . $id . '"');
+$reponse2 = $BDD->query('SELECT Valeur FROM capteur WHERE IdPiece="' . $id . '"');
 
 while ($donnees = $reponse->fetch()) {
     $donnees2 = $reponse2->fetch();
