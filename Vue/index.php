@@ -272,6 +272,10 @@
             font-weight: 600;
         }
 
+        #logo{
+            transition: all 1.1s ease-out;
+        }
+
     </style>
 </head>
 <body>
@@ -289,7 +293,7 @@
     <div class="section " id="section0">
         <div class="content">
 <!--            <h1>C-HOME</h1>-->
-                <img src="../Image/LOGO11-3.png" height="100" width="auto">
+                <img id="logo" src="../Image/LOGO11-3.png" height="100" width="auto">
             <p><br>DOMISEP</p>
         </div>
     </div>
