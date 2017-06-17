@@ -124,7 +124,7 @@ include '../Vue/header.html';
                 <option name="Température" value="Température">Température</option>
                 <option name="Fumée" value="Fumée">Fumée</option>
                 <option name="Lumière" value="Lumière" name="Lumière">Lumière</option>
-                <option name="Porte" value="Porte">Porte</option>
+                <option name="Porte" value="Porte d\'entrée">Porte</option>
                 <option name="Fenêtre" value="Fenêtre">Fenêtre</option>
                 <option name="Présence" value="Présence">Présence</option>
             </select>
