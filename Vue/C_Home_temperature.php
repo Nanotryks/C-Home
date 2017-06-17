@@ -28,9 +28,8 @@ include '../Vue/header.html';
 
             <br><br>
             <SELECT name="Maison" size="1" onchange="showUser(this.value)">
-                <option selected="selected" value="">Choisissez</option>
                 <?php
-                include "../Controleur/Maison.php";
+                include "../Controleur/MaisonTemp.php";
                 ?>
             </SELECT>
             <br>

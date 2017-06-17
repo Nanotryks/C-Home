@@ -28,14 +28,14 @@ APP G8C ISEP
 
 				<div class="group">
 					<label for="user" class="label">Identifiant DOMISEP</label>
-					<input id="user" name="user" type="text" class="input">
+					<input id="user" name="user" type="text" class="input" required>
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Mot de passe</label>
-					<input id="pass" name="pass" type="password" class="input" data-type="password">
+					<input id="pass" name="pass" type="password" class="input" data-type="password" required>
 				</div>
 				<div class="group">
-					<input id="check" type="checkbox" class="check" checked>
+					<input id="check" type="checkbox" class="check" checked >
 					<label for="check"><span class="icon"></span> Garder ma session active</label>
 				</div>
 				<div class="group">
@@ -56,27 +56,27 @@ APP G8C ISEP
                 <form action="../Controleur/inscription.php" method="post">
 				<div class="group">
 					<label for="user" class="label">IDENTIFIANT DOMISEP</label>
-					<input id="user" name="user" type="text" class="input">
+					<input id="user" name="user" type="text" class="input" required>
 				</div>
                 <div class="group">
 					<label for="pass" class="label">Prenom</label>
-					<input id="pass" name="prenom" type="text" class="input">
+					<input id="pass" name="prenom" type="text" class="input" required>
 				</div>
                 <div class="group">
 					<label for="pass" class="label">NOM</label>
-					<input id="pass" name="nom" type="text" class="input">
+					<input id="pass" name="nom" type="text" class="input" required>
 				</div>
                 <div class="group">
 					<label for="pass" class="label">adresse email</label>
-					<input id="pass" name="email" type="text" class="input">
+					<input id="pass" name="email" type="email" class="input" required>
 				</div>
 				<div class="group">
 					<label for="pass" class="label">MOT DE PASSE</label>
-					<input id="pass" name="pass" type="password" class="input" data-type="password">
+					<input id="pass" name="pass" type="password" class="input" data-type="password" required>
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Telephone</label>
-					<input id="pass" name="telephone" type="text" class="input">
+					<input id="pass" name="telephone" type="text" class="input" required maxlength="10">
 				</div>
                     <div id="Question" class="group">
                         <label for="question" class="label">Question secrète</label><br>
@@ -91,7 +91,7 @@ APP G8C ISEP
                     </br>
                         </br>
                         <label for="reponse" class="label">Votre réponse secrète</label>
-                        <input class ="input" type="text" name="reponse">
+                        <input class ="input" type="text" name="reponse" required>
                     </div>
                 <div class="group">
                     <input id="check" type="checkbox" class="check" checked>

@@ -27,18 +27,10 @@ include '../Vue/header.html';
 
             <br><br>
             <SELECT name="Maison" size="1" onchange="showUser(this.value)">
-                <option selected="selected" value="">Choisissez</option>
                 <?php
-                include "../Controleur/Maison.php";
+                include "../Controleur/MaisonFP.php";
                 ?>
-            </SELECT>
-            </br>
-            </br>
-            <div id="Capteur">
-                <?php
-                include '../Controleur/Capteur.php';
-                ?>
-            </div>
+
         </div>
     </div>
     <div id="section">
