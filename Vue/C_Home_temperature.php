@@ -31,12 +31,7 @@ include '../Vue/header.html';
                 <?php
                 include "../Controleur/MaisonTemp.php";
                 ?>
-            </SELECT>
-            <br>
-            <br>
-            <div id="Capteur">
 
-            </div>
         </div>
     </div>
     <div id="section">
