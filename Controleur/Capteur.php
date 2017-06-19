@@ -31,11 +31,11 @@ for( $size=count($data_tab)-2, $i=$size; $i>$size-1; $i--) {
         $donnees4 = $reponse4->fetch();
 
         if ($c == "3") {
-            if ($v == "1111" && $donnees3['Valeur'] !=1 )
+            if ($v == "1111" && $donnees3['Valeur'] !='1' )
             {
                 $BDD->exec('UPDATE capteur SET Valeur=1 WHERE IdPiece="' . $id . '" AND Nom="Présence"');
             } else {
-                if ($v == "0000" && $donnees3['Valeur'] != 0) {
+                if ($v == "0000" && $donnees3['Valeur'] != '0') {
                     $BDD->exec('UPDATE capteur SET Valeur=0 WHERE IdPiece="' . $id . '" AND Nom="Présence"');
                 }
             }
