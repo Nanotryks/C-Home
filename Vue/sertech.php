@@ -57,9 +57,12 @@ include '../Vue/header.html';
 
     <div id="bloc_envoyertechnicien" class="">
         <br>
-        <h2>ENVOYER UN TECHNICIEN </h2>
-
-        
+    
+<form action="../Controleur/message.php" method="post">
+        <label for="message">Ecrire un Message à nos Techniciens</label><br>
+        <textarea id="message" name="message" rows="15" cols="50" type="text"></textarea><br><br><br>
+        <input type="submit" class="btn" value="Envoyer">
+        </form>
 <footer>
     <br>
     <div id="photos">

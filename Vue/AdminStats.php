@@ -132,42 +132,16 @@ include '../Vue/header_admin.html';?>
 <body>
 
 <div id="Stats">
-    <h2>Statistiques</h2>
-
-
-    <label>Identifiant du client : </label>
-    <input type="search" name="search" onchange="showUser(this.value)" maxlength="4" size="4">
-    <button type="button" value="Rechercher">Rechercher</button>
-    <!--        --><?php
-    //
-    //            include "../Modele/Connexion.php";
-    //
-    //            $query =$BDD->query("SELECT IdUtilisateur, nom, prenom, mail, telephone, numero_abonne FROM utilisateur ORDER BY IdUtilisateur");
-    //            ?>
-    <!---->
-    <!--            <select name="categories" onchange="showUser(this)">-->
-    <!--        --><?php //
-    //            while ($row = $query->fetch())
-    //            {
-    //                echo "<option id='".$row['IdUtilisateur']."' value='".$row['path']."'>".$row['prenom']." ".$row['nom']."</option>";
-    //            }
-    //            ?><!--        -->
-    <!--            </select>-->
-
-
-    <div id="Rechercher">
-
-    </div>
-
-    <div id="capteurs">
-
-    </div>
-
-
-</div>
+    <h2>Messages des Utilisateurs</h2>
+<?php
+ include('../Modele/Connexion.php');
+    $reponse = $BDD->query('SELECT * FROM message');
+    $donnees = $reponse->fetch();
+    echo $donnees['message'];
+?>
 
 <div id="util">
-    <h2>util</h2>
+    <h2>CONTENUE</h2>
 </div>
 <?php
 include '../Vue/footer_admin.html';
