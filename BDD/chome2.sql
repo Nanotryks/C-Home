@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.4
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Sam 17 Juin 2017 à 19:11
--- Version du serveur :  5.7.14
--- Version de PHP :  5.6.25
+-- Généré le :  Lun 19 Juin 2017 à 16:33
+-- Version du serveur :  10.1.9-MariaDB
+-- Version de PHP :  5.6.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -69,7 +69,7 @@ INSERT INTO `capteur` (`IdPiece`, `IdCapteur`, `Nom`, `Valeur`, `Mode_Valeur`) V
 (12, 34, 'Présence', 1, 0),
 (15, 36, 'Lumière', 700, 700),
 (14, 37, 'Température', 20, 20),
-(14, 38, 'Porte d\'entrée', 1, 0),
+(14, 38, 'Porte d''entrée', 1, 0),
 (14, 39, 'Fenêtre', 1, 0);
 
 -- --------------------------------------------------------
@@ -150,6 +150,26 @@ INSERT INTO `maison` (`IdUtilisateur`, `IdMaison`, `Nom`, `Porte`, `Voie`, `Adre
 (36, 24, 'Maison1', 1, 'rue', 'azerty', '90000', 'Issy', 20, 4),
 (38, 25, 'Maison1', 2, 'rue', 'azerty', '90000', 'Issy', 12, 2),
 (38, 26, 'Maison2', 3, 'rue', 'bidon', '90000', 'Issy', 10, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `message`
+--
+
+CREATE TABLE `message` (
+  `id` int(255) NOT NULL,
+  `nom` varchar(255) NOT NULL,
+  `message` text NOT NULL,
+  `contact` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `message`
+--
+
+INSERT INTO `message` (`id`, `nom`, `message`, `contact`) VALUES
+(1, 'azerty', 'je suis le mesage\r\n', '123456789');
 
 -- --------------------------------------------------------
 
@@ -286,6 +306,12 @@ ALTER TABLE `maison`
   ADD KEY `IdUtilisateur` (`IdUtilisateur`);
 
 --
+-- Index pour la table `message`
+--
+ALTER TABLE `message`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Index pour la table `mode`
 --
 ALTER TABLE `mode`
@@ -336,6 +362,11 @@ ALTER TABLE `donnees`
 --
 ALTER TABLE `maison`
   MODIFY `IdMaison` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+--
+-- AUTO_INCREMENT pour la table `message`
+--
+ALTER TABLE `message`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT pour la table `mode`
 --
