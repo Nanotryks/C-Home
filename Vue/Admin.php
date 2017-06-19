@@ -60,36 +60,33 @@ include '../Vue/header_admin.html';?>
 <form method="post" action="../Controleur/admin_delete.php">
     <div id="Moderate">
         <h2>Modérateur</h2>
-        <label>Identifiant du client : </label>
+        <label>Identifiant du client : </label></br>
+
         <input type="search" name="search" onchange="showUser(this.value)" maxlength="4" size="4">
         <button type="button" value="Rechercher">Rechercher</button>
-        <!--        --><?php
-        //
-        //            include "../Modele/Connexion.php";
-        //
-        //            $query =$BDD->query("SELECT IdUtilisateur, nom, prenom, mail, telephone, numero_abonne FROM utilisateur ORDER BY IdUtilisateur");
-        //            ?>
-        <!---->
-        <!--            <select name="categories" onchange="showUser(this)">-->
-        <!--        --><?php //
-        //            while ($row = $query->fetch())
-        //            {
-        //                echo "<option id='".$row['IdUtilisateur']."' value='".$row['path']."'>".$row['prenom']." ".$row['nom']."</option>";
-        //            }
-        //            ?><!--        -->
-        <!--            </select>-->
 
 
     <div id="Rechercher">
+
 
     </div>
 
     <div id="capteurs">
 
     </div>
-    </br>
-    <input type="submit" value="Supprimer le compte">
+        <br/> <br/>
 
+        <div class="choix">
+        <br/>
+        <input type="radio" name="choix" value="supprimer" id="supprimer"/> <label for="supprimer">Supprimer le compte</label>
+        <input type="radio" name="choix" value="donner" id="donner"/> <label for="donner">Donner les droits administrateur</label>
+        <input type="radio" name="choix" value="retirer" id="retirer"/> <label for="retirer">Retirer les droits admintrateur</label>
+        <br/>
+        <br/>
+        <input type="submit" value="Valider votre choix">
+            <br/>
+            <br/>
+        </div>
     </div>
 </form>
 

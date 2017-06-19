@@ -9,96 +9,20 @@ include '../Vue/header.html';
 
       <link rel="stylesheet" href=" ../CSS/Statistiques.css"/>
 
-    <link rel="stylesheet" href="../CSS/Stat.css" />
-
     <title>Statistiques</title>
 
     <script type="text/javascript" src="../Js/scroll.js"></script>
 </head>
-<body style="position: relative;">
-
-<div class="Consommation">
-	<div class="Eau">
-        <div>
-
-        <ul>
-            <li><a href="PageEau.html">Eau</a></li>
-            <li><a href="PageElec.html">Électricité</a></li>
-
-        </ul>
-
-    </div>
-
-		<div class="Conso">
-
-        <div id="jour">
-		<h2>
-
-			TEMPÉRATURE EN TEMPS RÉELS
-
-			
-		</h2>
-            <label for="Style">Vos consommations :</label>
-        <br />
-       <select name="style" id="style" class="style2">
-           <option value="rock and roll">Températures en temps réel</option>
-           <option value="rap">Moyenne hebdomadaire</option>
-           <option value="funk">Moyenne mensuelle</option>
-           
-       </select>
-        
-		</div>
-
-        <div id="jour">
-		<h2>
-
-			MOYENNE DE TEMPÉRATURE HEBDOMADAIRE 
+<body>
 
 
-		</h2>
-            <table>
-                <caption>Température</caption>
-                <tr>
-                    <?php
-                    include "../Controleur/BareSupTemp.php";
-                    ?>
-                </tr>
-                <tr>
-                    <?php
-                    include "../Controleur/BareInfTemp.php";
-                    ?>
-                </tr>
-            </table>
-		</div>
-
-            </div>
-
-        <div id="jour">
-		<h2>
-			MOYENNE TEMPÉRATURE MENSUELLE
-        </h2>
-            <table>
-                <caption>Température</caption>
-                <tr>
-                    <?php
-                    include "../Controleur/BareSupTemp.php";
-                    ?>
-                </tr>
-                <tr>
-                    <?php
-                    include "../Controleur/BareInfTemp.php";
-                    ?>
-                </tr>
-            </table>
-		</div>
-
-
-	</div>
-
+<div class="bilan">
+<?php
+include '../Controleur/StatsCible.php';?>
 </div>
 
-<?php
-include '../Vue/footer.html';
+
+<?include '../Vue/footer.html';
 ?>
 </body>
 </html>
