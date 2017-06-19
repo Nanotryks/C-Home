@@ -38,19 +38,15 @@ include '../Vue/header.html';
 
 			
 		</h2>
-            <table>
-                <caption>Température</caption>
-                <tr>
-                    <?php
-                    include "../Controleur/BareSupTemp.php";
-                    ?>
-                </tr>
-                <tr>
-                    <?php
-                    include "../Controleur/BareInfTemp.php";
-                    ?>
-                </tr>
-            </table>
+            <label for="Style">Vos consommations :</label>
+        <br />
+       <select name="style" id="style" class="style2">
+           <option value="rock and roll">Températures en temps réel</option>
+           <option value="rap">Moyenne hebdomadaire</option>
+           <option value="funk">Moyenne mensuelle</option>
+           
+       </select>
+        
 		</div>
 
         <div id="jour">
