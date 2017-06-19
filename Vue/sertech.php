@@ -59,63 +59,7 @@ include '../Vue/header.html';
         <br>
         <h2>ENVOYER UN TECHNICIEN </h2>
 
-        <br>
-
-
-        <p>
-            <label for="pseudo">Numéro d'utilisateur :</label> <br/>
-            <br>
-            <input type="text" name="pseudo" id="pseudoP1" maxlength="4" size="4" value="XXXX"
-                   onFocus="javascript:this.value=''"/>
-
-            <br>
-            <br>
-
-            <br>
-            <!--                <textarea name="explication" rows=5 cols=40>  </textarea><br/>-->
-            <!--                <br>-->
-            <!--                <input type="submit" value="Envoyer"/>-->
-
-            <form method="post">
-        <p>
-
-            <label for="message">Détails du problème :</label></p> <input type="text" name="message" id="message" size="20"/><br/>
-
-            <br>
-            <input type="submit" value="Envoyer"/>
-        </p>
-        </form>
-        <?php
-        //            // Connexion à la base de données
-        //            include '../Controleur/Connexion.php';
-
-        try {
-            $bdd = new PDO('mysql:host=localhost;dbname=chome2;charset=utf8', 'root', '');
-        } catch (Exception $e) {
-            die('Erreur : ' . $e->getMessage());
-        }
-
-        // Insertion du message à l'aide d'une requête préparée
-        $req = $bdd->prepare('INSERT INTO minichat (message) VALUES(?)');
-        if (isset($_POST['message'])) {
-            $req->execute(array($_POST['message']));
-        }
-
-
-        ?>
-
-
-        </p>
-        <br>
-        <br>
-        <br>
-        <br>
-
-
-    </div>
-
-</div>
-</div>
+        
 <footer>
     <br>
     <div id="photos">
