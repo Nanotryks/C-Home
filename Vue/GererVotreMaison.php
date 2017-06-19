@@ -104,6 +104,7 @@ include '../Vue/header.html';
 
         function showUser5(str)
         {
+
             if (str == "")
             {
                 document.getElementById("envoie").innerHTML = "";
@@ -173,7 +174,7 @@ include '../Vue/header.html';
             <div id="tout">
             <p>
                 <select id="Piece" name="Piece" size="1" onchange="showUser2(this.value)" style="width:150px;">
-                    <option selected="selected" value="">Choisissez</option>
+
                     <?php
                     include '../Controleur/Piece.php'
                     ?>

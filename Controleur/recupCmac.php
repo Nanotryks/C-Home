@@ -9,7 +9,6 @@ if(isset($_GET['q']))
 {
     $choix=$_GET['q'];
 }
-
     if($choix==2)
     {
         $ch = curl_init();
