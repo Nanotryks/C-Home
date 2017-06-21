@@ -14,6 +14,10 @@ $piece =$_POST["Piece"];
 $capteur = $_POST["Capteur"];
 $idPiece = intval($piece);
 
+date_default_timezone_set("UTC" );
+$date = date("Y-m-d");
+$time = date("H:i:s");
+
 if($capteur=='Température')
 {
 
@@ -22,6 +26,7 @@ if($capteur=='Température')
     {
         $val=intval($donnees['Valeur']);
         $BDD ->exec('INSERT INTO capteur(IdPiece, Nom ,Valeur,Mode_Valeur) VALUES ("'.$idPiece.'", "'.$capteur.'", "'.$val.'", "'.$val.'")');
+        $BDD->exec('INSERT INTO donnees(IdUtilisateur,Type,Valeur,date,time) VALUES ("'.$_SESSION["IdUtilisateur"].'","'.$capteur.'","'.$val.'", "'.$date.'", "'.$time.'")');
         $reponse2 = $BDD->query('SELECT IdCapteur FROM capteur WHERE Nom="'.$capteur.'" AND IdPiece="'.$idPiece.'"');
         while($donnees2 = $reponse2->fetch())
         {
@@ -40,6 +45,7 @@ else
         {
             $val=intval($donnees['Valeur']);
             $BDD ->exec('INSERT INTO capteur(IdPiece, Nom ,Valeur,Mode_Valeur) VALUES ("'.$idPiece.'", "'.$capteur.'", "'.$val.'", "'.$val.'")');
+            $BDD->exec('INSERT INTO donnees(IdUtilisateur,Type,Valeur,date,time) VALUES ("'.$_SESSION["IdUtilisateur"].'","'.$capteur.'","'.$val.'", "'.$date.'", "'.$time.'")');
             $reponse2 = $BDD->query('SELECT IdCapteur FROM capteur WHERE Nom="'.$capteur.'" AND IdPiece="'.$idPiece.'"');
             while($donnees2 = $reponse2->fetch())
             {
