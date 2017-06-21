@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.6.4
+-- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Lun 19 Juin 2017 à 16:33
--- Version du serveur :  10.1.9-MariaDB
--- Version de PHP :  5.6.15
+-- Généré le :  Mer 21 Juin 2017 à 12:36
+-- Version du serveur :  5.7.14
+-- Version de PHP :  5.6.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -69,8 +69,12 @@ INSERT INTO `capteur` (`IdPiece`, `IdCapteur`, `Nom`, `Valeur`, `Mode_Valeur`) V
 (12, 34, 'Présence', 1, 0),
 (15, 36, 'Lumière', 700, 700),
 (14, 37, 'Température', 20, 20),
-(14, 38, 'Porte d''entrée', 1, 0),
-(14, 39, 'Fenêtre', 1, 0);
+(14, 38, 'Porte d\'entrée', 1, 0),
+(14, 39, 'Fenêtre', 1, 0),
+(16, 40, 'Température', 20, 20),
+(16, 41, 'Lumière', 700, 700),
+(16, 42, 'Humidité', 81, 0),
+(16, 43, 'Présence', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -149,7 +153,8 @@ INSERT INTO `maison` (`IdUtilisateur`, `IdMaison`, `Nom`, `Porte`, `Voie`, `Adre
 (31, 21, 'Ma maison', 23, 'boulevard', 'Général Leclerc', '92130', 'Lizié', 4, 1),
 (36, 24, 'Maison1', 1, 'rue', 'azerty', '90000', 'Issy', 20, 4),
 (38, 25, 'Maison1', 2, 'rue', 'azerty', '90000', 'Issy', 12, 2),
-(38, 26, 'Maison2', 3, 'rue', 'bidon', '90000', 'Issy', 10, 2);
+(38, 26, 'Maison2', 3, 'rue', 'bidon', '90000', 'Issy', 10, 2),
+(39, 27, 'Maison Principal', 10, 'rue', 'Pierre Currie', '94700', 'MaisonAlfort', 12, 2);
 
 -- --------------------------------------------------------
 
@@ -197,7 +202,9 @@ INSERT INTO `mode` (`IdUtilisateur`, `IdCapteur`, `Idmode`, `mode`, `Capteur`, `
 (36, 32, 15, 'Automatique', 'Température', 20),
 (36, 33, 16, 'Automatique', 'Température', 20),
 (38, 36, 18, 'Automatique', 'Lumière', 700),
-(38, 37, 19, 'Automatique', 'Température', 20);
+(38, 37, 19, 'Automatique', 'Température', 20),
+(39, 40, 20, 'Automatique', 'Température', 20),
+(39, 41, 21, 'Automatique', 'Lumière', 700);
 
 -- --------------------------------------------------------
 
@@ -225,7 +232,9 @@ INSERT INTO `piece` (`IdMaison`, `IdPiece`, `Nom`) VALUES
 (24, 12, 'Salon'),
 (24, 13, 'Chambre'),
 (25, 14, 'Salon'),
-(26, 15, 'Chambre');
+(26, 15, 'Chambre'),
+(27, 16, 'Salon'),
+(27, 17, 'Chambre');
 
 -- --------------------------------------------------------
 
@@ -267,7 +276,8 @@ INSERT INTO `utilisateur` (`IdUtilisateur`, `nom`, `prenom`, `mail`, `mdp`, `num
 (35, 'ben', 'ben', 'ben@chome.fr', '9cf95dacd226dcf43da376cdb6cbba7035218921', 'ben', '0123456789', 'Couleur', 'd1695e2cec40372ed7283e1e657b7ab18cd3efa9', 1),
 (36, 'benji', 'benji', 'benji@chome.com', '9cf95dacd226dcf43da376cdb6cbba7035218921', 'benji', '0123456789', 'Couleur', '1dc97c0fa3d7c1ac3418c6b94d7199687bef0836', 0),
 (37, '', '', 'azefg', 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '', '', 'SÃ©lectionnez une question', 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 0),
-(38, 'dran', 'ben', 'benjamin123@C-Home.fr', '9cf95dacd226dcf43da376cdb6cbba7035218921', '123', '0123456789', 'Couleur', 'a0d6b8b8b6ff239253dbc1af10337dabd12f2236', 0);
+(38, 'dran', 'ben', 'benjamin123@C-Home.fr', '9cf95dacd226dcf43da376cdb6cbba7035218921', '123', '0123456789', 'Couleur', 'a0d6b8b8b6ff239253dbc1af10337dabd12f2236', 0),
+(39, 'DRAN', 'Benjamin', 'benjamin.dran@isep.fr', '9cf95dacd226dcf43da376cdb6cbba7035218921', 'benjamindran', '0123456789', 'Couleur', 'a0d6b8b8b6ff239253dbc1af10337dabd12f2236', 0);
 
 --
 -- Index pour les tables exportées
@@ -346,7 +356,7 @@ ALTER TABLE `auto`
 -- AUTO_INCREMENT pour la table `capteur`
 --
 ALTER TABLE `capteur`
-  MODIFY `IdCapteur` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `IdCapteur` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 --
 -- AUTO_INCREMENT pour la table `conditions_d_utilisation`
 --
@@ -361,7 +371,7 @@ ALTER TABLE `donnees`
 -- AUTO_INCREMENT pour la table `maison`
 --
 ALTER TABLE `maison`
-  MODIFY `IdMaison` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `IdMaison` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 --
 -- AUTO_INCREMENT pour la table `message`
 --
@@ -371,17 +381,17 @@ ALTER TABLE `message`
 -- AUTO_INCREMENT pour la table `mode`
 --
 ALTER TABLE `mode`
-  MODIFY `Idmode` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `Idmode` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 --
 -- AUTO_INCREMENT pour la table `piece`
 --
 ALTER TABLE `piece`
-  MODIFY `IdPiece` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `IdPiece` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `IdUtilisateur` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `IdUtilisateur` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 --
 -- Contraintes pour les tables exportées
 --

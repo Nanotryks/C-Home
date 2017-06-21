@@ -122,6 +122,7 @@ include '../Vue/header.html';
             <select name="Capteur" style="width:150px;">
                 <option selected="selected">Choississez</option>
                 <option name="Température" value="Température">Température</option>
+                <option name = "Humidité" value = "Humidité">Humidité</option>
                 <option name="Fumée" value="Fumée">Fumée</option>
                 <option name="Lumière" value="Lumière" name="Lumière">Lumière</option>
                 <option name="Porte" value="Porte d\'entrée">Porte</option>

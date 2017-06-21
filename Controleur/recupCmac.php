@@ -15,7 +15,7 @@ if(isset($_GET['q']))
         curl_setopt(
             $ch,
             CURLOPT_URL,
-            "http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=A18C&TRAME=1A18C13020000a3");
+            "http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=0039&TRAME=1003913020000a3");
         curl_setopt($ch, CURLOPT_HEADER, FALSE);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
         $data = curl_exec($ch);
@@ -29,7 +29,7 @@ if(isset($_GET['q']))
             curl_setopt(
                 $ch,
                 CURLOPT_URL,
-                "http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=A18C&TRAME=1A18C13030000a3");
+                "http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=0039&TRAME=1003913030000a3");
             curl_setopt($ch, CURLOPT_HEADER, FALSE);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
             $data = curl_exec($ch);
@@ -41,7 +41,7 @@ if(isset($_GET['q']))
             curl_setopt(
                 $ch,
                 CURLOPT_URL,
-                "http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=A18C&TRAME=1A18C13040000a3");
+                "http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=A18C&TRAME=1003913040000a3");
             curl_setopt($ch, CURLOPT_HEADER, FALSE);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
             $data = curl_exec($ch);
