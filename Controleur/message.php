@@ -1,5 +1,6 @@
-session_start();
+
 <?php
+session_start();
    $host_name  = "localhost";
     $database   = "chome2";
     $user_name  = "root";
@@ -19,9 +20,10 @@ catch(Exception $e)
 }
 
 // Insertion du message à l'aide d'une requête préparée
-session_start();
+
  if (isset($_POST['message'])){
      $message=htmlspecialchars($_POST['message']);
  $req = $bdd->prepare('INSERT INTO message (nom, message, contact) VALUES(?, ?, ?)');
  $req->execute(array($_SESSION['nom'],$message,$_SESSION['telephone']));
 }
+ header("Location: ../Vue/sertech.php");

@@ -50,6 +50,44 @@ include '../Vue/header_admin.html';?>
 
 
         }
+         function showUserAdmin(str) {
+            if (str == "") {
+                document.getElementById("util").innerHTML = "";
+                return;
+            }
+
+            if (window.XMLHttpRequest) {
+
+                xmlhttp = new XMLHttpRequest();
+            } else {
+
+                if (window.ActiveXObject)
+                    try {
+                        xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
+                    } catch (e) {
+                        try {
+                            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+                        } catch (e) {
+                            return NULL;
+                        }
+                    }
+            }
+
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+
+                    document.getElementById("util").innerHTML = xmlhttp.responseText;
+
+                }
+            }
+
+            xmlhttp.open("GET", "../Controleur/messageAdmin.php?q=" + str, true);
+
+            xmlhttp.send();
+
+
+        }
+
 
         function showUser2(str) {
             if (str == "") {
@@ -136,13 +174,12 @@ include '../Vue/header_admin.html';?>
 <?php
  include('../Modele/Connexion.php');
     $reponse = $BDD->query('SELECT * FROM message');
-    $donnees = $reponse->fetch();
-    echo $donnees['message'];
+    
+    while($donnees = $reponse->fetch()){
+    echo "Message de ".$donnees['nom'].":                          ".$donnees['message'].'<br>'.'<br>'.'<br>';}
 ?>
-
-<div id="util">
-    <h2>CONTENUE</h2>
-</div>
+    
+ 
 <?php
 include '../Vue/footer_admin.html';
 ?>
