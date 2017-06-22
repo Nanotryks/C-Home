@@ -5,17 +5,19 @@
  * Date: 14/06/2017
  * Time: 10:10
  */
+include "start_session.php";
 if(isset($_GET['q']))
 {
     $choix=$_GET['q'];
 }
+
     if($choix==2)
     {
         $ch = curl_init();
         curl_setopt(
             $ch,
             CURLOPT_URL,
-            "http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=0039&TRAME=1003913020000a3");
+            "http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=00".$_SESSION['IdUtilisateur']."&TRAME=100".$_SESSION['IdUtilisateur']."13020000a3");
         curl_setopt($ch, CURLOPT_HEADER, FALSE);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
         $data = curl_exec($ch);
@@ -29,7 +31,7 @@ if(isset($_GET['q']))
             curl_setopt(
                 $ch,
                 CURLOPT_URL,
-                "http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=0039&TRAME=1003913030000a3");
+                "http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=00".$_SESSION['IdUtilisateur']."&TRAME=100".$_SESSION['IdUtilisateur']."13030000a3");
             curl_setopt($ch, CURLOPT_HEADER, FALSE);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
             $data = curl_exec($ch);
@@ -41,7 +43,7 @@ if(isset($_GET['q']))
             curl_setopt(
                 $ch,
                 CURLOPT_URL,
-                "http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=A18C&TRAME=1003913040000a3");
+                "http://projets-tomcat.isep.fr:8080/appService?ACTION=COMMAND&TEAM=00".$_SESSION['IdUtilisateur']."&TRAME=100".$_SESSION['IdUtilisateur']."13040000a3");
             curl_setopt($ch, CURLOPT_HEADER, FALSE);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
             $data = curl_exec($ch);

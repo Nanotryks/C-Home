@@ -1,6 +1,7 @@
 <?php
 
 include '../Modele/Connexion.php';
+include "start_session.php";
 $piece=0;
 global $id;
     if (isset($_GET["q"])) {
@@ -12,7 +13,7 @@ $ch = curl_init();
 curl_setopt(
     $ch,
     CURLOPT_URL,
-    "http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=0039");
+    "http://projets-tomcat.isep.fr:8080/appService?ACTION=GETLOG&TEAM=00".$_SESSION['IdUtilisateur']);
 curl_setopt($ch, CURLOPT_HEADER, FALSE);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
 $data = curl_exec($ch);
@@ -36,7 +37,6 @@ for( $size=count($data_tab)-2, $i=$size; $i>$size-2; $i--) {
 
             if ($c == "3") {
                 if ($v == "1111" && intval($donnees3['Valeur']) != 1) {
-                    echo 'bonjours';
                     $BDD->exec('UPDATE capteur SET Valeur=1 WHERE IdPiece="' . $id . '" AND Nom="Présence"');
                 } else {
                     if ($v == "0000" && intval($donnees3['Valeur']) != 0) {
@@ -62,7 +62,6 @@ for( $size=count($data_tab)-2, $i=$size; $i>$size-2; $i--) {
         while ($donnees = $reponse->fetch()) {
             $donnees2 = $reponse2->fetch();
 
-//    echo $donnees['Nom']." : ".$donnees2['Valeur']."<br>";
 
             if ($donnees['Nom'] == 'Température') {
                 echo $donnees['Nom'] . " : " . $donnees2['Valeur'] . " °C" . "<br>";

@@ -28,10 +28,7 @@ $rows = $req->rowCount();
 // si le mot de passe et l'identifiant ne correspondent pas
 if ($rows <=0)
 {
-    echo ', Mauvais identifiant ou mot de passe !';
-    echo $rows;
-    echo ', user '.$_POST['user'];
-
+    header("Location: ../Vue/EchecConnexion.php");
 }
 else
     // sinon, on démarre la séssion
