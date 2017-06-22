@@ -16,7 +16,7 @@ while($q = $getid->fetch()){
     $i=0;
     while($donnees = $reponse->fetch())
     {
-        $reponse2=$BDD->query('SELECT Valeur FROM capteur WHERE IdPiece="'.$donnees['IdPiece'].'" and Nom="Température" ');
+        $reponse2=$BDD->query('SELECT Valeur FROM donnees WHERE IdUtilisateur="' . $_SESSION['IdUtilisateur'] . '" and Type="Température" ');
         while($donnees2 = $reponse2->fetch()) {
             $table = $table + $donnees2['Valeur'];
             $i++;
@@ -25,7 +25,7 @@ while($q = $getid->fetch()){
     }
     if($i!=0) {
         $moyenne = $table/$i;
-        echo "Température moyenne ".$q['Nom']." est ".floor($moyenne)." °C";
+        echo "Température moyenne ".$q['Nom']." est " . floor($moyenne)." °C";
     }
 
 
@@ -37,7 +37,7 @@ while($q = $getid->fetch()){
     $i=0;
     while($donnees = $reponse->fetch())
     {
-        $reponse2=$BDD->query('SELECT Valeur FROM capteur WHERE IdPiece="'.$donnees['IdPiece'].'" and Nom="Lumière" ');
+        $reponse2=$BDD->query('SELECT Valeur FROM donnees WHERE IdUtilisateur="' . $_SESSION['IdUtilisateur'] . '" and Type="Lumière" ');
         while($donnees2 = $reponse2->fetch())
         {
             $table = $table + $donnees2['Valeur'];
@@ -47,25 +47,6 @@ while($q = $getid->fetch()){
     if($i!=0) {
         $moyenne = $table / $i;
         echo "</br> Luminosité moyenne ".$q['Nom']." est ".floor($moyenne)." lux";
-    }
-
-    // HUMIDITE
-
-    $reponse = $BDD->query('SELECT IdPiece FROM piece WHERE IdMaison="'.$q['IdMaison'].'"');
-    $table=0;
-    $i=0;
-    while($donnees = $reponse->fetch())
-    {
-        $reponse2=$BDD->query('SELECT Valeur FROM capteur WHERE IdPiece="'.$donnees['IdPiece'].'" and Nom="Humidité" ');
-        while($donnees2 = $reponse2->fetch())
-        {
-            $table = $table + $donnees2['Valeur'];
-            $i++;
-        }
-    }
-    if($i!=0) {
-        $moyenne = $table / $i;
-        echo "</br> Humidité moyenne ".$q['Nom']." est ".floor($moyenne)." %";
     }
 };
 

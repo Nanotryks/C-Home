@@ -24,9 +24,31 @@ include '../Controleur/StatsCible.php';
 </div>
 
 <div class="température">
-  <?php
-  echo 'Historique des température';
-  include '../Controleur/ListeStats.php';?>
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Heure</th>
+            <th>Valeur (en °C) </th>
+        </tr>
+        <?php
+        echo 'Historique des températures';
+        include '../Controleur/ListeStats.php';
+        ?>
+    </table>
+</div>
+
+<div class="lumière">
+<table>
+    <tr>
+        <th>Date</th>
+        <th>Heure</th>
+        <th>Valeur (en Lux)</th>
+    </tr>
+    <?php
+    echo 'Historique des niveaux de lumière';
+    include '../Controleur/ListeStats2.php';
+    ?>
+</table>
 </div>
 
 
