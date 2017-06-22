@@ -23,7 +23,7 @@ APP G8C ISEP
 		<div class="forme">
 			<div class="sign-in-lo">
 <!--                form avec la connexion-->
-                <h3>Identitfiant ou mot de passe érronés</h3>
+                <h3>Identifiant ou mot de passe érroné</h3>
             <form action="../Controleur/connexion.php" method="post">
 
 				<div class="group">
