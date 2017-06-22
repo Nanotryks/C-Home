@@ -15,7 +15,7 @@ include '../Vue/header.html';
 </head>
 <body>
 
-
+<h2> Bilan </h2>
 <div class="bilan">
 <?php
 include '../Controleur/StatsCible.php';
@@ -23,6 +23,7 @@ include '../Controleur/StatsCible.php';
 ?>
 </div>
 
+<h2> Historique des températures </h2>
 <div class="température">
     <table>
         <tr>
@@ -31,12 +32,12 @@ include '../Controleur/StatsCible.php';
             <th>Valeur (en °C) </th>
         </tr>
         <?php
-        echo 'Historique des températures';
         include '../Controleur/ListeStats.php';
         ?>
     </table>
 </div>
 
+<h2> Historique des lumières </h2>
 <div class="lumière">
 <table>
     <tr>
@@ -45,14 +46,13 @@ include '../Controleur/StatsCible.php';
         <th>Valeur (en Lux)</th>
     </tr>
     <?php
-    echo 'Historique des niveaux de lumière';
     include '../Controleur/ListeStats2.php';
     ?>
 </table>
 </div>
 
 
-<?include '../Vue/footer.html';
+<?php include '../Vue/footer.html';
 ?>
 
 

@@ -25,7 +25,7 @@ while($q = $getid->fetch()){
     }
     if($i!=0) {
         $moyenne = $table/$i;
-        echo "Température moyenne ".$q['Nom']." est " . floor($moyenne)." °C";
+        echo '</br>'. '<h3>'.$q['Nom'].'</h3>'. "Température moyenne "." est " . floor($moyenne)." °C";
     }
 
 
@@ -46,7 +46,7 @@ while($q = $getid->fetch()){
     }
     if($i!=0) {
         $moyenne = $table / $i;
-        echo "</br> Luminosité moyenne ".$q['Nom']." est ".floor($moyenne)." lux";
+        echo "</br> Luminosité moyenne "." est ".floor($moyenne)." lux" . '</br>' . '</br>';
     }
 };
 
