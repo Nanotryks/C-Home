@@ -37,8 +37,9 @@ include '../Controleur/StatsCible.php';
     </table>
 </div>
 
-<h2> Historique des lumières </h2>
+<h2> Historique des niveaux de luminosité </h2>
 <div class="lumière">
+
 <table>
     <tr>
         <th>Date</th>
