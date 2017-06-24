@@ -79,12 +79,12 @@ for( $size=count($data_tab)-2, $i=$size; $i>$size-2; $i--) {
                             echo $donnees['Nom'] . " : " . $donnees2['Valeur'] . "<br>";
                             echo "<br>";
                         } else {
-                            if ($donnees['Nom'] == "Porte d\'entrée") {
+                            if ($donnees['Nom'] == "Porte dentrée") {
                                 if ($donnees2['Valeur'] == 0) {
-                                    echo $donnees['Nom'] . " : " . " est fermée" . "<br>";
+                                    echo "Porte d'entrée est fermée"."<br>";
                                     echo "<br>";
                                 } else if ($donnees2['Valeur'] == 0) {
-                                    echo $donnees['Nom'] . " : " . " est ouverte" . "<br>";
+                                    echo "Porte d'entrée est ouverte" . "<br>";
                                     echo "<br>";
                                 }
                             } else {

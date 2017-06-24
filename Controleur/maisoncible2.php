@@ -24,7 +24,7 @@ while ($donnees2 = $reponse2->fetch()) {
 
 
 $req1 = $BDD->exec("DELETE FROM piece WHERE IdMaison = '" . $Id . "'");
-$req1 = $BDD->exec("DELETE FROM donnees WHERE IdUtilisateur='".$_SESSION['IdUtilisateur']."'");
+
 $req = $BDD->exec("DELETE FROM maison WHERE Porte = '" . intval($_POST['test']) . "' AND IdUtilisateur='".$_SESSION['IdUtilisateur']."'");
 
 header('Location:../Vue/maison_supprimer.php');
