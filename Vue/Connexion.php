@@ -10,6 +10,7 @@ APP G8C ISEP
 
       <link rel="stylesheet" href="../CSS/style.css">
     <link rel="icon" href="../Image/Logopic.ico">
+    <script type="text/javascript" src="../Js/VerifCaractere.js"></script>
 
   
 </head>
@@ -29,7 +30,7 @@ APP G8C ISEP
 
 				<div class="group">
 					<label for="user" class="label">Identifiant DOMISEP</label>
-					<input id="user" name="user" type="text" class="input" required>
+					<input id="user" name="user" type="text" class="input" required" onkeyup="verif3(this)">
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Mot de passe</label>
@@ -57,15 +58,15 @@ APP G8C ISEP
                 <form action="../Controleur/inscription.php" method="post">
 				<div class="group">
 					<label for="user" class="label">IDENTIFIANT DOMISEP</label>
-					<input id="user" name="user" type="text" class="input" required>
+					<input id="user" name="user" type="text" class="input" required onkeyup="verif3(this)">
 				</div>
                 <div class="group">
 					<label for="pass" class="label">Prenom</label>
-					<input id="pass" name="prenom" type="text" class="input" required>
+					<input id="pass" name="prenom" type="text" class="input" required onkeyup="verif(this)">
 				</div>
                 <div class="group">
 					<label for="pass" class="label">NOM</label>
-					<input id="pass" name="nom" type="text" class="input" required>
+					<input id="pass" name="nom" type="text" class="input" required onkeyup="verif(this)">
 				</div>
                 <div class="group">
 					<label for="pass" class="label">adresse email</label>
@@ -77,7 +78,7 @@ APP G8C ISEP
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Telephone</label>
-					<input id="pass" name="telephone" type="text" class="input" required maxlength="10">
+					<input id="pass" name="telephone" type="text" class="input" required maxlength="10" onkeyup="verif2(this)">
 				</div>
                     <div id="Question" class="group">
                         <label for="question" class="label">Question secrète</label><br>
@@ -92,7 +93,7 @@ APP G8C ISEP
                     </br>
                         </br>
                         <label for="reponse" class="label">Votre réponse secrète</label>
-                        <input class ="input" type="text" name="reponse" required>
+                        <input class ="input" type="text" name="reponse" required onkeyup="verif(this)">
                     </div>
                 <div class="group">
                     <input id="check" type="checkbox" class="check" checked>
@@ -109,7 +110,6 @@ APP G8C ISEP
 		</div>
 	</div>
 </div>
-  
-  
+
 </body>
 </html>

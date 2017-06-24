@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="../CSS/style.css">
     <link rel="icon" href="../Image/Logopic.ico">
-
+    <script type="text/javascript" src="../Js/VerifCaractere.js"></script>
 </head>
 
 <body>
@@ -27,19 +27,19 @@
 
                 <div class="group">
                     <label for="pass" class="label">Prenom</label>
-                    <input id="pass" name="prenom" type="text" class="input">
+                    <input id="pass" name="prenom" type="text" class="input" required onkeyup="verif(this)">
                 </div>
                 <div class="group">
                     <label for="pass" class="label">NOM</label>
-                    <input id="pass" name="nom" type="text" class="input">
+                    <input id="pass" name="nom" type="text" class="input" required onkeyup="verif(this)">
                 </div>
                 <div class="group">
                     <label for="pass" class="label">adresse email</label>
-                    <input id="pass" name="email" type="text" class="input">
+                    <input id="pass" name="email" type="email" class="input" required>
                 </div>
                 <div class="group">
                     <label for="pass" class="label">Telephone</label>
-                    <input id="pass" name="telephone" type="text" class="input">
+                    <input id="pass" name="telephone" type="text" class="input" required maxlength="10" onkeyup="verif2(this)">
                 </div>
                 <div id="Question" class="group">
                     <label for="creneau" class="label">Dates disponibles</label><br>
@@ -57,7 +57,7 @@
                 </div>
                 <div id="Question" class="group">
                     <label for="horaires" class="label">Horaires disponibles</label><br>
-                    <select name="Select">
+                    <select name="Select" required>
                         <option selected="selected">Sélectionnez un horaire</option>
                         <option name="Morning" value="Morning">9h - 12h</option>
                         <option name="Noon" value="Noon">14h - 17h</option>
@@ -75,7 +75,6 @@
     </div>
 </div>
 </div>
-
 
 </body>
 </html>
