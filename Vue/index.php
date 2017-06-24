@@ -385,8 +385,8 @@
         <div class="content">
             <h1>RENCONTRE</h1>
             <p><br>
-                Pour prendre un rendez vous, remplissez le formulaire ci-dessous</br><br>
-                 <a id="formulaire" href="../Vue/FormulaireRDV.php">FORMULAIRE</a>
+                 </br><br>
+                 <a id="formulaire" href="../Vue/FormulaireRDV.php"> Cliquez sur moi pour prendre contact !</a>
 
             </p>
         </div>

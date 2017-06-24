@@ -36,10 +36,10 @@ while($donnees = $reponse->fetch())
 }
 if($i!=0) {
     $moyenne = $table / $i;
-    echo "La lumière moyenne de votre maison est " . floor($moyenne) . " Lux";
+    echo "L'intensité lumineuse moyenne de votre maison est de " . floor($moyenne) . " Lux";
 }
 else{
-    echo "Vous n'avez pas de capteur de luminosité";
+    echo "Aucun capteur de luminosité n'est installé chez vous";
 }
 ?>
 

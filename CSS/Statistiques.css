@@ -120,16 +120,7 @@ nav{
     text-align: center;
 }
 
-table
-{
-    border-collapse: collapse; /* Les bordures du tableau seront collées (plus joli) */
-    text-align: center;
-    margin:auto;
-    width:100%;
-    padding-right:100%;
-    height:15px;
-    border-spacing: 0px;
-}
+
 td,tr
 {
     font-weight: bold;
@@ -161,7 +152,7 @@ th {
 }
 
   td:hover::before {
-      background-color: red;
+      background-color: silver;
       content: '';
       height: 100%;
       left: -5000px;
@@ -170,3 +161,4 @@ th {
       width: 10000px;
       z-index: -2;
   }
+

@@ -42,7 +42,7 @@
                     <input id="pass" name="telephone" type="text" class="input">
                 </div>
                 <div id="Question" class="group">
-                    <label for="creneau" class="label">Créneau disponible</label><br>
+                    <label for="creneau" class="label">Dates disponibles</label><br>
                     <select name="Select">
                         <option selected="selected">Sélectionnez un créneau</option>
                         <option name="27" value="27">27 juin 2017</option>
@@ -56,7 +56,7 @@
 
                 </div>
                 <div id="Question" class="group">
-                    <label for="horaires" class="label">Horaires disponible</label><br>
+                    <label for="horaires" class="label">Horaires disponibles</label><br>
                     <select name="Select">
                         <option selected="selected">Sélectionnez un horaire</option>
                         <option name="Morning" value="Morning">9h - 12h</option>
