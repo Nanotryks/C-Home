@@ -3,6 +3,7 @@
 include ('../Modele/Connexion.php');
 
 session_start();
+
 $reponse = $BDD->query('SELECT IdMaison FROM maison WHERE Porte = "' . $_POST['test'] . '" and IdUtilisateur="'.$_SESSION['IdUtilisateur'].'"');
 $id = 0;
 while ($donnees = $reponse->fetch()) {
@@ -23,6 +24,7 @@ while ($donnees2 = $reponse2->fetch()) {
 
 
 $req1 = $BDD->exec("DELETE FROM piece WHERE IdMaison = '" . $Id . "'");
-$req = $BDD->exec("DELETE FROM maison WHERE Porte = '" . intval($_POST['test']) . "'");
+$req1 = $BDD->exec("DELETE FROM donnees WHERE IdUtilisateur='".$_SESSION['IdUtilisateur']."'");
+$req = $BDD->exec("DELETE FROM maison WHERE Porte = '" . intval($_POST['test']) . "' AND IdUtilisateur='".$_SESSION['IdUtilisateur']."'");
 
 header('Location:../Vue/maison_supprimer.php');

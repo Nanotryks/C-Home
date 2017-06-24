@@ -78,7 +78,7 @@ APP G8C ISEP
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Telephone</label>
-					<input id="pass" name="telephone" type="text" class="input" required maxlength="10" onkeyup="verif2(this)">
+					<input id="pass" name="telephone" type="text" class="input" required minlength="10" maxlength="10" onkeyup="verif2(this)">
 				</div>
                     <div id="Question" class="group">
                         <label for="question" class="label">Question secrète</label><br>
