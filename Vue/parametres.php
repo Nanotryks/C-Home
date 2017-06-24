@@ -12,6 +12,7 @@ include '../Vue/header.html';
 
     <script type="text/javascript" src="../Js/scroll.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../Js/VerifCaractere.js"></script>
     <script>
         $(document).ready(function () {
             $("p.modif").toggle();
@@ -44,11 +45,11 @@ include '../Vue/header.html';
             <br>
             <br>
             <label for="nom">Nom :</label><br/>
-            <input type="text" name="nom" id="nom" value="<?php echo $donnees['nom']; ?>"/>
+            <input type="text" name="nom" id="nom" value="<?php echo $donnees['nom']; ?>" onkeyup="verif(this)"/>
             <br/><br>
 
             <label for="prenom">Prénom :</label><br/>
-            <input type="text" name="prenom" id="prenom" value="<?php echo $donnees['prenom']; ?>"/>
+            <input type="text" name="prenom" id="prenom" value="<?php echo $donnees['prenom']; ?>" onkeyup="verif(this)"/>
             <br/><br>
 
             <label for="mail">Adresse mail associée au compte :</label> <br/>
@@ -60,12 +61,12 @@ include '../Vue/header.html';
             <br/><br>
 
             <label for="telephone">Numéro de téléphone :</label> <br/>
-            <input type="text" name="telephone" id="telephone" value="<?php echo $donnees['telephone']; ?>"/>
+            <input type="text" name="telephone" id="telephone" value="<?php echo $donnees['telephone']; ?>" maxlength="10" onkeyup="verif2(this)"/>
             <br/><br>
 
             <label for="numero_abonne">Votre numéro abonné :</label><br/>
             <input type="text" name="numero_abonne" id="numero_abonne"
-                   value="<?php echo $donnees['numero_abonne']; ?>"/>
+                   value="<?php echo $donnees['numero_abonne']; ?>" onkeyup="verif3(this)"/>
             <br/><br>
 
             <input type="submit" name="submit" value="Sauvegarder"/>

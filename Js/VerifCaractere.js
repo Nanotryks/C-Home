@@ -3,7 +3,7 @@
  */
 function verif(chars) {
     // Caractères autorisés
-    var regex = new RegExp("[A-Za-zé]", "i");
+    var regex = new RegExp("[A-Za-zêéèà]", "i");
     var valid;
     for (x = 0; x < chars.value.length; x++) {
         valid = regex.test(chars.value.charAt(x));
@@ -27,7 +27,7 @@ function verif2(chars) {
 
 function verif3(chars) {
     // Caractères autorisés
-    var regex = new RegExp("[A-Za-z0-9é]", "i");
+    var regex = new RegExp("[A-Za-z0-9êéèà]", "i");
     var valid;
     for (x = 0; x < chars.value.length; x++) {
         valid = regex.test(chars.value.charAt(x));

@@ -19,7 +19,7 @@ $i=0;
                {
 
                    echo '<label for="couleur" class="label" id="question">Quelle est votre couleur préférée ?</label><br>';
-                   echo '<input type="text" name="reponse" class="input"><br>';
+                   echo '<input type="text" name="reponse" class="input" onkeyup="verif(this)"><br>';
 
                }break;
 
@@ -27,7 +27,7 @@ $i=0;
                {
 
                    echo '<label for="ville" class="label" id="question">Quelle est votre ville favorite ?</label><br>';
-                   echo '<input type="text" name="reponse" class="input"><br>';
+                   echo '<input type="text" name="reponse" class="input" onkeyup="verif(this)"><br>';
 
                }break;
 
@@ -35,7 +35,7 @@ $i=0;
                {
 
                    echo '<label for="animal" class="label" id="question">Quelle est le nom de votre premier animal domestique ?</label><br>';
-                   echo '<input type="text" name="reponse" class="input"><br>';
+                   echo '<input type="text" name="reponse" class="input" onkeyup="verif(this)"><br>';
 
                }break;
 
@@ -43,7 +43,7 @@ $i=0;
                {
 
                    echo '<label for="mere" class="label"  id="question">Quelle est le nom de jeune fille de votre mère ?</label><br>';
-                   echo '<input type="text" name="reponse" class="input"><br>';
+                   echo '<input type="text" name="reponse" class="input" onkeyup="verif(this)"><br>';
 
                }break;
 
@@ -51,7 +51,7 @@ $i=0;
                {
 
                    echo '<label for="teacher" class="label" id="question">Quelle est le nom de votre institutrice de maternelle ?</label><br>';
-                   echo '<input type="text" name="reponse" class="input"><br>';
+                   echo '<input type="text" name="reponse" class="input" onkeyup="verif(this)"><br>';
 
                }break;
 

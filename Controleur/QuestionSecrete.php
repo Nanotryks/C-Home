@@ -28,7 +28,6 @@ while($donnees=$reponse->fetch())
 
     if($rep2==$rep && $mdp==$conf)
     {
-        echo 'reussi';
         $BDD->query('UPDATE utilisateur SET mdp="'.$mdp.'" WHERE mail="'.$mail.'"');
         header('Location:../Vue/Connexion.php');
     }

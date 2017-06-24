@@ -12,6 +12,7 @@ include '../Vue/header.html';
     <title>Ajout d'une pièce</title>
 
     <script type="text/javascript" src="../Js/scroll.js"></script>
+    <script type="text/javascript" src="../Js/VerifCaractere.js"></script>
 </head>
 
 <body>
@@ -34,7 +35,7 @@ include '../Vue/header.html';
 
         <label>Nom de la pièce</label>
         <br>
-        <input type="text" name="Piece">
+        <input type="text" name="Piece" onkeyup="verif3(this)">
     <br>
     <input type="submit" value="Ajouter">
 </FORM>

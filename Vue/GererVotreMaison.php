@@ -17,6 +17,7 @@ include '../Vue/header.html';
 
     <script type="text/javascript" src="../Js/scroll.js"></script>
     <script type="text/javascript" src="../Js/GererVotreMaison.js"></script>
+    <script type="text/javascript" src="../Js/VerifCaractere.js"></script>
     <script>
 
         function showUser3(str)
