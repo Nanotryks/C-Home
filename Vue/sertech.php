@@ -50,7 +50,7 @@ include '../Vue/header.html';
                 <h3>Par Mail</h3>
             </div>
             <div id="content">
-                <p><a id="mail" href="mailto:lyes.bounoua@isep.fr">Envoyez-moi un e-mail !</a></p>
+                <p><a id="mail" href="mailto:lyes.bounoua@isep.fr">Envoyez un mail ! (réponse sous 24h) </a></p>
             </div>
         </div>
     </div>
@@ -59,10 +59,13 @@ include '../Vue/header.html';
         <br>
     
 <form action="../Controleur/message.php" method="post">
-        <label for="message">Ecrire un Message à nos Techniciens</label><br>
-        <textarea id="message" name="message" rows="15" cols="50" type="text"></textarea><br><br><br>
+        <label for="message"><h2>CONTACTER UN ADMINISTRATEUR</h2></label><br>
+        <textarea id="message" name="message" rows="15" cols="50" type="text"></textarea><br><br>
         <input type="submit" class="btn" value="Envoyer">
         </form>
+
+    </div>
+</div>
 <footer>
     <br>
     <div id="photos">
