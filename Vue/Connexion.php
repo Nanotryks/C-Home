@@ -30,7 +30,7 @@ APP G8C ISEP
 
 				<div class="group">
 					<label for="user" class="label">Identifiant DOMISEP</label>
-					<input id="user" name="user" type="text" class="input" required onkeyup="verif3(this)">
+					<input id="user" name="user" type="text" class="input" required onkeyup="verif2(this)">
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Mot de passe</label>
@@ -135,6 +135,8 @@ APP G8C ISEP
               }
           }
       }
+
+
   </script>
 
 </body>
