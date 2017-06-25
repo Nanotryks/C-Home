@@ -58,15 +58,15 @@ APP G8C ISEP
                 <form action="../Controleur/inscription.php" method="post">
 				<div class="group">
 					<label for="user" class="label">IDENTIFIANT DOMISEP</label>
-					<input id="user" name="user" type="text" class="input" required onkeyup="verif3(this)">
+					<input id="user" name="user" type="text" class="input" required onkeyup="verif2(this)">
 				</div>
                 <div class="group">
 					<label for="pass" class="label">Prenom</label>
-					<input id="pass" name="prenom" type="text" class="input" required onkeyup="verif(this)">
+					<input id="pass" name="prenom" type="text" class="input" required onkeyup="verif4(this)">
 				</div>
                 <div class="group">
 					<label for="pass" class="label">NOM</label>
-					<input id="pass" name="nom" type="text" class="input" required onkeyup="verif(this)">
+					<input id="pass" name="nom" type="text" class="input" required onkeyup="verif4(this)">
 				</div>
                 <div class="group">
 					<label for="pass" class="label">adresse email</label>
@@ -93,7 +93,7 @@ APP G8C ISEP
                     </br>
                         </br>
                         <label for="reponse" class="label">Votre réponse secrète</label>
-                        <input class ="input" type="text" name="reponse" required onkeyup="verif(this)">
+                        <input class ="input" type="text" name="reponse" required onkeyup="verif4(this)">
                     </div>
                 <div class="group">
                     <input id="check" type="checkbox" class="check" checked>
@@ -110,6 +110,32 @@ APP G8C ISEP
 		</div>
 	</div>
 </div>
+
+  <script>
+      function verif3(chars) {
+          // Caractères autorisés
+          var regex = new RegExp("[a-zA-Z0-9ÀÁÂÃÄÅàáâãäåÒÓÔÕÖØòóôõöøÈÉÊËèéêëÇçÌÍÎÏìíîïÙÚÛÜùúûüÿÑñ_-'\\s]", "i");
+          var valid;
+          for (x = 0; x < chars.value.length; x++) {
+              valid = regex.test(chars.value.charAt(x));
+              if (valid == false) {
+                  chars.value = chars.value.substr(0, x) + chars.value.substr(x + 1, chars.value.length - x + 1); x--;
+              }
+          }
+      }
+
+      function verif4(chars) {
+          // Caractères autorisés
+          var regex = new RegExp("[A-Za-ÀÁÂÃÄÅàáâãäåÒÓÔÕÖØòóôõöøÈÉÊËèéêëÇçÌÍÎÏìíîïÙÚÛÜùúûüÿÑñ'-\\s]", "i");
+          var valid;
+          for (x = 0; x < chars.value.length; x++) {
+              valid = regex.test(chars.value.charAt(x));
+              if (valid == false) {
+                  chars.value = chars.value.substr(0, x) + chars.value.substr(x + 1, chars.value.length - x + 1); x--;
+              }
+          }
+      }
+  </script>
 
 </body>
 </html>
