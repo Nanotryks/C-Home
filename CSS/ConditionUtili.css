@@ -62,7 +62,9 @@ body {
     border-top: solid;
     border-top-color: #FFFFFF;
     margin-top: 30px;
-    background: white;
+    margin-left:20%;
+    margin-right:20%;
+    background: rgba(255,255,255,0.5);
     padding: 10px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, .3),
     0 3px 5px rgba(0, 0, 0, .2),
@@ -71,14 +73,22 @@ body {
 
 }
 
-#cond {
+#condi{
     width: 100%;
     margin: auto;
     margin-top: 30px;
     max-width: 725px;
     min-height: 150px;
     position: relative;
+}
 
+.zone{
+    width: 100%;
+    margin: auto;
+    margin-top: 30px;
+    max-width: 725px;
+    min-height: 150px;
+    position: relative;
 }
 
 html {

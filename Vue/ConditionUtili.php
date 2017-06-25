@@ -22,17 +22,17 @@
     </div>
 
 
-    <div id="cond">
+    <div id="condi">
 
         <br><br>
         <form action="../Controleur/condgen.php" method="post">
             <div class="group">
-                <label for="cond" class="label">Entrez les conditions générales d'utilisation :</label>
-                <textarea id="cond" name="cond" rows="15" cols="1" type="text" class="input"></textarea>
+                <label for="condi" class="label">Entrez les conditions générales d'utilisation :</label>
+                <textarea class="zone" name="condition" rows="15" cols="1" type="text" class="input"></textarea>
             </div>
 
             <br><br><br>
-            <input type="submit" class="btn" value="Envoyer"><br><br><br>
+            <input type="submit" class="btn" name="cond" value="Envoyer"><br><br><br>
         </form>
     </div>
 </div>

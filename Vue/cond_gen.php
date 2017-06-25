@@ -22,6 +22,8 @@
 
           echo $donnees['text'];
     ?>
+        </div>
+    </form>
   
   
 </body>
