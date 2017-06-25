@@ -6,12 +6,14 @@
  * Time: 10:49
  */
 include "../Modele/Connexion.php";
+$i=0;
 if(isset($_GET["q"]))
 {
     $id=$_GET["q"];
     $reponse = $BDD->query('SELECT nom, prenom, mail, telephone, numero_abonne FROM utilisateur WHERE IdUtilisateur="'.$id.'"');
     while($donnees = $reponse->fetch())
     {
+        $i++;
         echo "<br><br>"."Nom : ".$donnees["nom"]."<br></br> "."Prénom : ".$donnees["prenom"]."<br></br> "."Mail : ".$donnees["mail"]."<br></br> "."Numéro Abonné : ".$donnees["numero_abonne"];
     }
 
@@ -22,4 +24,8 @@ if(isset($_GET["q"]))
         echo "<br><br>"."Id Maison : ".$donnees["IdMaison"]."<br></br> "."Adresse : ".$donnees["Porte"]." ".$donnees["Voie"]." ".$donnees["Adresse"]
         ." ".$donnees["Ville"]." ".$donnees["Code_Postal"];
     }
+}
+if($i==0)
+{
+    echo "Cette identifiant n'existe pas";
 }

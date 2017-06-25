@@ -78,9 +78,9 @@ include '../Vue/header_admin.html';?>
 
         <div class="choix">
         <br/>
-        <input type="radio" name="choix" value="supprimer" id="supprimer"/> <label for="supprimer">Supprimer le compte</label>
-        <input type="radio" name="choix" value="donner" id="donner"/> <label for="donner">Donner les droits administrateur</label>
-        <input type="radio" name="choix" value="retirer" id="retirer"/> <label for="retirer">Retirer les droits admintrateur</label>
+        <input type="radio" name="choix" value="supprimer" id="supprimer" required/> <label for="supprimer">Supprimer le compte</label>
+        <input type="radio" name="choix" value="donner" id="donner" required/> <label for="donner">Donner les droits administrateur</label>
+        <input type="radio" name="choix" value="retirer" id="retirer" required/> <label for="retirer">Retirer les droits admintrateur</label>
         <br/>
         <br/>
         <input type="submit" value="Valider votre choix">
