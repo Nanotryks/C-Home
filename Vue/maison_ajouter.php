@@ -26,7 +26,7 @@ include '../Vue/header.html';
         <p>
             <br>
             <label for="nom">Nom</label> : <br/>
-            <input type="text" name="nom" id="nom" onkeyup="verif(this)"/><br/><br>
+            <input type="text" name="nom" id="nom" onkeyup="verif3(this)"/><br/><br>
 
             <label for="porte">Numéro de porte</label> : <br/>
             <input type="number" name="porte" id="porte" min="0" onkeyup="verif2(this)"/>
@@ -43,7 +43,7 @@ include '../Vue/header.html';
             <br/><br>
 
             <label for="adresse">Nom de la voie</label> : <br/>
-            <input type="text" name="adresse" id="adresse" onkeyup="verif(this)">
+            <input type="text" name="adresse" id="adresse" onkeyup="verif4(this)">
             <br/><br>
 
             <label for="code_postal">Code postal</label> : <br/>
@@ -51,7 +51,7 @@ include '../Vue/header.html';
             <br/><br>
 
             <label for="ville">Ville</label> : <br/>
-            <input type="text" name="ville" id="ville" onkeyup="verif(this)"/>
+            <input type="text" name="ville" id="ville" onkeyup="verif4(this)"/>
             <br/><br>
 
             <label for="nombre_pieces">Veuillez indiquer le nombre de pièces <br/> dont dispose votre domicile</label> : <br/>
@@ -66,8 +66,34 @@ include '../Vue/header.html';
             <input type="submit" value="Ajouter une maison" class="add"/><br><br><br>
         </p>
     </form>
-
+</div>
 
 <?php
 include '../Vue/footer.html';
 ?>
+<script>
+    function verif3(chars) {
+        // Caractères autorisés
+        var regex = new RegExp("[a-zA-Z0-9ÀÁÂÃÄÅàáâãäåÒÓÔÕÖØòóôõöøÈÉÊËèéêëÇçÌÍÎÏìíîïÙÚÛÜùúûüÿÑñ_-'\\s]", "i");
+        var valid;
+        for (x = 0; x < chars.value.length; x++) {
+            valid = regex.test(chars.value.charAt(x));
+            if (valid == false) {
+                chars.value = chars.value.substr(0, x) + chars.value.substr(x + 1, chars.value.length - x + 1); x--;
+            }
+        }
+    }
+
+    function verif4(chars) {
+        // Caractères autorisés
+        var regex = new RegExp("[A-Za-ÀÁÂÃÄÅàáâãäåÒÓÔÕÖØòóôõöøÈÉÊËèéêëÇçÌÍÎÏìíîïÙÚÛÜùúûüÿÑñ'-\\s]", "i");
+        var valid;
+        for (x = 0; x < chars.value.length; x++) {
+            valid = regex.test(chars.value.charAt(x));
+            if (valid == false) {
+                chars.value = chars.value.substr(0, x) + chars.value.substr(x + 1, chars.value.length - x + 1); x--;
+            }
+        }
+    }
+</script>
+</body>

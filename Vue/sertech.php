@@ -29,11 +29,11 @@ include '../Vue/header.html';
                 }
             </script>
             <select name="group" id="group" onChange="myNewFunction(this);">
-                <option value="0" id="0159595932">Type de support requis</option>
-                <option value="1" id="0188946890">Service technique capteurs</option>
-                <option value="2" id="0125934344">Service technique réseaux</option>
-                <option value="3" id="0134595959">Service technique sécurité</option>
-                <option value="4" id="0153464744">Autre</option>
+                <option value="0" id="01 59 59 59 32">Type de support requis</option>
+                <option value="1" id="01 88 94 68 90">Service technique capteurs</option>
+                <option value="2" id="01 25 93 43 44">Service technique réseaux</option>
+                <option value="3" id="01 34 59 59 59">Service technique sécurité</option>
+                <option value="4" id="01 53 46 47 44">Autre</option>
             </select>
 
             <div id="bloc_telephone" class=" Par Téléphone">
@@ -66,18 +66,7 @@ include '../Vue/header.html';
 
     </div>
 </div>
-<footer>
-    <br>
-    <div id="photos">
-        <h1>Nos capteurs</h1>
-        <br>
-        <p><img id="p1" src="../Image/photo1.jpeg" width="200px" height="auto"/><img id="p4" src="../Image/photo2.png"
-                                                                                     width="200px" height="auto"/><img
-                    id="p3" src="../Image/photo3.jpeg" width="200px" height="auto"/></p>
-    </div>
 
-    <br>
-</footer>
 
 <?php
 include '../Vue/footer.html';
