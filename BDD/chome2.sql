@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 21 Juin 2017 à 14:43
+-- Généré le :  Dim 25 Juin 2017 à 09:12
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -59,27 +59,14 @@ CREATE TABLE `capteur` (
 --
 
 INSERT INTO `capteur` (`IdPiece`, `IdCapteur`, `Nom`, `Valeur`, `Mode_Valeur`) VALUES
-(5, 12, 'Fumée', 0, 0),
-(6, 26, 'Température', 21, 21),
-(7, 27, 'Lumière', 100, 100),
-(10, 30, 'Température', 21, 21),
-(10, 31, 'Lumière', 100, 100),
-(12, 32, 'Température', 21, 21),
-(13, 33, 'Température', 21, 21),
-(12, 34, 'Présence', 1, 0),
-(15, 36, 'Lumière', 100, 100),
-(14, 37, 'Température', 21, 21),
-(14, 38, 'Porte d\'entrée', 1, 0),
-(14, 39, 'Fenêtre', 1, 0),
-(16, 40, 'Température', 21, 21),
-(16, 41, 'Lumière', 100, 100),
-(16, 42, 'Humidité', 81, 0),
+(16, 40, 'Température', 2, 2),
+(16, 41, 'Lumière', 500, 500),
+(16, 42, 'Humidité', 65, 0),
 (16, 43, 'Présence', 0, 0),
-(18, 44, 'Température', 21, 21),
-(17, 45, 'Humidité', 81, 0),
-(16, 46, 'Lumière', 700, 700),
-(17, 48, 'Température', 20, 20),
-(17, 49, 'Lumière', 700, 700);
+(17, 45, 'Humidité', 65, 0),
+(16, 46, 'Lumière', 500, 500),
+(17, 48, 'Température', 2, 2),
+(17, 49, 'Lumière', 500, 500);
 
 -- --------------------------------------------------------
 
@@ -122,11 +109,14 @@ INSERT INTO `donnees` (`IdUtilisateur`, `IdDonnees`, `Type`, `Valeur`, `date`, `
 (39, 14, 'Température', 24, '2017-06-21', '14:09:38'),
 (39, 15, 'Température', 14, '2017-06-21', '14:10:54'),
 (39, 16, 'Température', 20, '2017-06-21', '14:11:10'),
-(40, 17, 'Température', 99, '2017-06-21', '14:14:38'),
 (39, 18, 'Température', 16, '2017-06-21', '14:29:50'),
 (39, 19, 'Température', 21, '2017-06-21', '14:30:40'),
 (39, 20, 'Température', 20, '2017-06-21', '14:40:04'),
-(39, 21, 'Lumière', 700, '2017-06-21', '14:40:58');
+(39, 21, 'Lumière', 700, '2017-06-21', '14:40:58'),
+(39, 22, 'Température', 20, '2017-06-22', '08:52:23'),
+(39, 23, 'Lumière', 700, '2017-06-22', '08:52:29'),
+(39, 24, 'Température', 2, '2017-06-22', '08:53:07'),
+(39, 25, 'Lumière', 500, '2017-06-22', '08:53:46');
 
 -- --------------------------------------------------------
 
@@ -152,15 +142,7 @@ CREATE TABLE `maison` (
 --
 
 INSERT INTO `maison` (`IdUtilisateur`, `IdMaison`, `Nom`, `Porte`, `Voie`, `Adresse`, `Code_Postal`, `Ville`, `Nombre_Piece`, `Nombre_Etage`) VALUES
-(24, 2, 'Maison1', 1, 'rue', 'bidon', '90000', 'Issy', 5, 1),
-(25, 11, 'vacance', 6, 'rue', 'vac', '75000', 'rochelle', 9, 2),
-(29, 12, 'Maison1', 1, 'rue', 'azerty', '90000', 'Issy', 10, 2),
-(31, 21, 'Ma maison', 23, 'boulevard', 'Général Leclerc', '92130', 'Lizié', 4, 1),
-(36, 24, 'Maison1', 1, 'rue', 'azerty', '90000', 'Issy', 20, 4),
-(38, 25, 'Maison1', 2, 'rue', 'azerty', '90000', 'Issy', 12, 2),
-(38, 26, 'Maison2', 3, 'rue', 'bidon', '90000', 'Issy', 10, 2),
-(39, 27, 'Maison Principal', 10, 'rue', 'Pierre Currie', '94700', 'MaisonAlfort', 12, 2),
-(40, 28, 'Maison1', 21, 'rue', 'eric', '92130', 'Paris', 6, 1);
+(39, 27, 'Maison Principale', 10, 'rue', 'Pierre Currie', '94700', 'MaisonAlfort', 12, 2);
 
 -- --------------------------------------------------------
 
@@ -180,7 +162,8 @@ CREATE TABLE `message` (
 --
 
 INSERT INTO `message` (`id`, `nom`, `message`, `contact`) VALUES
-(1, 'azerty', 'je suis le mesage\r\n', '123456789');
+(1, 'Jean-Baptiste MARCHON', 'Bonjour, je rencontre un problème lorsque je veux modifier mes paramètres utilisateurs. Pourriez-vous m\'aider ?\r\n', '123456789'),
+(2, 'Benjamin DRAN', 'Bonsoir, je pars en vacances dans 2 jours et j\'aimerai que vous puissiez garder un oeil sur le chauffage central de ma maison', '0123456789');
 
 -- --------------------------------------------------------
 
@@ -202,20 +185,12 @@ CREATE TABLE `mode` (
 --
 
 INSERT INTO `mode` (`IdUtilisateur`, `IdCapteur`, `Idmode`, `mode`, `Capteur`, `Valeur`) VALUES
-(29, 26, 11, 'Manuel', 'Température', 21),
-(31, 30, 13, 'Manuel', 'Température', 21),
-(31, 31, 14, 'Manuel', 'Lumière', 100),
-(36, 32, 15, 'Manuel', 'Température', 21),
-(36, 33, 16, 'Manuel', 'Température', 21),
-(38, 36, 18, 'Manuel', 'Lumière', 100),
-(38, 37, 19, 'Manuel', 'Température', 21),
-(39, 40, 20, 'Manuel', 'Température', 21),
-(39, 41, 21, 'Manuel', 'Lumière', 100),
-(40, 44, 22, 'Manuel', 'Température', 21),
-(39, 41, 23, 'Automatique', 'Lumière', 700),
-(39, 46, 24, 'Automatique', 'Lumière', 700),
-(39, 48, 26, 'Automatique', 'Température', 20),
-(39, 49, 27, 'Automatique', 'Lumière', 700);
+(39, 40, 20, 'Manuel', 'Température', 2),
+(39, 41, 21, 'Manuel', 'Lumière', 500),
+(39, 41, 23, 'Manuel', 'Lumière', 500),
+(39, 46, 24, 'Manuel', 'Lumière', 500),
+(39, 48, 26, 'Manuel', 'Température', 2),
+(39, 49, 27, 'Manuel', 'Lumière', 500);
 
 -- --------------------------------------------------------
 
@@ -234,19 +209,8 @@ CREATE TABLE `piece` (
 --
 
 INSERT INTO `piece` (`IdMaison`, `IdPiece`, `Nom`) VALUES
-(2, 5, 'Salon'),
-(12, 6, 'Salon'),
-(12, 7, 'Chambre'),
-(12, 8, 'Cuisine'),
-(21, 10, 'Salon'),
-(21, 11, 'Cuisine'),
-(24, 12, 'Salon'),
-(24, 13, 'Chambre'),
-(25, 14, 'Salon'),
-(26, 15, 'Chambre'),
 (27, 16, 'Salon'),
-(27, 17, 'Chambre'),
-(28, 18, 'Living room');
+(27, 17, 'Chambre');
 
 -- --------------------------------------------------------
 
@@ -272,25 +236,8 @@ CREATE TABLE `utilisateur` (
 --
 
 INSERT INTO `utilisateur` (`IdUtilisateur`, `nom`, `prenom`, `mail`, `mdp`, `numero_abonne`, `telephone`, `QuestionSecrete`, `ReponseSecrete`, `Admin`) VALUES
-(2, 'jgdgdf', 'dfgsdhf', '123@gmail.com', 'qsdqsdqsdqsd', '1231312', '1231312', '', '', 0),
-(3, 'abcde', 'ddadqss', 'dqsfqfqsfqs@qsdqs', 'sqdqsdq', '1231312', '1231312', '', '', 0),
-(6, 'nouveaunom', 'test2', 'jdrebd@test', 'fhfghfghg', '2222222', '1231312', '', '', 0),
-(7, 'dran', 'be', 'benjamin@dran.fr', 'azertyazerty', '999992222', '6943837', '', '', 0),
-(17, '', '', 'jb', '90795a0ffaa8b88c0e250546d8439b', 'tata', '758449357', '', '', 0),
-(20, 'LO', 'CHEIKHOUNA', 'cheikhouna@cheikhouna.com', '3105221c1c15399d170ef540e974ef4f37f84e93', 'tete', '758449357', '', '', 0),
-(22, 'Chomes', 'G8C', 'G8c@chome.com', 'Chome', '0', '758449357', '', '', 0),
-(24, 'dran', 'be', 'Chome@Chome.com', '8cb2237d0679ca88db6464eac60da96345513964', '12345', '12345', '', '', 0),
-(25, 'dell', 'paul', 'pauldell@c-home.com', '8cb2237d0679ca88db6464eac60da96345513964', 'paul', '12345', '', '', 0),
-(26, 'LO', 'CHEIKHOUNA', 'azerty@azerty.com', 'a0ff094025db6249d90f911e531633bdaea45616', 'azerty', '123456', '', '', 1),
-(28, 'Basile', 'test', 'test@test.com', 'c4033bff94b567a190e33faa551f411caef444f2', 'test', '758449357', '', '', 0),
-(29, 'azerty', 'azerty', 'azerty@azerty.fr', '9cf95dacd226dcf43da376cdb6cbba7035218921', 'azerty', '123456789', '', '', 0),
-(31, 'qsd', 'qsd', 'qsd@qsd', '81b87be71decdd74ee12a34ad4c278b401bc2a09', 'jb123', '0648624597', '', '', 0),
-(35, 'ben', 'ben', 'ben@chome.fr', '9cf95dacd226dcf43da376cdb6cbba7035218921', 'ben', '0123456789', 'Couleur', 'd1695e2cec40372ed7283e1e657b7ab18cd3efa9', 1),
-(36, 'benji', 'benji', 'benji@chome.com', '9cf95dacd226dcf43da376cdb6cbba7035218921', 'benji', '0123456789', 'Couleur', '1dc97c0fa3d7c1ac3418c6b94d7199687bef0836', 0),
-(37, '', '', 'azefg', 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '', '', 'SÃ©lectionnez une question', 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 0),
-(38, 'dran', 'ben', 'benjamin123@C-Home.fr', '9cf95dacd226dcf43da376cdb6cbba7035218921', '123', '0123456789', 'Couleur', 'a0d6b8b8b6ff239253dbc1af10337dabd12f2236', 0),
 (39, 'DRAN', 'Benjamin', 'benjamin.dran@isep.fr', '9cf95dacd226dcf43da376cdb6cbba7035218921', 'benjamindran', '0123456789', 'Couleur', 'a0d6b8b8b6ff239253dbc1af10337dabd12f2236', 0),
-(40, 'abc', 'abc', 'abc@bde.fr', '88facedcac8751f8d33300a0cea23442804ac560', 'jb123', '012165448', 'Ville', '2c95d5c7e08870f26da04fb9316d29a6679dfa14', 0);
+(41, 'admin', 'admin', 'mail.admin@admin.fr', '9cf95dacd226dcf43da376cdb6cbba7035218921', 'admin', '0645794512', 'Ville', '22390ad11c32faec43fc61555b53607660b3c185', 1);
 
 --
 -- Index pour les tables exportées
@@ -370,7 +317,7 @@ ALTER TABLE `auto`
 -- AUTO_INCREMENT pour la table `capteur`
 --
 ALTER TABLE `capteur`
-  MODIFY `IdCapteur` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `IdCapteur` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 --
 -- AUTO_INCREMENT pour la table `conditions_d_utilisation`
 --
@@ -380,32 +327,32 @@ ALTER TABLE `conditions_d_utilisation`
 -- AUTO_INCREMENT pour la table `donnees`
 --
 ALTER TABLE `donnees`
-  MODIFY `IdDonnees` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `IdDonnees` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT pour la table `maison`
 --
 ALTER TABLE `maison`
-  MODIFY `IdMaison` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `IdMaison` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 --
 -- AUTO_INCREMENT pour la table `message`
 --
 ALTER TABLE `message`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT pour la table `mode`
 --
 ALTER TABLE `mode`
-  MODIFY `Idmode` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `Idmode` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 --
 -- AUTO_INCREMENT pour la table `piece`
 --
 ALTER TABLE `piece`
-  MODIFY `IdPiece` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `IdPiece` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `IdUtilisateur` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `IdUtilisateur` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 --
 -- Contraintes pour les tables exportées
 --

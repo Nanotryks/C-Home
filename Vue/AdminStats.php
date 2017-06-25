@@ -176,8 +176,9 @@ include '../Vue/header_admin.html';?>
     $reponse = $BDD->query('SELECT * FROM message');
     
     while($donnees = $reponse->fetch()){
-    echo "Message de ".$donnees['nom'].":                          ".$donnees['message'].'<br>'.'<br>'.'<br>';}
+    echo "Message de ".$donnees['nom'].' :<br>'."                          ".$donnees['message'].'<br>'.'<br>'.'<br>';}
 ?>
+</div>
     
  
 <?php
