@@ -40,7 +40,7 @@ include '../Vue/header.html';
 
             <p>C Home Corporation</p>
 
-            <p>Mail : </p>
+            <p>Mail : customers.service@chome.fr </p>
             <p>10 rue de Vanves</p>
             <p>92130 ISSY LES MOULINEAUX</p>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.7390397216686!2d2.2779324156780496!3d48.82504037928424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6707980bd3947%3A0xd54fb6c5e1933333!2s10+Rue+de+Vanves%2C+92170+Issy-les-Moulineaux!5e0!3m2!1sfr!2sfr!4v1492426882176"
