@@ -36,9 +36,9 @@ include '../Vue/header_admin.html';?>
 
     ?>
     <p class="affichage">
-        <?php echo "Nom:" . " " . $donnees['nom'] . '<br>' . '<br>' . "Prenom:" . " " . $donnees['prenom'] . '<br>' . '<br>' . "Email:" . " " . $donnees['mail'] . '<br>' . '<br>' . "Telephone: 0" . $donnees['telephone'] . '<br>' . '<br>' . "Votre Numero abonné:" . " " . $donnees['numero_abonne']; ?></p>
+        <?php echo "Nom:" . " " . $donnees['nom'] . '<br>' . '<br>' . "Prenom:" . " " . $donnees['prenom'] . '<br>' . '<br>' . "Email:" . " " . $donnees['mail'] . '<br>' . '<br>' . "Telephone: " . $donnees['telephone'] . '<br>' . '<br>' . "Votre Numero abonné:" . " " . $donnees['numero_abonne']; ?></p>
     <button class="button">Modifier les Parametres</button>
-    <form action="../Controleur/parametrescible.php" method="post">
+    <form action="../Controleur/parametrescible2.php" method="post">
         <p class="modif">
             <br>
             <br>
