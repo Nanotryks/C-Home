@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Lun 26 Juin 2017 à 07:18
+-- Généré le :  Lun 26 Juin 2017 à 10:49
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -59,8 +59,11 @@ CREATE TABLE `capteur` (
 --
 
 INSERT INTO `capteur` (`IdPiece`, `IdCapteur`, `Nom`, `Valeur`, `Mode_Valeur`) VALUES
-(20, 53, 'Humidité', 19, 0),
-(20, 54, 'Présence', 0, 0);
+(20, 53, 'Humidité', 20, 0),
+(20, 54, 'Présence', 0, 0),
+(20, 55, 'Température', 18, 18),
+(22, 56, 'Lumière', 500, 500),
+(22, 57, 'Température', 18, 18);
 
 -- --------------------------------------------------------
 
@@ -95,6 +98,18 @@ CREATE TABLE `donnees` (
   `time` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Contenu de la table `donnees`
+--
+
+INSERT INTO `donnees` (`IdUtilisateur`, `IdDonnees`, `Type`, `Valeur`, `date`, `time`) VALUES
+(45, 27, 'Température', 20, '2017-06-26', '10:44:48'),
+(45, 28, 'Lumière', 700, '2017-06-26', '10:46:48'),
+(45, 29, 'Température', 20, '2017-06-26', '10:47:27'),
+(45, 30, 'Température', 18, '2017-06-26', '10:48:41'),
+(45, 31, 'Température', 18, '2017-06-26', '10:48:41'),
+(45, 32, 'Lumière', 500, '2017-06-26', '10:48:54');
+
 -- --------------------------------------------------------
 
 --
@@ -119,7 +134,8 @@ CREATE TABLE `maison` (
 --
 
 INSERT INTO `maison` (`IdUtilisateur`, `IdMaison`, `Nom`, `Porte`, `Voie`, `Adresse`, `Code_Postal`, `Ville`, `Nombre_Piece`, `Nombre_Etage`) VALUES
-(45, 29, 'Maison Principal', 1, 'rue', 'Pierre Currie', '94700', 'MaisonAlfort', 12, 2);
+(45, 29, 'Maison Principal', 1, 'rue', 'Pierre Currie', '94700', 'MaisonAlfort', 12, 2),
+(45, 30, 'Maison 2', 65, 'boulevard', 'Général commandant', '54560', 'Marseille', 6, 2);
 
 -- --------------------------------------------------------
 
@@ -157,6 +173,15 @@ CREATE TABLE `mode` (
   `Valeur` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Contenu de la table `mode`
+--
+
+INSERT INTO `mode` (`IdUtilisateur`, `IdCapteur`, `Idmode`, `mode`, `Capteur`, `Valeur`) VALUES
+(45, 55, 29, 'Manuel', 'Température', 18),
+(45, 56, 30, 'Manuel', 'Lumière', 500),
+(45, 57, 31, 'Manuel', 'Température', 18);
+
 -- --------------------------------------------------------
 
 --
@@ -174,7 +199,8 @@ CREATE TABLE `piece` (
 --
 
 INSERT INTO `piece` (`IdMaison`, `IdPiece`, `Nom`) VALUES
-(29, 20, 'Salon');
+(29, 20, 'Salon'),
+(29, 22, 'Cuisine');
 
 -- --------------------------------------------------------
 
@@ -281,7 +307,7 @@ ALTER TABLE `auto`
 -- AUTO_INCREMENT pour la table `capteur`
 --
 ALTER TABLE `capteur`
-  MODIFY `IdCapteur` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `IdCapteur` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 --
 -- AUTO_INCREMENT pour la table `conditions_d_utilisation`
 --
@@ -291,12 +317,12 @@ ALTER TABLE `conditions_d_utilisation`
 -- AUTO_INCREMENT pour la table `donnees`
 --
 ALTER TABLE `donnees`
-  MODIFY `IdDonnees` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `IdDonnees` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 --
 -- AUTO_INCREMENT pour la table `maison`
 --
 ALTER TABLE `maison`
-  MODIFY `IdMaison` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `IdMaison` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 --
 -- AUTO_INCREMENT pour la table `message`
 --
@@ -306,12 +332,12 @@ ALTER TABLE `message`
 -- AUTO_INCREMENT pour la table `mode`
 --
 ALTER TABLE `mode`
-  MODIFY `Idmode` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `Idmode` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 --
 -- AUTO_INCREMENT pour la table `piece`
 --
 ALTER TABLE `piece`
-  MODIFY `IdPiece` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `IdPiece` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT pour la table `utilisateur`
 --
