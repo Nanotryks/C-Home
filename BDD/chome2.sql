@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Dim 25 Juin 2017 à 09:12
+-- Généré le :  Lun 26 Juin 2017 à 07:18
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -59,14 +59,8 @@ CREATE TABLE `capteur` (
 --
 
 INSERT INTO `capteur` (`IdPiece`, `IdCapteur`, `Nom`, `Valeur`, `Mode_Valeur`) VALUES
-(16, 40, 'Température', 2, 2),
-(16, 41, 'Lumière', 500, 500),
-(16, 42, 'Humidité', 65, 0),
-(16, 43, 'Présence', 0, 0),
-(17, 45, 'Humidité', 65, 0),
-(16, 46, 'Lumière', 500, 500),
-(17, 48, 'Température', 2, 2),
-(17, 49, 'Lumière', 500, 500);
+(20, 53, 'Humidité', 19, 0),
+(20, 54, 'Présence', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -101,23 +95,6 @@ CREATE TABLE `donnees` (
   `time` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Contenu de la table `donnees`
---
-
-INSERT INTO `donnees` (`IdUtilisateur`, `IdDonnees`, `Type`, `Valeur`, `date`, `time`) VALUES
-(39, 14, 'Température', 24, '2017-06-21', '14:09:38'),
-(39, 15, 'Température', 14, '2017-06-21', '14:10:54'),
-(39, 16, 'Température', 20, '2017-06-21', '14:11:10'),
-(39, 18, 'Température', 16, '2017-06-21', '14:29:50'),
-(39, 19, 'Température', 21, '2017-06-21', '14:30:40'),
-(39, 20, 'Température', 20, '2017-06-21', '14:40:04'),
-(39, 21, 'Lumière', 700, '2017-06-21', '14:40:58'),
-(39, 22, 'Température', 20, '2017-06-22', '08:52:23'),
-(39, 23, 'Lumière', 700, '2017-06-22', '08:52:29'),
-(39, 24, 'Température', 2, '2017-06-22', '08:53:07'),
-(39, 25, 'Lumière', 500, '2017-06-22', '08:53:46');
-
 -- --------------------------------------------------------
 
 --
@@ -142,7 +119,7 @@ CREATE TABLE `maison` (
 --
 
 INSERT INTO `maison` (`IdUtilisateur`, `IdMaison`, `Nom`, `Porte`, `Voie`, `Adresse`, `Code_Postal`, `Ville`, `Nombre_Piece`, `Nombre_Etage`) VALUES
-(39, 27, 'Maison Principale', 10, 'rue', 'Pierre Currie', '94700', 'MaisonAlfort', 12, 2);
+(45, 29, 'Maison Principal', 1, 'rue', 'Pierre Currie', '94700', 'MaisonAlfort', 12, 2);
 
 -- --------------------------------------------------------
 
@@ -180,18 +157,6 @@ CREATE TABLE `mode` (
   `Valeur` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Contenu de la table `mode`
---
-
-INSERT INTO `mode` (`IdUtilisateur`, `IdCapteur`, `Idmode`, `mode`, `Capteur`, `Valeur`) VALUES
-(39, 40, 20, 'Manuel', 'Température', 2),
-(39, 41, 21, 'Manuel', 'Lumière', 500),
-(39, 41, 23, 'Manuel', 'Lumière', 500),
-(39, 46, 24, 'Manuel', 'Lumière', 500),
-(39, 48, 26, 'Manuel', 'Température', 2),
-(39, 49, 27, 'Manuel', 'Lumière', 500);
-
 -- --------------------------------------------------------
 
 --
@@ -209,8 +174,7 @@ CREATE TABLE `piece` (
 --
 
 INSERT INTO `piece` (`IdMaison`, `IdPiece`, `Nom`) VALUES
-(27, 16, 'Salon'),
-(27, 17, 'Chambre');
+(29, 20, 'Salon');
 
 -- --------------------------------------------------------
 
@@ -236,8 +200,8 @@ CREATE TABLE `utilisateur` (
 --
 
 INSERT INTO `utilisateur` (`IdUtilisateur`, `nom`, `prenom`, `mail`, `mdp`, `numero_abonne`, `telephone`, `QuestionSecrete`, `ReponseSecrete`, `Admin`) VALUES
-(39, 'DRAN', 'Benjamin', 'benjamin.dran@isep.fr', '9cf95dacd226dcf43da376cdb6cbba7035218921', 'benjamindran', '0123456789', 'Couleur', 'a0d6b8b8b6ff239253dbc1af10337dabd12f2236', 0),
-(41, 'admin', 'admin', 'mail.admin@admin.fr', '9cf95dacd226dcf43da376cdb6cbba7035218921', 'admin', '0645794512', 'Ville', '22390ad11c32faec43fc61555b53607660b3c185', 1);
+(43, 'admin', 'admin', 'admin@Chome.com', '9cf95dacd226dcf43da376cdb6cbba7035218921', '0000', '0123456789', 'Couleur', 'd1695e2cec40372ed7283e1e657b7ab18cd3efa9', 1),
+(45, 'Demo', 'Demo', 'demo@Chome.com', '9cf95dacd226dcf43da376cdb6cbba7035218921', '0001', '0123456789', 'Couleur', 'a0d6b8b8b6ff239253dbc1af10337dabd12f2236', 0);
 
 --
 -- Index pour les tables exportées
@@ -317,7 +281,7 @@ ALTER TABLE `auto`
 -- AUTO_INCREMENT pour la table `capteur`
 --
 ALTER TABLE `capteur`
-  MODIFY `IdCapteur` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `IdCapteur` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 --
 -- AUTO_INCREMENT pour la table `conditions_d_utilisation`
 --
@@ -327,7 +291,7 @@ ALTER TABLE `conditions_d_utilisation`
 -- AUTO_INCREMENT pour la table `donnees`
 --
 ALTER TABLE `donnees`
-  MODIFY `IdDonnees` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `IdDonnees` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 --
 -- AUTO_INCREMENT pour la table `maison`
 --
@@ -342,17 +306,17 @@ ALTER TABLE `message`
 -- AUTO_INCREMENT pour la table `mode`
 --
 ALTER TABLE `mode`
-  MODIFY `Idmode` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `Idmode` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 --
 -- AUTO_INCREMENT pour la table `piece`
 --
 ALTER TABLE `piece`
-  MODIFY `IdPiece` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `IdPiece` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `IdUtilisateur` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `IdUtilisateur` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 --
 -- Contraintes pour les tables exportées
 --
