@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Lun 26 Juin 2017 à 10:49
+-- Généré le :  Mar 27 Juin 2017 à 12:46
 -- Version du serveur :  5.7.14
 -- Version de PHP :  5.6.25
 
@@ -81,7 +81,7 @@ CREATE TABLE `conditions_d_utilisation` (
 --
 
 INSERT INTO `conditions_d_utilisation` (`id`, `text`) VALUES
-(1, 'Mamadou fi lay ndogoo inchaAllah');
+(1, 'Ici se trouvent les conditions générales d\'utilisation');
 
 -- --------------------------------------------------------
 
